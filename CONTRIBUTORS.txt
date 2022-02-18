@@ -11,8 +11,8 @@
 This project was contributed by the following people:
 
 - Rafael Corchuelo (corchu@us.es)
+- Alberto Monedero (albmonmar3@alum.us.es)
 - Mario Rey (marreycar1@alum.us.es)
 - Pablo Benítez (pabbenoli@alum.us.es // pablobenitezoliva@gmail.com)
 - Andreu Montagut (andmonosu@alum.us.es)
 - José Pérez (josperrod9@alum.us.es)
-
