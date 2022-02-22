@@ -9,4 +9,7 @@
 # they accept any liabilities with respect to them.
 
 master.welcome.title = Welcome!
-master.welcome.text = Acme One! Your first project in D&T2!
+master.welcome.text = \
+	If you think your invention can revolutionize the world and you want to give it more visibility,  \
+	Acme-ToolKits offers a large list of patrons willing to sponsor it.\
+	The limit is in your mind!

@@ -9,5 +9,8 @@
 # they accept any liabilities with respect to them.
 
 master.welcome.title = ¡Bienvenidos!
-master.welcome.text = ¡Acme One! ¡Tu primer proyecto en DP2!
+master.welcome.text = \
+	Si crees que tu invento puede revolucionar el mundo y quieres darle más visibilidad, \
+	Acme-ToolKits ofrece una gran lista de patrocinadores dispuestos a financiarlo. \
+	¡El límite está en tu mente! 
 ﻿
