@@ -18,8 +18,12 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
-
+master.menu.anonymous.mario = 31872382V:Rey,Mario
+master.menu.anonymous.andreu = 47860188V:Montagut,Andreu
+master.menu.anonymous.pepe = 45157051R:Pérez,José
+master.menu.anonymous.alberto = 20102017V:Monedero,Alberto
+master.menu.anonymous.pablog = 80101033Z:Giráldez,Pablo
+master.menu.anonymous.pablob = 30696743T:Benitez,Pablo
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
