@@ -19,8 +19,13 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
+            <acme:menu-suboption code="master.menu.anonymous.mario" action="http://www.facebook.com/"/>
+            <acme:menu-suboption code="master.menu.anonymous.andreu" action="http://www.twitter.com/"/>
+            <acme:menu-suboption code="master.menu.anonymous.alberto" action="http://www.twitch.com/"/>
+            <acme:menu-suboption code="master.menu.anonymous.pepe" action="http://www.instagram.com/"/>
+            <acme:menu-suboption code="master.menu.anonymous.pablob" action="http://www.google.com/"/>
+            <acme:menu-suboption code="master.menu.anonymous.pablog" action="http://www.yahoo.com/"/>
+        </acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
