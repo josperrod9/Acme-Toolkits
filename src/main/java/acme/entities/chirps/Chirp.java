@@ -1,4 +1,4 @@
-package acme.entities;
+package acme.entities.chirps;
 
 import java.util.Date;
 
@@ -7,7 +7,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
