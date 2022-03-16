@@ -1,6 +1,5 @@
 package acme.entities.patronages;
 import java.util.Date;
-import java.util.Formatter;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -15,6 +14,8 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Inventor;
+import acme.roles.Patron;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -43,14 +44,25 @@ public class PatronageReport extends AbstractEntity {
 	
 	@NotBlank
 	public String automaticSequenceNumber() {
-		final Formatter fmt = new Formatter();
-	    fmt.format("%04d",this.id);
-		return this.patronage.getCode()+":"+fmt;
+		StringBuilder sequenceNumber;
+		sequenceNumber = new StringBuilder();
+		sequenceNumber.append(this.patronage.getCode());
+	    sequenceNumber.append(String.format("%04d",this.id));
+		return sequenceNumber.toString();
 	};
+	
+	public Patron patron() {
+		return this.patronage.patron;
+	}
+	
+	public Inventor inventor() {
+		return this.patronage.inventor;
+	}
 
 	// Relationships ----------------------------------------------------------
 	@Valid
 	@NotNull
 	@OneToOne(optional=false)
 	protected Patronage patronage;
+	
 }

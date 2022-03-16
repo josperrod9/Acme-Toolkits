@@ -1,0 +1,4 @@
+key,key:user-account,company,statement,info
+patron1,user-account-patron1,"Google, LLC",Online Patronage,https://www.google.com/
+patron2,user-account-patron2,"Amazon.com, Inc.",Products Patronage,https://www.amazon.com/
+patron3,user-account-patron3,"Apple, Inc.",Technology Patronage,https://www.apple.com/

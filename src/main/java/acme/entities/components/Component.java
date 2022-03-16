@@ -1,12 +1,13 @@
 package acme.entities.components;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
+import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -36,9 +37,11 @@ public class Component extends AbstractEntity {
 				@Length(max=256)
 				protected String			description;
 				
-				@Min(0)
-				protected Double price;
-				protected String link;
+//				@Positive
+				protected Money 			retailPrice;
+				
+				@URL
+				protected String 			info;
 
 				// Derived attributes -----------------------------------------------------
 

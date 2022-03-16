@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -19,7 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Announcement extends AbstractEntity{
-	// Serialisation identifier -----------------------------------------------
+			// Serialisation identifier -----------------------------------------------
 
 			protected static final long	serialVersionUID	= 1L;
 
@@ -27,7 +28,8 @@ public class Announcement extends AbstractEntity{
 			@Temporal(TemporalType.TIMESTAMP)
 		    @Past
 		    @NotNull
-		    protected Date                moment;
+		    protected Date                creationMoment;
+			
 			@NotBlank
 			@Length(max=101)
 			protected String			title;
@@ -36,9 +38,10 @@ public class Announcement extends AbstractEntity{
 			@Length(max=256)
 			protected String			body;
 			
-			
 			protected Boolean isCritical;
-			protected String link;
+			
+			@URL
+			protected String info;
 
 			// Derived attributes -----------------------------------------------------
 

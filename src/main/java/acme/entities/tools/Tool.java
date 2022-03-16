@@ -2,13 +2,13 @@ package acme.entities.tools;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -41,8 +41,8 @@ public class Tool extends AbstractEntity {
 	@Length(max = 256)
 	protected String			description;
 	
-	@Min(0)
-	protected Double 			retailPrice;
+//	@Min(0)
+	protected Money 			retailPrice;
 
 	@URL
 	protected String			info;
