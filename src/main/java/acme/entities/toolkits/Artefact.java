@@ -1,8 +1,10 @@
-package acme.entities.tools;
+package acme.entities.toolkits;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -16,7 +18,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Tool extends AbstractEntity {
+public class Artefact extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -29,9 +31,11 @@ public class Tool extends AbstractEntity {
 	protected String			name;
 	
 	
-	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$", message = "default.error.conversion")
+	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	@Column(unique=true)
+	@NotBlank
 	protected String			code;
+	
 
 	@NotBlank
 	@Length(max = 101)
@@ -41,7 +45,8 @@ public class Tool extends AbstractEntity {
 	@Length(max = 256)
 	protected String			description;
 	
-//	@Min(0)
+	@Valid
+	@NotNull
 	protected Money 			retailPrice;
 
 	@URL

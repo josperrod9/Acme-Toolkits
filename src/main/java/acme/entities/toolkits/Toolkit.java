@@ -1,20 +1,13 @@
 package acme.entities.toolkits;
 
-import java.util.Collection;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.components.Component;
-import acme.entities.tools.Tool;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,8 +23,9 @@ public class Toolkit extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 	
-	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$", message = "default.error.conversion")
+	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	@Column(unique=true)
+	@NotBlank
 	protected String			code;
 
 	@NotBlank
@@ -52,13 +46,6 @@ public class Toolkit extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-	
-    @Valid
-    @OneToMany
-    protected Collection<Component> components;
-	
-	@Valid
-	@OneToOne
-	protected Tool tool;
+
 }
 
