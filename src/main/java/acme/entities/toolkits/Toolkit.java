@@ -1,5 +1,7 @@
 package acme.entities.toolkits;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -53,7 +55,7 @@ public class Toolkit extends AbstractEntity {
 	
     @Valid
     @OneToMany
-    protected Component component;
+    protected Collection<Component> components;
 	
 	@Valid
 	@OneToOne
