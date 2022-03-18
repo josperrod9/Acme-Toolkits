@@ -2,7 +2,7 @@ package acme.entities.toolkits;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -52,7 +52,7 @@ public class Toolkit extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 	
     @Valid
-    @ManyToOne
+    @OneToMany
     protected Component component;
 	
 	@Valid

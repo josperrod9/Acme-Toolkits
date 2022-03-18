@@ -1,5 +1,6 @@
 package acme.entities.components;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -26,7 +27,8 @@ public class Component extends AbstractEntity {
 				@Length(max=101)
 				protected String			name;
 				
-				@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
+				@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$", message = "default.error.conversion")
+				@Column(unique=true)
 				protected String			code;
 				
 				@NotBlank
