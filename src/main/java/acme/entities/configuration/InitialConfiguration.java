@@ -21,11 +21,11 @@ public class InitialConfiguration extends AbstractEntity {
 	
 	public String currency;
 	
-	public String weakSpamTerms;
+	public String weakSpamTerm;
 	
 	public Double weakSpamThreshold;
 	
-	public String strongSpamTerms;
+	public String strongSpamTerm;
 	
 	public Double strongSpamThreshold;
 	
