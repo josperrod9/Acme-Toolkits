@@ -3,6 +3,8 @@ package acme.forms;
 import java.io.Serializable;
 import java.util.Map;
 
+import org.springframework.data.util.Pair;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,15 +18,10 @@ public class AdministratorDashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<String,Double> averageRetailPriceOfComponentsGroupedByTechnology;
-	Map<String,Double> deviationRetailPriceOfComponentsGroupedByTechnology;
-	Map<String,Double> minimumRetailPriceOfComponentsGroupedByTechnology;
-	Map<String,Double> maximumRetailPriceOfComponentsGroupedByTechnology;
-	
-	Map<String,Double> averageRetailPriceOfComponentsGroupedByCurrency;
-	Map<String,Double> deviationRetailPriceOfComponentsGroupedByCurrency;
-	Map<String,Double> minimumRetailPriceOfComponentsGroupedByCurrency;
-	Map<String,Double> maximumRetailPriceOfComponentsGroupedByCurrency;
+	Map<Pair<String,String>,Double> averageRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double> deviationRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double> minimumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
+	Map<Pair<String,String>,Double> maximumRetailPriceOfComponentsGroupedByTechnologyAndCurrency;
 	
 	Integer totalNumberOfTools;
 	
