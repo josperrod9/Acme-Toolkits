@@ -71,12 +71,12 @@ public class Patronage extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	protected Inventor inventor;
 	
 	@NotNull
 	@Valid
-	@ManyToOne(optional = true)
+	@ManyToOne(optional = false)
 	protected Patron patron;
 }
 
