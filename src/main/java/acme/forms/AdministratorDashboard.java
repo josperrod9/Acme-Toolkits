@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.data.util.Pair;
 
+import acme.entities.patronages.Status;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,20 +35,10 @@ public class AdministratorDashboard implements Serializable {
 	Integer totalNumberOfAcceptedPatronages;
 	Integer totalNumberOfDeniedPatronages;
 	
-	Double averageOfProposedPatronages;
-	Double deviationOfProposedPatronages;
-	Double minimumOfProposedPatronages;
-	Double maximumOfProposedPatronages;
-	
-	Double averageOfAceptedPatronages;
-	Double deviationOfAceptedPatronages;
-	Double minimumOfAceptedPatronages;
-	Double maximumOfAceptedPatronages;
-	
-	Double averageOfDeniedPatronages;
-	Double deviationOfDeniedPatronages;
-	Double minimumOfDeniedPatronages;
-	Double maximumOfDeniedPatronages;
+	Map<Status,Double> averageOfPatronagesGroupedByStatus;
+	Map<Status,Double> deviationOfPatronagesGroupedByStatus;
+	Map<Status,Double> minimumOfPatronagesGroupedByStatus;
+	Map<Status,Double> maimumOfPatronagesGroupedByStatus;
 
 	// Derived attributes -----------------------------------------------------
 
