@@ -34,7 +34,7 @@ public class Patronage extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	
+	@NotNull
 	protected Status			status;
 	
 	
