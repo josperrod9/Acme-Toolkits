@@ -2,20 +2,19 @@ package acme.entities.patronages;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
-import acme.roles.Inventor;
-import acme.roles.Patron;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,36 +32,24 @@ public class PatronageReport extends AbstractEntity {
 	@Length(max = 256)
 	protected String			memorandum;
 	
+	@NotBlank
+	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?:[0-9]{4}$")
+	protected String 			automaticSequenceNumber;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-    protected Date              creationMoment;
+	@NotNull
+    	protected Date              creationMoment;
 	
 	@URL
 	protected String			info;
 
 	// Derived attributes -----------------------------------------------------
 	
-	@NotBlank
-	public String automaticSequenceNumber() {
-		StringBuilder sequenceNumber;
-		sequenceNumber = new StringBuilder();
-		sequenceNumber.append(this.patronage.getCode());
-	    sequenceNumber.append(String.format("%04d",this.id));
-		return sequenceNumber.toString();
-	};
-	
-	public Patron patron() {
-		return this.patronage.patron;
-	}
-	
-	public Inventor inventor() {
-		return this.patronage.inventor;
-	}
-
 	// Relationships ----------------------------------------------------------
 	@Valid
 	@NotNull
-	@OneToOne(optional=false)
+	@ManyToOne(optional=false)
 	protected Patronage patronage;
 	
 }

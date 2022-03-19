@@ -34,19 +34,21 @@ public class Patronage extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	
+	@NotNull
 	protected Status			status;
 	
 	
-	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$", message = "default.error.conversion")
+	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	@Column(unique=true)
+	@NotBlank
 	protected String			code;
 
 	@NotBlank
 	@Length(max = 256)
 	protected String			legalStuff;
 	
-//	@Positive
+	@Valid
+	@NotNull
 	protected Money 			budget;
 	
 	@Temporal(TemporalType.DATE)
