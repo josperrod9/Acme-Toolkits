@@ -28,7 +28,7 @@ public class Announcement extends AbstractEntity{
 			@Temporal(TemporalType.TIMESTAMP)
 		    @Past
 		    @NotNull
-		    protected Date                creationMoment;
+		    protected Date              creationMoment;
 			
 			@NotBlank
 			@Length(max=101)
@@ -39,10 +39,10 @@ public class Announcement extends AbstractEntity{
 			protected String			body;
 			
 	
-			protected boolean flag;
+			protected boolean 			critical;
 			
 			@URL
-			protected String info;
+			protected String 			info;
 
 			// Derived attributes -----------------------------------------------------
 
