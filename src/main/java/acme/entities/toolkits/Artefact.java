@@ -36,7 +36,9 @@ public class Artefact extends AbstractEntity {
 	@NotBlank
 	protected String			code;
 	
-
+	@NotNull
+	protected ArtefactType			type;
+	
 	@NotBlank
 	@Length(max = 101)
 	protected String			technology;
@@ -49,6 +51,7 @@ public class Artefact extends AbstractEntity {
 	@NotNull
 	protected Money 			retailPrice;
 
+	
 	@URL
 	protected String			info;
 

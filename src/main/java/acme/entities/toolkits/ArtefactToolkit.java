@@ -3,6 +3,7 @@ package acme.entities.toolkits;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.AbstractEntity;
@@ -19,9 +20,9 @@ public class ArtefactToolkit extends AbstractEntity{
 		protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-		@NotNull
-		protected ArtefactType			type;
 		
+		@Min(1)
+		protected int 			amount;
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
