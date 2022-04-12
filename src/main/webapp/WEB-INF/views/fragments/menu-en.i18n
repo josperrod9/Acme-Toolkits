@@ -24,6 +24,9 @@ master.menu.anonymous.pepe = 45157051R:Pérez,José
 master.menu.anonymous.alberto = 20102017V:Monedero,Alberto
 master.menu.anonymous.pablog = 80101033Z:Giráldez,Pablo
 master.menu.anonymous.pablob = 30696743T:Benitez,Pablo
+master.menu.anonymous.user-accounts = User accounts
+master.menu.anonymous.chirp = List Chirps
+master.menu.anonymous.artefact = List Artefact
 
 # master.menu.administrator ###################################################
 
@@ -33,16 +36,25 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.chirp = List Chirps
+master.menu.administrator.artefact = List Artefact
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.user-accounts = User accounts
+master.menu.provider.chirp = List Chirps
+master.menu.provider.artefact = List Artefact
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.user-accounts = User accounts
+master.menu.consumer.chirp = List Chirps
+master.menu.consumer.artefact = List Artefact
 
 # master.menu.user-account ####################################################
 
@@ -52,3 +64,11 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+# master.menu.authenticated ####################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.announcement = List Announcement
+master.menu.authenticated.user-accounts = User accounts
+master.menu.authenticated.chirp = List Chirps
+master.menu.authenticated.artefact = List Artefact
