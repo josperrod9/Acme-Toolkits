@@ -21,6 +21,8 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.user-accounts"
 				action="/any/user-account/list" />
+			<acme:menu-suboption code="master.menu.anonymous.toolkit"
+				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.anonymous.chirp"
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.anonymous.artefact"
@@ -34,6 +36,8 @@
         </acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.toolkit"
+				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.authenticated.user-accounts"
 				action="/any/user-account/list" />
 			<acme:menu-suboption code="master.menu.authenticated.chirp"
@@ -46,6 +50,8 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts"
 				action="/any/user-account/list" />
+					<acme:menu-suboption code="master.menu.administrator.toolkit"
+				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.administrator.chirp"
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.administrator.artefact"
@@ -61,6 +67,8 @@
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.user-accounts"
 				action="/any/user-account/list" />
+					<acme:menu-suboption code="master.menu.provider.toolkit"
+				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.provider.chirp"
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.provider.artefact"
@@ -71,6 +79,8 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.user-accounts"
 				action="/any/user-account/list" />
+					<acme:menu-suboption code="master.menu.consumer.toolkit"
+				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.consumer.chirp"
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.consumer.artefact"
