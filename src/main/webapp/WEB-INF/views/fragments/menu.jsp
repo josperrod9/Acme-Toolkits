@@ -48,8 +48,7 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.administrator.user-accounts"
-				action="/any/user-account/list" />
+		
 					<acme:menu-suboption code="master.menu.administrator.toolkit"
 				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.administrator.chirp"
