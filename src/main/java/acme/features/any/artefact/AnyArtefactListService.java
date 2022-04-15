@@ -30,7 +30,7 @@ public class AnyArtefactListService implements AbstractListService<Any, Artefact
 	@Override
 	public Collection<Artefact> findMany(final Request<Artefact> request) {
 		 int masterId;
-		if(request.getModel().getInteger("masterId")!=null) {
+		if(request.getModel().hasAttribute("masterId")) {
 			  masterId = request.getModel().getInteger("masterId");
 			 
 			return this.repository.findManyArtifactsByMasterId(masterId);

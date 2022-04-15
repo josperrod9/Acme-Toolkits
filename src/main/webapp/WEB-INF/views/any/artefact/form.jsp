@@ -19,7 +19,7 @@
 	<acme:input-textbox code="any.artefact.form.label.name" path="name" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.code" path="code" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.type" path="type" readonly="true"/>
-	<acme:input-textbox code="any.artefact.form.label.technology" path="tehnology" readonly="true"/>
+	<acme:input-textbox code="any.artefact.form.label.technology" path="technology" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.description" path="description" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.retailPrice" path="retailPrice" readonly="true"/>
 	<acme:input-url code="any.artefact.form.label.info" path="info" readonly="true"/>
