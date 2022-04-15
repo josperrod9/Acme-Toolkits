@@ -19,12 +19,12 @@ public class PatronDashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<Status,Integer>	totalNumberofPatronagesGroupedByStatus;
+	Map<Status,Integer>	totalNumberOfPatronagesGroupedByStatus;
 	
 	Map<Pair<Status, String>,Double> averageBudgetOfPatronagesGroupedByCurrencyAndStatus;
 	Map<Pair<Status, String>,Double> deviationBudgetOfPatronagesGroupedByCurrencyAndStatus;
-	Map<Pair<Status, String>,Double> minimunBudgetOfPatronagesGroupedByCurrencyAndStatus;
-	Map<Pair<Status, String>,Double> maximunBudgetOfPatronagesGroupedByCurrencyAndStatus;
+	Map<Pair<Status, String>,Double> minimumBudgetOfPatronagesGroupedByCurrencyAndStatus;
+	Map<Pair<Status, String>,Double> maximumBudgetOfPatronagesGroupedByCurrencyAndStatus;
 	
 
 

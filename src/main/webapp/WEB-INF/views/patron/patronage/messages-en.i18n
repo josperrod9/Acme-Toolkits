@@ -1,0 +1,35 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+patron.patronage.list.label.status = Status
+patron.patronage.list.label.code = Code
+patron.patronage.list.label.legalStuff = Legal Stuff
+patron.patronage.list.label.budget = Budget
+patron.patronage.list.label.creationDate = Creation
+patron.patronage.list.label.startDate = Patronage Start
+patron.patronage.list.label.endDate = Patronage End
+patron.patronage.list.label.info = Info
+
+patron.patronage.show.label.status = Status
+patron.patronage.show.label.status.proposed = Proposed
+patron.patronage.show.label.status.accepted = Accepted
+patron.patronage.show.label.status.denied = Denied
+patron.patronage.show.label.code = Code
+patron.patronage.show.label.legalStuff = Legal Stuff
+patron.patronage.show.label.budget = Budget
+patron.patronage.show.label.creationDate = Creation
+patron.patronage.show.label.startDate = Patronage Start
+patron.patronage.show.label.endDate = Patronage End
+patron.patronage.show.label.info = Info
+
+patron.patronage.show.label.inventor.username = Inventor
+patron.patronage.show.label.inventor.company = Inventor Company
+patron.patronage.show.label.inventor.statement = Inventor Statement
+patron.patronage.show.label.inventor.info = Inventor Info

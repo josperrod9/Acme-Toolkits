@@ -33,11 +33,15 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+master.menu.administrator.configuration = Show system configuration
+master.menu.administrator.dashboard = Dashboard
 
-# master.menu.provider ########################################################
 
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+# master.menu.patron ########################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronages
+master.menu.patron.dashboard = Dashboard
 
 # master.menu.consumer ##########################################################
 
