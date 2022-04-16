@@ -36,32 +36,32 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("SELECT count(a) FROM Artefact a WHERE a.type = 0")
 	Integer totalNumberOfTools();
-//	
-//	@Query("")
-//	Map<String,Double> averageRetailPriceOfToolsGroupedByCurrency();
-//
-//	@Query("")
-//	Map<String,Double> deviationRetailPriceOfToolsGroupedByCurrency();
-//
-//	@Query("")
-//	Map<String,Double> minimumRetailPriceOfToolsGroupedByCurrency();
-//
-//	@Query("")
-//	Map<String,Double> maximumRetailPriceOfToolsGroupedByCurrency();
-//	
-//	@Query("")
-//	Map<Status,Integer>	totalNumberofPatronagesGroupedByStatus();
-//	
-//	@Query("")
-//	Map<Status,Double> averageOfPatronagesGroupedByStatus();
-//
-//	@Query("")
-//	Map<Status,Double> deviationOfPatronagesGroupedByStatus();
-//
-//	@Query("")
-//	Map<Status,Double> minimumOfPatronagesGroupedByStatus();
-//	
-//	@Query("")
-//	Map<Status,Double> maimumOfPatronagesGroupedByStatus();
+	
+	@Query("SELECT a.retailPrice.currency,avg(a.retailPrice.amount) FROM Artefact a where a.type=0 GROUP BY a.retailPrice.currency")
+	List<String> averageRetailPriceOfToolsGroupedByCurrency();
+
+	@Query("SELECT a.retailPrice.currency,stddev(a.retailPrice.amount) FROM Artefact a where a.type=0 GROUP BY a.retailPrice.currency")
+	List<String> deviationRetailPriceOfToolsGroupedByCurrency();
+
+	@Query("SELECT a.retailPrice.currency,min(a.retailPrice.amount) FROM Artefact a where a.type=0 GROUP BY a.retailPrice.currency")
+	List<String> minimumRetailPriceOfToolsGroupedByCurrency();
+
+	@Query("SELECT a.retailPrice.currency,max(a.retailPrice.amount) FROM Artefact a where a.type=0 GROUP BY a.retailPrice.currency")
+	List<String> maximumRetailPriceOfToolsGroupedByCurrency();
+	
+	@Query("SELECT p.status,count(p) FROM Patronage p GROUP BY p.status")
+	List<String> totalNumberofPatronagesGroupedByStatus();
+	
+	@Query("SELECT p.status, avg(p.budget.amount), p.status FROM Patronage p GROUP BY p.status")
+	List<String> averageOfPatronagesGroupedByStatus();
+
+	@Query("SELECT p.status, stddev(p.budget.amount), p.status FROM Patronage p GROUP BY p.status")
+	List<String> deviationOfPatronagesGroupedByStatus();
+
+	@Query("SELECT p.status, min(p.budget.amount), p.status FROM Patronage p GROUP BY p.status")
+	List<String> minimumOfPatronagesGroupedByStatus();
+	
+	@Query("SELECT p.status, max(p.budget.amount), p.status FROM Patronage p GROUP BY p.status")
+	List<String> maximumOfPatronagesGroupedByStatus();
 
 }

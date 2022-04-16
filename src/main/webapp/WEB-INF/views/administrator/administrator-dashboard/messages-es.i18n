@@ -10,8 +10,11 @@
 
 administrator.dashboard.form.title.general-indicators = Indicadores generales
 administrator.dashboard.form.title.components= Componentes
+administrator.dashboard.form.title.tools= Herramientas
+administrator.dashboard.form.title.patronages= Patrocionios
 administrator.administrator-dashboard.form.title.measure= Medida
 administrator.administrator-dashboard.form.title.groupby= Agrupado por
+administrator.administrator-dashboard.form.title.value= Valor
 administrator.dashboard.form.title.components.average = Media del precio de los componentes
 administrator.dashboard.form.title.components.deviation = Desviación del precio de los componentes
 administrator.dashboard.form.title.components.minimum =  Mínimo del precio de los componentes
@@ -21,3 +24,23 @@ administrator.administrator-dashboard.form.label.total-number-of-components =  N
 administrator.administrator-dashboard.form.label.total-number-of-tools =  Número total de herramientas
 administrator.administrator-dashboard.form.label.currency = Divisa: 
 administrator.administrator-dashboard.form.label.technology = Tecnología: 
+
+administrator.administrator-dashboard.form.label.numPatronageProposed =  Número de patrocinios propuestos
+administrator.administrator-dashboard.form.label.numPatronageAccepted =  Número de patrocinios aceptados
+administrator.administrator-dashboard.form.label.numPatronageDenied = Número de patrocinios denegados
+
+administrator.administrator-dashboard.form.label.avgPatronageProposed =  Media del presupuesto de patrocinios propuestos
+administrator.administrator-dashboard.form.label.avgPatronageAccepted =  Media del presupuesto de patrocinios aceptados
+administrator.administrator-dashboard.form.label.avgPatronageDenied = Media del presupuesto de patrocinios denegados
+
+administrator.administrator-dashboard.form.label.devPatronageProposed =  Desviación del presupuesto de patrocinios propuestos
+administrator.administrator-dashboard.form.label.devPatronageAccepted =  Desviación del presupuesto de patrocinios aceptados
+administrator.administrator-dashboard.form.label.devPatronageDenied = Desviación del presupuesto de patrocinios denegados
+
+administrator.administrator-dashboard.form.label.maxPatronageProposed = Presupuesto máximo de patrocinios propuestos
+administrator.administrator-dashboard.form.label.maxPatronageAccepted =  Presupuesto máximo de patrocinios aceptados
+administrator.administrator-dashboard.form.label.maxPatronageDenied = Presupuesto máximo de patrocinios denegados
+
+administrator.administrator-dashboard.form.label.minPatronageProposed =  Presupuesto mínimo de patrocinios propuestos
+administrator.administrator-dashboard.form.label.minPatronageAccepted =  Presupuesto mínimo del presupuesto de patrocinios aceptados
+administrator.administrator-dashboard.form.label.minPatronageDenied = Presupuesto mínimo del presupuesto de patrocinios denegados

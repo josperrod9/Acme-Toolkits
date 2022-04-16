@@ -10,8 +10,11 @@
 
 administrator.dashboard.form.title.general-indicators = General indicators
 administrator.dashboard.form.title.components= Components
+administrator.dashboard.form.title.tools= Tools
+administrator.dashboard.form.title.patronages= Patronages
 administrator.administrator-dashboard.form.title.measure= Measure
 administrator.administrator-dashboard.form.title.groupby= Group by
+administrator.administrator-dashboard.form.title.value= Value
 administrator.dashboard.form.title.components.average = Average price of components
 administrator.dashboard.form.title.components.deviation = Deviation price of components
 administrator.dashboard.form.title.components.minimum =  Minimum price of components
@@ -22,3 +25,22 @@ administrator.administrator-dashboard.form.label.total-number-of-tools =  Total 
 administrator.administrator-dashboard.form.label.currency = Currency: 
 administrator.administrator-dashboard.form.label.technology = Technology: 
 
+administrator.administrator-dashboard.form.label.numPatronageProposed =  Number of proposed pratonages
+administrator.administrator-dashboard.form.label.numPatronageAccepted =  Number of accepted pratonages
+administrator.administrator-dashboard.form.label.numPatronageDenied = Number of denied pratonages
+
+administrator.administrator-dashboard.form.label.avgPatronageProposed =  Average budget of proposed pratonages
+administrator.administrator-dashboard.form.label.avgPatronageAccepted =  Average budget of accepted pratonages
+administrator.administrator-dashboard.form.label.avgPatronageDenied = Average budget of denied pratonages
+
+administrator.administrator-dashboard.form.label.devPatronageProposed =  Deviation of budget of proposed pratonages
+administrator.administrator-dashboard.form.label.devPatronageAccepted =  Deviation of budget of accepted pratonages
+administrator.administrator-dashboard.form.label.devPatronageDenied = Deviation of budget of denied pratonages
+
+administrator.administrator-dashboard.form.label.maxPatronageProposed = Maximum budget of proposed pratonages
+administrator.administrator-dashboard.form.label.maxPatronageAccepted =  Maximum budget of accepted pratonages
+administrator.administrator-dashboard.form.label.maxPatronageDenied = Maximum budget of denied pratonages
+
+administrator.administrator-dashboard.form.label.minPatronageProposed =  Minimum budget of proposed pratonages
+administrator.administrator-dashboard.form.label.minPatronageAccepted =  Minimum budget of accepted pratonages
+administrator.administrator-dashboard.form.label.minPatronageDenied = Minimum budget of denied pratonages
