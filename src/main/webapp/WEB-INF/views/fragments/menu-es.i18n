@@ -38,6 +38,12 @@ master.menu.administrator.shut-down = Parar el sistema
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.toolkit.list = Lista de caja de herramientas
+master.menu.inventor.component.list = Lista de componentes
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor

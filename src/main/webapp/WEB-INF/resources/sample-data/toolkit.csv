@@ -1,2 +1,2 @@
-key,code,title,description,assembly-notes,info
-toolkit-01,HHG-123-Q,Super Toolkit,Ultra Toolkit,So Cheap,null
+key,code,title,description,assembly-notes,info,key:inventor
+toolkit-01,HHG-123-Q,Super Toolkit,Ultra Toolkit,So Cheap,null,inventor1
