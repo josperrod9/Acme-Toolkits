@@ -1,4 +1,4 @@
-package acme.features.authenticated.inventor;
+package acme.features.inventor.component;
 
 import javax.annotation.PostConstruct;
 
@@ -10,13 +10,13 @@ import acme.framework.controllers.AbstractController;
 import acme.roles.Inventor;
 
 @Controller
-public class InventorComponentsController extends AbstractController<Inventor, Artefact>{
+public class InventorComponentController extends AbstractController<Inventor, Artefact>{
 	
 	@Autowired
-    protected InventorComponentsListService listService;
+    protected InventorComponentListService listService;
 
     @Autowired
-    protected InventorComponentsShowService showService;
+    protected InventorComponentShowService showService;
 
     // Constructors -----------------------------------------------------------
 

@@ -1,4 +1,4 @@
-package acme.features.authenticated.inventor;
+package acme.features.inventor.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,10 +10,10 @@ import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorComponentsShowService implements AbstractShowService<Inventor, Artefact> {
+public class InventorComponentShowService implements AbstractShowService<Inventor, Artefact> {
 	
 	@Autowired
-	protected InventorComponentsRepository repo;
+	protected InventorComponentRepository repo;
 	
 	
 	@Override
@@ -26,8 +26,9 @@ public class InventorComponentsShowService implements AbstractShowService<Invent
 	public Artefact findOne(final Request<Artefact> request) {
 		assert request != null;
 		
-		Integer id;
-		final Artefact artefact;
+		int id;
+		Artefact artefact;
+		
 		id = request.getModel().getInteger("id");
 		artefact = this.repo.findArtefactById(id);
 		
