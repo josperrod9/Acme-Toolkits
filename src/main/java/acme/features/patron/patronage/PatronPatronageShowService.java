@@ -46,7 +46,7 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		final UserAccount inventorAccount = inventor.getUserAccount();
 		
 		request.unbind(entity, model,"status", "code" , "legalStuff", "budget", "creationDate", "startDate", "endDate", "info");
-		request.unbind(inventor, model, "company", "statement", "info");
+		request.unbind(inventor, model, "company", "statement", "inventorInfo");
 		request.unbind(inventorAccount, model, "username");
 	}
 }

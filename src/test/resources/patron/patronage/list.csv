@@ -1,0 +1,4 @@
+key,status,code,legal-stuff,budget,creation-date,start-date,end-date,info,key:inventor,key:patron,inventor-company,inventor-statement,inventor-info
+0,DENIED,DDD-786-M,Bad work,"EUR 78,945.78",2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor3,patron1,"Toys,Inc.",Toy Inventor,https://www.juguetilandia.com/
+1,DENIED,EEE-786-M,Bad work,"EUR 4,444.78",2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor3,patron1,"Toys,Inc.",Toy Inventor,https://www.juguetilandia.com/
+2,DENIED,FFF-786-M,Bad work,EUR 5.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor3,patron1,"Toys,Inc.",Toy Inventor,https://www.juguetilandia.com/

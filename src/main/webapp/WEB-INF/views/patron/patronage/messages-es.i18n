@@ -32,4 +32,4 @@ patron.patronage.show.label.info = Info
 patron.patronage.show.label.inventor.username = Inventor
 patron.patronage.show.label.inventor.company = Empresa del Inventor
 patron.patronage.show.label.inventor.statement = Declaración del Inventor
-patron.patronage.show.label.inventor.info = Info del Inventor
+patron.patronage.show.label.inventor.inventorInfo = Info del Inventor
