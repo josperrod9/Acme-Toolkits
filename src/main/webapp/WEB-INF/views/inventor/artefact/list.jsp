@@ -7,4 +7,5 @@
 	<acme:list-column code="inventor.artefact.list.label.name" path="name" width="20%"/>
 	<acme:list-column code="inventor.artefact.list.label.code" path="code" width="30%"/>
 	<acme:list-column code="inventor.artefact.list.label.retailPrice" path="retailPrice" width="50%"/>	
+	<acme:list-column code="inventor.artefact.list.label.type" path="type" width="50%"/>	
 </acme:list>

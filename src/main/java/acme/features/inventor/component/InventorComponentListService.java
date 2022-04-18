@@ -21,7 +21,7 @@ public class InventorComponentListService implements AbstractListService<Invento
 	
 	
 	@Override
-	public boolean authorise(final Request<Artefact> request) {
+	public boolean authorise( final Request<Artefact> request) {
 		assert request != null;
 		return true;
 	}
@@ -30,15 +30,21 @@ public class InventorComponentListService implements AbstractListService<Invento
 	@Override
     public Collection<Artefact> findMany(final Request<Artefact> request) {
         final Principal principal = request.getPrincipal();
-        return this.repo.findAllInventorComponents(principal.getActiveRoleId());
+		final String type = request.getModel().getString("type");
+		if (type.equals("component")) {
+			return this.repo.findAllInventorComponents(principal.getActiveRoleId());
+		} else {
+			return this.repo.findAllInventorTools(principal.getActiveRoleId());
+		}
     }
 
+	
     @Override
     public void unbind(final Request<Artefact> request, final Artefact entity, final Model model) {
         assert request != null;
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "name", "code","retailPrice");
+        request.unbind(entity, model, "name","code","retailPrice","type");
     }
 }
