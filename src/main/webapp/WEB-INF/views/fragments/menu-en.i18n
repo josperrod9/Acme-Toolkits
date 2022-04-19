@@ -44,6 +44,9 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.inventor = Inventor
 master.menu.inventor.toolkit.list = Toolkit list
 master.menu.inventor.component.list = Component list
+master.menu.inventor.tool.list = Tool list
+master.menu.inventor.patronageReport.list = Patronage Report
+master.menu.inventor.patronage.list = Patronage
 
 # master.menu.consumer ##########################################################
 

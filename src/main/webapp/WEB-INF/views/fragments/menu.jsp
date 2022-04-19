@@ -18,6 +18,11 @@
 
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
+	
+			<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+	            <acme:menu-suboption code="master.menu.authenticated.configuration.list" action="/authenticated/configuration/show"/>
+	        </acme:menu-option>
+	
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
             <acme:menu-suboption code="master.menu.anonymous.mario" action="http://www.facebook.com/"/>
             <acme:menu-suboption code="master.menu.anonymous.andreu" action="http://www.twitter.com/"/>
@@ -44,9 +49,11 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.component.list" action="/inventor/artefact/list"/>
+			<acme:menu-suboption code="master.menu.inventor.component.list" action="/inventor/artefact/list?type=component"/>
+			<acme:menu-suboption code="master.menu.inventor.tool.list" action="/inventor/artefact/list?type=tool"/>
 			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronageReport.list" action="/inventor/patronage-report/list"/>
+			<acme:menu-suboption code="master.menu.inventor.patronage.list" action="/inventor/patronage/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

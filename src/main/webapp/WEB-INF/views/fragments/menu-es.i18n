@@ -43,6 +43,7 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.inventor = Inventor
 master.menu.inventor.toolkit.list = Lista de caja de herramientas
 master.menu.inventor.component.list = Lista de componentes
+master.menu.inventor.tool.list = Lista de herramientas
 
 # master.menu.consumer ##########################################################
 
