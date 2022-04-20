@@ -18,9 +18,9 @@ patron.patronage.list.label.endDate = Patronage End
 patron.patronage.list.label.info = Info
 
 patron.patronage.show.label.status = Status
-patron.patronage.show.label.status.proposed = Proposed
-patron.patronage.show.label.status.accepted = Accepted
-patron.patronage.show.label.status.denied = Denied
+patron.patronage.show.label.status.proposed = PROPOSED
+patron.patronage.show.label.status.accepted = ACCEPTED
+patron.patronage.show.label.status.denied = DENIED
 patron.patronage.show.label.code = Code
 patron.patronage.show.label.legalStuff = Legal Stuff
 patron.patronage.show.label.budget = Budget
