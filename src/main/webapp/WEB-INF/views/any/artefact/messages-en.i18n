@@ -22,3 +22,5 @@ any.artefact.form.label.technology = Technology:
 any.artefact.form.label.description = Description:
 any.artefact.form.label.retailPrice = Retail Price:
 any.artefact.form.label.info = Info:
+any.artefact.form.label.type.component = COMPONENT
+any.artefact.form.label.type.tool = TOOL
