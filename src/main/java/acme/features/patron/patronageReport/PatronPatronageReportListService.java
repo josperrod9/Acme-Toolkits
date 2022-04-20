@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.entities.patronages.PatronageReport;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 import acme.roles.Patron;
 
@@ -35,10 +34,9 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 		assert request != null;
 
 		Collection<PatronageReport> result;
-		Principal principal;
 
-		principal = request.getPrincipal();
-		result = this.repository.findManyPatronagesReportByPatronId(principal.getActiveRoleId());
+		final int patronageId = request.getModel().getInteger("masterId");
+		result = this.repository.findManyPatronagesReportByPatronageId(patronageId);
 
 		return result;
 	}
@@ -49,7 +47,7 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 		assert entity != null;
 		assert model != null;
 		
-		model.setAttribute("patronageId", entity.getPatronage().getCode());
+		model.setAttribute("masterId", entity.getPatronage().getCode());
 
 		request.unbind(entity, model, "creationMoment");
 	}

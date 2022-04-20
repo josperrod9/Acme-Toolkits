@@ -49,5 +49,5 @@
 	<acme:input-textbox code="patron.patronage.show.label.inventor.statement" path="statement" />
 	<acme:input-textbox code="patron.patronage.show.label.inventor.inventorInfo" path="inventorInfo" />
 	
-	<acme:button code="patron.patronage.form.button.patronage-reports" action="/patron/patronage-report/list?patronageId=${id}"/>
+	<acme:button code="patron.patronage.form.button.patronage-reports" action="/patron/patronage-report/list?masterId=${id}"/>
 </acme:form>
