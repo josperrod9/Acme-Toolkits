@@ -15,11 +15,12 @@ inventor.artefact.form.label.type = Tipo:
 inventor.artefact.form.label.technology = Tecnología:
 inventor.artefact.form.label.description = Descripción:
 inventor.artefact.form.label.info = Información:
-
+inventor.artefact.form.label.type.component = COMPONENTE
+inventor.artefact.form.label.type.tool = HERRAMIENTA
 inventor.artefact.form.button.create = Create
  
 inventor.artefact.list.label.name = Nombre
 inventor.artefact.list.label.code = Código
 inventor.artefact.list.label.retailPrice = Precio
-
+inventor.artefact.list.label.type = Tipo
 inventor.artefact.list.button.create = Create

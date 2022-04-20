@@ -19,7 +19,7 @@ public class InventorToolkitListTest extends TestHarness{
 
 		super.signIn("inventor1","inventor1");
 
-		super.clickOnMenu("Inventor", "Toolkit list");
+		super.clickOnMenu("Inventor", "My Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 

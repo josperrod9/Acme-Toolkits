@@ -12,6 +12,8 @@ inventor.artefact.form.label.name = Name:
 inventor.artefact.form.label.code = Code:
 inventor.artefact.form.label.retailPrice = Retail Price:
 inventor.artefact.form.label.type = Type:
+inventor.artefact.form.label.type.component = COMPONENT
+inventor.artefact.form.label.type.tool = TOOL
 inventor.artefact.form.label.technology = Technology:
 inventor.artefact.form.label.description = Description:
 inventor.artefact.form.label.info = Info:
@@ -21,5 +23,5 @@ inventor.artefact.form.button.create = Create
 inventor.artefact.list.label.name = Name
 inventor.artefact.list.label.code = Code
 inventor.artefact.list.label.retailPrice = Retail Price
-
+inventor.artefact.list.label.type = Type
 inventor.artefact.list.button.create = Create
