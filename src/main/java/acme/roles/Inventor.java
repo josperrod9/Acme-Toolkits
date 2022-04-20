@@ -30,7 +30,7 @@ public class Inventor extends UserRole {
 	protected String			statement;
 	
 	@URL
-	protected String info;
+	protected String inventorInfo;
 
 	// Derived attributes -----------------------------------------------------
 

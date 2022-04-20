@@ -36,7 +36,7 @@ public class AdministratorDashboard implements Serializable {
 	Map<Status,Double> averageOfPatronagesGroupedByStatus;
 	Map<Status,Double> deviationOfPatronagesGroupedByStatus;
 	Map<Status,Double> minimumOfPatronagesGroupedByStatus;
-	Map<Status,Double> maimumOfPatronagesGroupedByStatus;
+	Map<Status,Double> maximumOfPatronagesGroupedByStatus;
 
 	// Derived attributes -----------------------------------------------------
 

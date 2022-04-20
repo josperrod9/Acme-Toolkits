@@ -1,2 +1,10 @@
 key,status,code,legal-stuff,budget,creation-date,start-date,end-date,info,key:inventor,key:patron
-patronage-01,ACCEPTED,AAA-786-M,Good work,EUR 54123.78,2020/10/21 05:45,2020/11/21 11:24,2020/12/21 18:18,https://www.collinsdictionary.com/,inventor2,patron3
+patronage-01,ACCEPTED,AAA-786-M,Great work,EUR 54123.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor2,patron3
+patronage-02,ACCEPTED,BBB-786-M,Great work,EUR 4123.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor2,patron3
+patronage-03,ACCEPTED,CCC-786-M,Great work,EUR 12345.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor2,patron3
+patronage-04,DENIED,DDD-786-M,Bad work,EUR 78945.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor3,patron1
+patronage-05,DENIED,EEE-786-M,Bad work,EUR 4444.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor3,patron1
+patronage-06,DENIED,FFF-786-M,Bad work,EUR 5.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor3,patron1
+patronage-07,PROPOSED,GGG-786-M,Good work,EUR 543.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor1,patron2
+patronage-08,PROPOSED,HHH-786-M,Good work,EUR 5413.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor1,patron2
+patronage-09,PROPOSED,III-786-M,Good work,EUR 541.78,2020/10/21 00:00,2020/11/21 00:00,2020/12/21 00:00,https://www.collinsdictionary.com/,inventor1,patron2
