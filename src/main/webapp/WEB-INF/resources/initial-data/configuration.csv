@@ -1,9 +1,3 @@
 key,default-currency,currency,weak-spam-term,weak-spam-threshold,strong-spam-term,strong-spam-threshold
-spam-01,EUR,"EUR, USD, GBP",sexy,0.25,sex,0.1
-spam-02,EUR,USD,nigeria,0.25,hard core,0.1
-spam-03,EUR,GBP,you’ve won,0.25,viagra,0.1
-spam-04,EUR,EUR,one million,0.25,cialis,0.1
-spam-05,EUR,EUR,sexy,0.25,sexo,0.1
-spam-06,EUR,USD,nigeria,0.25,hard core,0.1
-spam-07,EUR,GBP,has ganado,0.25,viagra,0.1
-spam-08,EUR,EUR,un millón,0.25,cialis,0.1
+system-configuration-01,EUR,"EUR,USD,GBP","sex,sexo,duro,hard core,viagra,cialis",0.25,"sexy,sexi,nigeria,you've won,has ganado,one million,un millon",0.1
+

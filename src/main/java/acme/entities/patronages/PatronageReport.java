@@ -39,7 +39,7 @@ public class PatronageReport extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-    	protected Date              creationMoment;
+    protected Date              creationMoment;
 	
 	@URL
 	protected String			info;

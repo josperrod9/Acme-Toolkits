@@ -24,44 +24,66 @@ master.menu.anonymous.pepe = 45157051R:Pérez,José
 master.menu.anonymous.alberto = 20102017V:Monedero,Alberto
 master.menu.anonymous.pablog = 80101033Z:Giráldez,Pablo
 master.menu.anonymous.pablob = 30696743T:Benitez,Pablo
-
+master.menu.anonymous.user-accounts = List User accounts
+master.menu.anonymous.chirp = List Chirps
+master.menu.anonymous.artefact = List Artefact
+master.menu.anonymous.toolkit = List Toolkit
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.user-accounts = List User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
-# master.menu.provider ########################################################
+master.menu.administrator.configuration = Show system configuration
+master.menu.administrator.chirp = List Chirps
+master.menu.administrator.artefact = List Artefact
+master.menu.administrator.toolkit = List Toolkit
 
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+# master.menu.patron ########################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronages
+master.menu.patron.dashboard = Dashboard
+master.menu.patron.user-accounts =  List User accounts
+master.menu.patron.chirp = List Chirps
+master.menu.patron.artefact = List Artefact
+master.menu.patron.toolkit = List Toolkit
+
 
 # master.menu.inventor ########################################################
 
 master.menu.inventor = Inventor
-master.menu.inventor.toolkit.list = Toolkit list
-master.menu.inventor.component.list = Component list
-master.menu.inventor.tool.list = Tool list
-master.menu.inventor.patronageReport.list = Patronage Report
-master.menu.inventor.patronage.list = Patronage
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
+master.menu.inventor.toolkit.list = My Toolkits
+master.menu.inventor.component.list = My Components
+master.menu.inventor.tool.list = My Tools
+master.menu.inventor.patronageReport.list = My Patronage Reports
+master.menu.inventor.patronage.list = My Patronages
+master.menu.inventor.user-accounts =  List User accounts
+master.menu.inventor.chirp = List Chirps
+master.menu.inventor.artefact = List Artefact
+master.menu.inventor.toolkit = List Toolkit
 
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.patron = Patron data
+master.menu.user-account.become-patron = Become a patron
+master.menu.user-account.inventor = Inventor data
+master.menu.user-account.become-inventor = Become a inventor
+master.menu.user-account.toolkit = List Toolkit
 
-#########################
-master.menu.authenticated =authenticated user
+# master.menu.authenticated ####################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.announcement = List Announcement
+master.menu.authenticated.user-accounts = List User accounts
+master.menu.authenticated.chirp = List Chirps
+master.menu.authenticated.artefact = List Artefact
+master.menu.authenticated.toolkit = List Toolkit
+master.menu.authenticated = authenticated user
 master.menu.authenticated.configuration.list = configuration
+
