@@ -12,6 +12,7 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -136,7 +137,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			maximumRetailPriceOfToolsGroupedByCurrency.put(key,value);
 		}
 		
-		final Map<Status,Integer> totalNumberofPatronagesGroupedByStatus=new HashMap<Status, Integer>();
+		final Map<Status,Integer> totalNumberofPatronagesGroupedByStatus=new EnumMap<Status, Integer>(Status.class);
 		final List<String> totalNumberofPatronagesByStatusList=this.repository.totalNumberofPatronagesGroupedByStatus();
 		for(final String str:totalNumberofPatronagesByStatusList) {
 			final String[] split = str.split(",");
@@ -145,7 +146,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			totalNumberofPatronagesGroupedByStatus.put(key,value);
 		}
 		
-		final Map<Status,Double> averageOfPatronagesGroupedByStatus=new HashMap<Status, Double>();
+		final Map<Status,Double> averageOfPatronagesGroupedByStatus=new EnumMap<Status, Double>(Status.class);
 		final List<String> averageOfPatronagesByStatusList = this.repository.averageOfPatronagesGroupedByStatus();
 		for(final String str:averageOfPatronagesByStatusList) {
 			final String[] split = str.split(",");
@@ -154,7 +155,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			averageOfPatronagesGroupedByStatus.put(key,value);
 		}
 		
-		final Map<Status,Double> deviationOfPatronagesGroupedByStatus=new HashMap<Status, Double>();
+		final Map<Status,Double> deviationOfPatronagesGroupedByStatus=new EnumMap<Status, Double>(Status.class);
 		final List<String> deviationOfPatronagesByStatusList = this.repository.deviationOfPatronagesGroupedByStatus();
 		for(final String str:deviationOfPatronagesByStatusList) {
 			final String[] split = str.split(",");
@@ -163,7 +164,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			deviationOfPatronagesGroupedByStatus.put(key,value);
 		}
 		
-		final Map<Status,Double> minimumOfPatronagesGroupedByStatus=new HashMap<Status, Double>();
+		final Map<Status,Double> minimumOfPatronagesGroupedByStatus=new EnumMap<Status, Double>(Status.class);
 		final List<String> minimumOfPatronagesByStatusList = this.repository.minimumOfPatronagesGroupedByStatus();
 		for(final String str:minimumOfPatronagesByStatusList) {
 			final String[] split = str.split(",");
@@ -172,7 +173,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			minimumOfPatronagesGroupedByStatus.put(key,value);
 		}
 		
-		final Map<Status,Double> maximumOfPatronagesGroupedByStatus=new HashMap<Status, Double>();
+		final Map<Status,Double> maximumOfPatronagesGroupedByStatus=new EnumMap<Status, Double>(Status.class);
 		final List<String> maximumOfPatronagesByStatusList = this.repository.maximumOfPatronagesGroupedByStatus();
 		for(final String str:maximumOfPatronagesByStatusList) {
 			final String[] split = str.split(",");

@@ -21,23 +21,24 @@
 </h2>
 
 <table class="table table-sm" id=list>
+	<caption>Patron Dashboard</caption>
 	<jstl:forEach items="${totalNumberOfPatronagesGroupedByStatus}" var="entry">
 		<tr>
 			<jstl:if test="${entry.key == 'PROPOSED'}">
 				<td><acme:message code="patron.dashboard.form.label.numPatronageProposed" /></td>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if> 
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'DENIED'}">
 				<td><acme:message code="patron.dashboard.form.label.numPatronageDenied" /></td>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr> 
 			<jstl:if test="${entry.key == 'ACCEPTED'}">
 					<td><acme:message code="patron.dashboard.form.label.numPatronageAccepted" /></td>
-					<th><acme:print value="${entry.value}" /></th>
+					<th id="value"><acme:print value="${entry.value}" /></th>
 				</jstl:if>
 		</tr>
 	</jstl:forEach>
@@ -47,6 +48,7 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>Patron Dashboard</caption>
 	<jstl:forEach items="${averageBudgetOfPatronagesGroupedByCurrencyAndStatus}" var="entry">
 		<tr>
 			<td>
@@ -58,7 +60,7 @@
 				<acme:message code="patron.patron-dashboard.form.label.status"/>
 				<acme:print value="${pairSplited[0]}"/> 
 			</td>
-			<th>
+			<th id="value">
 				<acme:print value="${entry.value}"/>
 			</th>
 		</tr>
@@ -72,6 +74,7 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>Patron Dashboard</caption>
 	<jstl:forEach items="${deviationBudgetOfPatronagesGroupedByCurrencyAndStatus}" var="entry">
 		<tr>
 			<td>
@@ -83,7 +86,7 @@
 				<acme:message code="patron.patron-dashboard.form.label.status"/>
 				<acme:print value="${pairSplited[0]}"/> 
 			</td>
-			<th>
+			<th id="value">
 				<acme:print value="${entry.value}"/>
 			</th>
 		</tr>
@@ -97,6 +100,7 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>Patron Dashboard</caption>
 	<jstl:forEach items="${maximumBudgetOfPatronagesGroupedByCurrencyAndStatus}" var="entry">
 		<tr>
 			<td>
@@ -108,7 +112,7 @@
 				<acme:message code="patron.patron-dashboard.form.label.status"/>
 				<acme:print value="${pairSplited[0]}"/> 
 			</td>
-			<th>
+			<th id="value">
 				<acme:print value="${entry.value}"/>
 			</th>
 		</tr>
@@ -122,6 +126,7 @@
 </h3>
 
 <table class="table table-sm">
+	<caption>Patron Dashboard</caption>
 	<jstl:forEach items="${minimumBudgetOfPatronagesGroupedByCurrencyAndStatus}" var="entry">
 		<tr>
 			<td>
@@ -133,7 +138,7 @@
 				<acme:message code="patron.patron-dashboard.form.label.status"/>
 				<acme:print value="${pairSplited[0]}"/> 
 			</td>
-			<th>
+			<th id="value">
 				<acme:print value="${entry.value}"/>
 			</th>
 		</tr>

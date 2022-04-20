@@ -1,6 +1,7 @@
 package acme.features.patron.dashboard;
 
 
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,7 +49,7 @@ public class PatronDashboardShowService implements AbstractShowService<Patron, P
 		numPatronageAccepted = this.repository.numPatronageAcceptedByPatronId(principal.getActiveRoleId());
 		numPatronageDenied = this.repository.numPatronageDeniedByPatronId(principal.getActiveRoleId());
 	
-		final Map<Status,Integer> map= new HashMap<Status, Integer>();
+		final Map<Status,Integer> map= new EnumMap<Status, Integer>(Status.class);
 		map.put(Status.ACCEPTED, numPatronageAccepted);
 		map.put(Status.DENIED, numPatronageDenied);
 		map.put(Status.PROPOSED, numPatronageProposed);

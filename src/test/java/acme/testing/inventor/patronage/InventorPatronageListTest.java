@@ -19,13 +19,13 @@ public class InventorPatronageListTest extends TestHarness{
 
 		super.signIn("inventor2","inventor2");
 		
-		super.clickOnMenu("Inventor", "Patronage");
+		super.clickOnMenu("Inventor", "My Patronages");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-
+		
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, legalStuff);
-		super.checkColumnHasValue(recordIndex, 2, budget);
+		super.checkColumnHasValue(recordIndex, 2, budget.toString());
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("status", status);

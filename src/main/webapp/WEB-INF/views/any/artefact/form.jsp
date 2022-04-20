@@ -18,9 +18,23 @@
 <acme:form>
 	<acme:input-textbox code="any.artefact.form.label.name" path="name" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.code" path="code" readonly="true"/>
-	<acme:input-textbox code="any.artefact.form.label.type" path="type" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.technology" path="technology" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.description" path="description" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.retailPrice" path="retailPrice" readonly="true"/>
 	<acme:input-url code="any.artefact.form.label.info" path="info" readonly="true"/>
+	
+		<jstl:if test="${type == 'COMPONENT'}">
+			<acme:input-select path="type" code="any.artefact.form.label.type">
+                                <acme:input-option code="any.artefact.form.label.type.component" value="COMPONENT" selected="true"/>
+                                <acme:input-option code="any.artefact.form.label.type.tool" value="TOOL"/>
+                </acme:input-select> 
+    </jstl:if> 
+    <jstl:if test="${type == 'TOOL'}">
+			<acme:input-select path="type" code="any.artefact.form.label.type">
+                                <acme:input-option code="any.artefact.form.label.type.component" value="COMPONENT" />
+                                <acme:input-option code="any.artefact.form.label.type.tool" value="TOOL" selected="true"/>
+                </acme:input-select> 
+    </jstl:if>  
+	
+	
 </acme:form>

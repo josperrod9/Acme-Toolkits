@@ -16,7 +16,7 @@ public class AnyArtefactListTest extends TestHarness{
 	@CsvFileSource(resources = "/any/artefact/list-all.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String type, final String name, final String code, 
-		final String retailPrice, final String technology, final String description) {
+		final String retailPrice, final String technology, final String description, final String info) {
 
 		super.clickOnMenu("Anonymous", "List Artefact");
 		super.checkListingExists();
@@ -31,6 +31,7 @@ public class AnyArtefactListTest extends TestHarness{
         super.checkInputBoxHasValue("type", type);
         super.checkInputBoxHasValue("name", name);
         super.checkInputBoxHasValue("code", code);
+        super.checkInputBoxHasValue("info", info);
         super.checkInputBoxHasValue("retailPrice", retailPrice);
         super.checkInputBoxHasValue("technology", technology);
         super.checkInputBoxHasValue("description", description);

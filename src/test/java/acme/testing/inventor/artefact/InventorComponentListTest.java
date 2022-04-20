@@ -19,7 +19,7 @@ public class InventorComponentListTest extends TestHarness{
 
 		super.signIn("inventor1","inventor1");
 		
-		super.clickOnMenu("Inventor", "Component list");
+		super.clickOnMenu("Inventor", "My Components");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
