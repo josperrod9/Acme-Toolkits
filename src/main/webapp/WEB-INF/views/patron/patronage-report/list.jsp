@@ -17,6 +17,4 @@
 
 <acme:list>
 	<acme:list-column code="patron.patronage-report.list.label.creationMoment" path="creationMoment" width="50%"/>
-	<acme:list-column code="patron.patronage-report.list.label.patronage" path="patronageId" width="50%"/>
-	
 </acme:list>

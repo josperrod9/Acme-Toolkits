@@ -35,8 +35,8 @@ public class PatronPatronageReportListService implements AbstractListService<Pat
 
 		Collection<PatronageReport> result;
 
-		final int patronageId = request.getModel().getInteger("masterId");
-		result = this.repository.findManyPatronagesReportByPatronageId(patronageId);
+		final int masterId = request.getModel().getInteger("masterId");
+		result = this.repository.findManyPatronagesReportByPatronageId(masterId);
 
 		return result;
 	}
