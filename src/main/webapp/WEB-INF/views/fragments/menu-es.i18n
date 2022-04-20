@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-﻿# master.menu #################################################################
+# master.menu #################################################################
 
 master.menu.home = Inicio
 master.menu.sign-up = Registrarse
@@ -28,6 +28,7 @@ master.menu.anonymous.user-accounts =  Lista de Cuentas de usuario
 master.menu.anonymous.chirp = Lista de Chirridos
 master.menu.anonymous.artefact = Lista de Artefactos
 master.menu.anonymous.toolkit = Lista de Cajas de herramientas
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -52,10 +53,12 @@ master.menu.patron.chirp = Lista de Chirridos
 master.menu.patron.artefact = Lista de Artefactos
 master.menu.patron.toolkit = Lista de Cajas de herramientas
 
-
-# master.menu.inventor ##########################################################
+# master.menu.inventor ########################################################
 
 master.menu.inventor = Inventor
+master.menu.inventor.toolkit.list = Mi lista de caja de herramientas
+master.menu.inventor.component.list = Mi lista de componentes
+master.menu.inventor.tool.list = Mi lista de herramientas
 master.menu.inventor.user-accounts = Lista de Cuentas de usuario
 master.menu.inventor.chirp = Lista de Chirridos
 master.menu.inventor.artefact = Lista de Artefactos
@@ -65,17 +68,19 @@ master.menu.inventor.toolkit = Lista de Cajas de herramientas
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.patron = Datos de patrocinador
+master.menu.user-account.become-patron = Hazte patrocinador
+master.menu.user-account.inventor = Datos de inventor
+master.menu.user-account.become-inventor = Hazte inventor
 master.menu.user-account.toolkit = Lista de Cajas de herramientas
 
 # master.menu.authenticated ####################################################
 
+master.menu.authenticated.configuration.list = configuracion
 master.menu.authenticated = Autenticado
 master.menu.authenticated.announcement = Lista de Anuncios
 master.menu.authenticated.user-accounts =  Lista de Cuentas de usuario
 master.menu.authenticated.chirp = Lista de Chirridos
 master.menu.authenticated.artefact = Lista de Artefactos
 master.menu.authenticated.toolkit = Lista de Cajas de herramientas
+
