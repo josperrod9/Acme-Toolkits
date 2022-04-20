@@ -22,12 +22,13 @@
 </h2>
 
 <table class="table table-sm">
+    <caption>Administrator Dashboard</caption>
 	<tr>
-		<td scope="row"><acme:message
+		<td><acme:message
 				code="administrator.administrator-dashboard.form.label.total-number-of-tools" />
 		</td>
-		<th></th>
-		<th><acme:print value="${totalNumberOfTools}" /></th>
+		<th id="blank"></th>
+		<th id="tools"><acme:print value="${totalNumberOfTools}" /></th>
 	</tr>
 	<jstl:forEach items="${totalNumberofPatronagesGroupedByStatus}"
 		var="entry">
@@ -35,24 +36,24 @@
 			<jstl:if test="${entry.key == 'PROPOSED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.numPatronageProposed" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'DENIED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.numPatronageDenied" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'ACCEPTED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.numPatronageAccepted" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 	</jstl:forEach>
@@ -61,14 +62,15 @@
 	<acme:message code="administrator.dashboard.form.title.components" />
 </h2>
 <table class="table table-sm">
+<caption>Administrator Dashboard</caption>
 	<tr>
-		<th><acme:message
+		<th id="value"><acme:message
 				code="administrator.administrator-dashboard.form.title.measure" />
 		</th>
-		<th><acme:message
+		<th id="value"><acme:message
 				code="administrator.administrator-dashboard.form.title.groupby" />
 		</th>
-		<th><acme:message
+		<th id="value"><acme:message
 				code="administrator.administrator-dashboard.form.title.value" /></th>
 	</tr>
 	<jstl:forEach
@@ -83,7 +85,7 @@
 				<acme:print value="${pairSplited[1]}" /> <br /> <acme:message
 					code="administrator.administrator-dashboard.form.label.technology" />
 				<acme:print value="${pairSplited[0]}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 	<jstl:forEach
@@ -98,7 +100,7 @@
 				<acme:print value="${pairSplited[1]}" /> <br /> <acme:message
 					code="administrator.administrator-dashboard.form.label.technology" />
 				<acme:print value="${pairSplited[0]}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 
@@ -115,7 +117,7 @@
 				<acme:print value="${pairSplited[1]}" /> <br /> <acme:message
 					code="administrator.administrator-dashboard.form.label.technology" />
 				<acme:print value="${pairSplited[0]}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 	<jstl:forEach
@@ -130,7 +132,7 @@
 				<acme:print value="${pairSplited[1]}" /> <br /> <acme:message
 					code="administrator.administrator-dashboard.form.label.technology" />
 				<acme:print value="${pairSplited[0]}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 </table>
@@ -139,14 +141,15 @@
 	<acme:message code="administrator.dashboard.form.title.tools" />
 </h2>
 <table class="table table-sm">
+	<caption>Administrator Dashboard</caption>
 	<tr>
-		<th><acme:message
+		<th id ="measure"><acme:message
 				code="administrator.administrator-dashboard.form.title.measure" />
 		</th>
-		<th><acme:message
+		<th id="groupby"><acme:message
 				code="administrator.administrator-dashboard.form.title.groupby" />
 		</th>
-		<th><acme:message
+		<th id="value"><acme:message
 				code="administrator.administrator-dashboard.form.title.value" /></th>
 	</tr>
 	<jstl:forEach items="${averageRetailPriceOfToolsGroupedByCurrency}"
@@ -155,7 +158,7 @@
 			<td><acme:message
 					code="administrator.dashboard.form.title.components.average" /></td>
 			<td><acme:print value="${entry.key}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 	<jstl:forEach items="${deviationRetailPriceOfToolsGroupedByCurrency}"
@@ -164,7 +167,7 @@
 			<td><acme:message
 					code="administrator.dashboard.form.title.components.deviation" /></td>
 			<td><acme:print value="${entry.key}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 
@@ -174,7 +177,7 @@
 			<td><acme:message
 					code="administrator.dashboard.form.title.components.minimum" /></td>
 			<td><acme:print value="${entry.key}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 	<jstl:forEach items="${maximumRetailPriceOfToolsGroupedByCurrency}"
@@ -183,7 +186,7 @@
 			<td><acme:message
 					code="administrator.dashboard.form.title.components.maximum" /></td>
 			<td><acme:print value="${entry.key}" /></td>
-			<th><acme:print value="${entry.value}" /></th>
+			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
 	</jstl:forEach>
 </table>
@@ -192,12 +195,13 @@
 	<acme:message code="administrator.dashboard.form.title.patronages" />
 </h2>
 <table class="table table-sm">
+	<caption>Administrator Dashboard</caption>
 	<tr>
-		<th><acme:message
+		<th id="measure"><acme:message
 				code="administrator.administrator-dashboard.form.title.measure" />
 		</th>
-		<th></th>
-		<th><acme:message
+		<th id="value"></th>
+		<th id="value"><acme:message
 				code="administrator.administrator-dashboard.form.title.value" /></th>
 	</tr>
 	<jstl:forEach items="${averageOfPatronagesGroupedByStatus}" var="entry">
@@ -205,24 +209,24 @@
 			<jstl:if test="${entry.key == 'PROPOSED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.avgPatronageProposed" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="value"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'DENIED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.avgPatronageDenied" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'ACCEPTED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.avgPatronageAccepted" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 	</jstl:forEach>
@@ -232,24 +236,24 @@
 			<jstl:if test="${entry.key == 'PROPOSED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.devPatronageProposed" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'DENIED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.devPatronageDenied" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'ACCEPTED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.devPatronageAccepted" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 	</jstl:forEach>
@@ -259,24 +263,24 @@
 			<jstl:if test="${entry.key == 'PROPOSED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.minPatronageProposed" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'DENIED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.minPatronageDenied" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'ACCEPTED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.minPatronageAccepted" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 	</jstl:forEach>
@@ -285,24 +289,24 @@
 			<jstl:if test="${entry.key == 'PROPOSED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.maxPatronageProposed" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'DENIED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.maxPatronageDenied" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 		<tr>
 			<jstl:if test="${entry.key == 'ACCEPTED'}">
 				<td><acme:message
 						code="administrator.administrator-dashboard.form.label.maxPatronageAccepted" /></td>
-				<th></th>
-				<th><acme:print value="${entry.value}" /></th>
+				<th id="blank"></th>
+				<th id="value"><acme:print value="${entry.value}" /></th>
 			</jstl:if>
 		</tr>
 	</jstl:forEach>
