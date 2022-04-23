@@ -89,8 +89,7 @@
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.inventor.artefact"
 				action="/any/artefact/list" />
-			<acme:menu-suboption code="master.menu.inventor.component.list" action="/inventor/artefact/list?type=component"/>
-			<acme:menu-suboption code="master.menu.inventor.tool.list" action="/inventor/artefact/list?type=tool"/>
+			<acme:menu-suboption code="master.menu.inventor.artefact.list" action="/inventor/artefact/list"/>
 			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronageReport.list" action="/inventor/patronage-report/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage.list" action="/inventor/patronage/list"/>

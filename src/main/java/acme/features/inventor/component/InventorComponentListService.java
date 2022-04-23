@@ -30,12 +30,8 @@ public class InventorComponentListService implements AbstractListService<Invento
 	@Override
     public Collection<Artefact> findMany(final Request<Artefact> request) {
         final Principal principal = request.getPrincipal();
-		final String type = request.getModel().getString("type");
-		if (type.equals("component")) {
-			return this.repo.findAllInventorComponents(principal.getActiveRoleId());
-		} else {
-			return this.repo.findAllInventorTools(principal.getActiveRoleId());
-		}
+		
+			return this.repo.findAllInventorArtefacts(principal.getActiveRoleId());
     }
 
 	
