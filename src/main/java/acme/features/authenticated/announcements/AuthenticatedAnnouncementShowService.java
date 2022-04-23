@@ -23,7 +23,7 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 	public boolean authorise(final Request<Announcement> request) {
 		assert request != null;
 		
-		return true;
+		return request.getPrincipal().isAuthenticated();
 	}
 
 	@Override

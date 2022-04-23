@@ -1,2 +1,3 @@
-key,code,title,description,assembly-notes,info,key:inventor
-toolkit-01,HHG-123-Q,Super Toolkit,Ultra Toolkit,So Cheap,http://ev.us.es,inventor1
+key,code,title,description,assembly-notes,info,key:inventor,published
+toolkit-01,HHG-123-Q,Super Toolkit,Ultra Toolkit,So Cheap,http://ev.us.es,inventor1,true
+toolkit-02,HHG-456-Q,Ultra Toolkit,Super Toolkit,So Cheap,http://ev.us.es,inventor1,false
