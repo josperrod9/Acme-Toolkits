@@ -18,11 +18,20 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 	protected PatronPatronageRepository repository;
 	
 	@Override
-	public boolean authorise(final Request<Patronage> request) {
-		assert request != null;
-		return true;
-	}
+    public boolean authorise(final Request<Patronage> request) {
+        assert request != null;
 
+        boolean result;
+        int id;
+        id = request.getModel().getInteger("id");
+
+        Patronage patronage;
+        patronage = this.repository.findOneById(id);
+
+        result = request.isPrincipal(patronage.getPatron());
+
+        return result;
+    }
 	@Override
 	public Patronage findOne(final Request<Patronage> request) {
 		assert request != null;

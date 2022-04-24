@@ -26,7 +26,7 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
 		assert request != null;
-		return request.getPrincipal().isAuthenticated();
+		return true;
 	}
 
 	@Override
