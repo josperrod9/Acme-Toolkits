@@ -1,3 +1,3 @@
 recordIndex,name,type,code,retailPrice,technology,description,info
-0,Washer,COMPONENT,QQT-789-N,"GBP 15.35",Bronze,Small size,https://github.com/
-1,TOOL,Hammer,CDF-111-C,"EUR 21.15",steel,a Steel hammer,https://github.com/
+0,TOOL,Hammer,CDF-111-C,"EUR 21.15",steel,a Steel hammer,https://google.com/
+1,COMPONENT,Screw,QQM-789-N,"GBP 24.04",Bronze,Small size,https://github.com/

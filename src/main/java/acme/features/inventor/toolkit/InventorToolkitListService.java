@@ -23,7 +23,7 @@ public class InventorToolkitListService implements AbstractListService<Inventor,
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().isAuthenticated();
 	}
 	
 	

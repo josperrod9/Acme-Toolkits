@@ -19,7 +19,16 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int patronageId;
+		Patronage patronage;
+		
+		patronageId = request.getModel().getInteger("id");
+		patronage =  this.repo.findPatronageById(patronageId);
+		result = patronage.getInventor().getId() == request.getPrincipal().getActiveRoleId();
+		
+		return result;
 	}
 
 	@Override
@@ -41,7 +50,7 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "status", "code", "legalStuff","creationDate","budget","info");
+        request.unbind(entity, model, "status", "code", "legalStuff","creationDate","budget","info","id");
 		
 	}
 

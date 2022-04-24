@@ -23,7 +23,7 @@ public class InventorComponentListService implements AbstractListService<Invento
 	@Override
 	public boolean authorise( final Request<Artefact> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().isAuthenticated();
 	}
 	
 	
@@ -41,6 +41,6 @@ public class InventorComponentListService implements AbstractListService<Invento
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "name","code","retailPrice","type");
+        request.unbind(entity, model, "name","code","retailPrice","type","id");
     }
 }
