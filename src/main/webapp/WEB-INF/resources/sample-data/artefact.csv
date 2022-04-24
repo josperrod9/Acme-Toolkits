@@ -1,9 +1,9 @@
-key,name,code,type,technology,description,retailPrice,info,key:inventor
-artefact-01,Hammer,CDF-111-C,TOOL,steel,a Steel hammer,EUR 21.15,https://google.com/,inventor1
-artefact-02,Spike,QQW-789-N,TOOL,Bronze,Small size,"USD 14.00",https://github.com/,inventor2
-artefact-03,Wrench,QQI-789-N,TOOL,Bronze,Small size,"USD 34.00",https://github.com/,inventor1
-artefact-04,Screwdriver,QDW-789-N,TOOL,Bronze,Small size,"EUR 30.00",https://github.com/,inventor2
-artefact-05,Screw,QQM-789-N,COMPONENT,Bronze,Small size,"GBP 24.04",https://github.com/,inventor1
-artefact-06,Nut,QQH-789-N,COMPONENT,Bronze,Small size,"EUR 32.10",https://github.com/,inventor2
-artefact-07,Washer,QQT-789-N,COMPONENT,Bronze,Small size,"GBP 15.35",https://github.com/,inventor1
-artefact-08,Nail,QSW-789-N,COMPONENT,Bronze,Small size,"EUR 124.12",https://github.com/,inventor2
+key,name,code,type,technology,description,retailPrice,info,key:inventor,published
+artefact-01,Screw,QQM-789-N,COMPONENT,Bronze,Small size,"GBP 24.04",https://github.com/,inventor1,true
+artefact-02,Wrench,QQI-789-N,TOOL,Bronze,Small size,"USD 34.00",https://github.com/,inventor1,true
+artefact-03,Spike,QQW-789-N,TOOL,Bronze,Small size,"USD 14.00",https://github.com/,inventor2,false
+artefact-04,Screwdriver,QDW-789-N,TOOL,Bronze,Small size,"EUR 30.00",https://github.com/,inventor2,false
+artefact-05,Hammer,CDF-111-C,TOOL,steel,a Steel hammer,EUR 21.15,https://google.com/,inventor1,true
+artefact-06,Nut,QQH-789-N,COMPONENT,Bronze,Small size,"EUR 32.10",https://github.com/,inventor2,true
+artefact-07,Washer,QQT-789-N,COMPONENT,Bronze,Small size,"GBP 15.35",https://github.com/,inventor1,true
+artefact-08,Nail,QSW-789-N,COMPONENT,Bronze,Small size,"EUR 124.12",https://github.com/,inventor2,false

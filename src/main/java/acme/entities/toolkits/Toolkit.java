@@ -44,9 +44,10 @@ public class Toolkit extends AbstractEntity {
 
 	@URL
 	protected String			info;
-
+	
+	protected boolean 			published;
 	// Derived attributes -----------------------------------------------------
-
+	
 	// Relationships ----------------------------------------------------------
 	@ManyToOne(optional = false)
 	protected Inventor inventor;

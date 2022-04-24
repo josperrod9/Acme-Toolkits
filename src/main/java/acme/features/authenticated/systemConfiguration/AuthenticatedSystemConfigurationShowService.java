@@ -23,7 +23,7 @@ public class AuthenticatedSystemConfigurationShowService implements AbstractShow
 	@Override
 	public boolean authorise(final Request<Configuration> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().isAuthenticated();
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class AuthenticatedSystemConfigurationShowService implements AbstractShow
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "defaultCurrency", "currency");
+        request.unbind(entity, model, "defaultCurrency", "currency", "id");
 		
 	}
 

@@ -23,7 +23,7 @@ public class InventorPatronageReportListService implements AbstractListService<I
 	@Override
 	public boolean authorise(final Request<PatronageReport> request) {
 		assert request != null;
-		return true;
+		return request.getPrincipal().isAuthenticated();
 	}
 	
 	
@@ -39,6 +39,6 @@ public class InventorPatronageReportListService implements AbstractListService<I
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "memorandum", "creationMoment", "info");
+        request.unbind(entity, model, "memorandum", "creationMoment", "info","id");
     }
 }

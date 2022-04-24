@@ -6,20 +6,20 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class InventorToolListTest extends TestHarness{
+public class InventorArtefactListTest extends TestHarness{
 	
 	// Lifecycle management ---------------------------------------------------
 
     // Test cases -------------------------------------------------------------
 	@ParameterizedTest
-	@CsvFileSource(resources = "/inventor/artefact/list-tool.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/artefact/list-artefact.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String name, final String code, final String type, final String technology,
-		final String description, final String retailPrice, final String info) {
+	public void positiveTest(final int recordIndex, final String type, final String name, final String code, final String retailPrice,
+		final String technology, final String description, final String info) {
 
-		super.signIn("inventor2","inventor2");
+		super.signIn("inventor1","inventor1");
 		
-		super.clickOnMenu("Inventor", "My Tools");
+		super.clickOnMenu("Inventor", "My Artefacts");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 

@@ -89,8 +89,7 @@
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.inventor.artefact"
 				action="/any/artefact/list" />
-			<acme:menu-suboption code="master.menu.inventor.component.list" action="/inventor/artefact/list?type=component"/>
-			<acme:menu-suboption code="master.menu.inventor.tool.list" action="/inventor/artefact/list?type=tool"/>
+			<acme:menu-suboption code="master.menu.inventor.artefact.list" action="/inventor/artefact/list"/>
 			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronageReport.list" action="/inventor/patronage-report/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage.list" action="/inventor/patronage/list"/>
@@ -104,9 +103,9 @@
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
-			<acme:menu-suboption code="master.menu.user-account.become-patron" action="/authenticated/provider/create" access="!hasRole('Provider')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-patron" action="/authenticated/patron/create" access="!hasRole('Patron')"/>
 			<acme:menu-suboption code="master.menu.user-account.patron" action="/authenticated/provider/update" access="hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRole('Inventor')"/>
 			<acme:menu-suboption code="master.menu.user-account.inventor" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
 		</acme:menu-option>
 

@@ -57,8 +57,7 @@ master.menu.patron.toolkit = List Toolkit
 
 master.menu.inventor = Inventor
 master.menu.inventor.toolkit.list = My Toolkits
-master.menu.inventor.component.list = My Components
-master.menu.inventor.tool.list = My Tools
+master.menu.inventor.artefact.list = My Artefacts
 master.menu.inventor.patronageReport.list = My Patronage Reports
 master.menu.inventor.patronage.list = My Patronages
 master.menu.inventor.user-accounts =  List User accounts
