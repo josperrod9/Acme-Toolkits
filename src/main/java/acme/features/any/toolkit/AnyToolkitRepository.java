@@ -21,6 +21,9 @@ public interface AnyToolkitRepository extends AbstractRepository {
 	@Query("select a from ArtefactToolkit a where a.toolkit.id=:id")
 	Collection<ArtefactToolkit> findArtefactToolkitByToolKit(int id);
 	
+	@Query("select c.defaultCurrency  from Configuration c")
+	String getDefaultCurrency();
+	
 	
 
 }
