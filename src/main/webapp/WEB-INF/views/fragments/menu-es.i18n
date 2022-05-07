@@ -28,6 +28,7 @@ master.menu.anonymous.user-accounts =  Lista de Cuentas de usuario
 master.menu.anonymous.chirp = Lista de Chirridos
 master.menu.anonymous.artefact = Lista de Artefactos
 master.menu.anonymous.toolkit = Lista de Cajas de herramientas
+master.menu.anonymous.chirp.create = Crear un chirrido
 
 # master.menu.administrator ###################################################
 
