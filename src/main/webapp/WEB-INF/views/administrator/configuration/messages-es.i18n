@@ -14,3 +14,4 @@ administrator.configuration.form.label.strong-spam-terms = Términos fuertes de 
 administrator.configuration.form.label.strong-spam-threshold= Umbral de Spam fuerte
 administrator.configuration.form.label.weak-spam-terms = Términos débiles de spam
 administrator.configuration.form.label.weak-spam-threshold = Umbral de Spam débil
+administrator.configuration.form.button.update = Actualizar Configuración
