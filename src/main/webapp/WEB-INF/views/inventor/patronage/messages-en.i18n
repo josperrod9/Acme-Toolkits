@@ -16,6 +16,10 @@ inventor.patronage.form.label.info = Info:
 
 inventor.patronage.form.button.create = Create
  
+inventor.patronage.form.button.update = Update
+inventor.patronage.form.label.new-status = New status
+inventor.patronage.form.label.creationDate = Creation date
+
 inventor.patronage.list.label.code = Code:
 inventor.patronage.list.label.legalStuff = LegalStuff: 
 inventor.patronage.list.label.budget = Budget:
