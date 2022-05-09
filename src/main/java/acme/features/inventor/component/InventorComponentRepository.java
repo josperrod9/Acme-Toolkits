@@ -17,6 +17,9 @@ public interface InventorComponentRepository extends AbstractRepository{
 
 	@Query("select a from Artefact a where a.id =:id")
 	Artefact findArtefactById(int id);
+
+	@Query("select a.artefact from ArtefactToolkit a where a.toolkit.id = :masterId")
+	Collection<Artefact> findManyArtefactsByMasterId(int masterId);
 	
 
 }

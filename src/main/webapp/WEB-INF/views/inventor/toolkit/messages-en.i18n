@@ -15,10 +15,13 @@ inventor.toolkit.form.label.info = Info:
 inventor.toolkit.form.label.assemblyNotes = Assembly notes:
 
 
+inventor.toolkit.list.button.create = Create
 inventor.toolkit.form.button.create = Create
+inventor.toolkit.form.button.update = Update
+inventor.toolkit.form.button.delete = Delete
+inventor.toolkit.form.button.publish = Publish
+inventor.toolkit.form.button.artefacts = Artefacts
  
 inventor.toolkit.list.label.title = Title:
 inventor.toolkit.list.label.code = Code:
 inventor.toolkit.list.label.description = Description:
-
-inventor.toolkit.list.button.create = Create
