@@ -18,10 +18,16 @@ inventor.artefact.form.label.technology = Technology:
 inventor.artefact.form.label.description = Description:
 inventor.artefact.form.label.info = Info:
 
-inventor.artefact.form.button.create = Create
+
  
 inventor.artefact.list.label.name = Name
 inventor.artefact.list.label.code = Code
 inventor.artefact.list.label.retailPrice = Retail Price
 inventor.artefact.list.label.type = Type
 inventor.artefact.list.button.create = Create
+inventor.artefact.list.button.update = Update
+inventor.artefact.list.button.create = Create
+inventor.artefact.form.button.create = Create
+inventor.artefact.form.button.update = Update
+inventor.artefact.form.button.delete = Delete
+inventor.artefact.form.button.publish = Publish
