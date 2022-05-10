@@ -37,7 +37,7 @@ public class InventorComponentController extends AbstractController<Inventor, Ar
         super.addCommand("show", this.showService);
         super.addCommand("create", this.createService);
         super.addCommand("update", this.updateService);
-        super.addCommand("publish", this.publishService);
+        super.addCommand("publish","update",this.publishService);
         super.addCommand("delete", this.deleteService);
     }
 

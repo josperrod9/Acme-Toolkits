@@ -29,7 +29,6 @@
 			<acme:menu-suboption code="master.menu.anonymous.artefact"
 				action="/any/artefact/list" />
 		
-			<acme:menu-suboption code="master.menu.anonymous.chirp.create" action="/any/chirp/create"/>
 			
 			<acme:menu-suboption code="master.menu.anonymous.mario" action="http://www.facebook.com/"/>
 			
@@ -49,7 +48,6 @@
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.authenticated.artefact"
 				action="/any/artefact/list" />
-			<acme:menu-suboption code="master.menu.anonymous.chirp.create" action="/any/chirp/create"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.configuration.list" action="/authenticated/configuration/show"/>
 		</acme:menu-option>
@@ -60,10 +58,8 @@
 				action="/any/toolkit/list" />
 			<acme:menu-suboption code="master.menu.administrator.chirp"
 				action="/any/chirp/list" />
-				<acme:menu-suboption code="master.menu.anonymous.chirp.create" action="/any/chirp/create"/>
 			<acme:menu-suboption code="master.menu.administrator.artefact"
 				action="/any/artefact/list" />
-			<acme:menu-suboption code="master.menu.any.chirp.create" action="/any/chirp/create"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/>
@@ -75,7 +71,6 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
-		<acme:menu-suboption code="master.menu.anonymous.chirp.create" action="/any/chirp/create"/>
 			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
 			<acme:menu-suboption code="master.menu.patron.dashboard" action="/patron/patron-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.patron.user-accounts"
@@ -97,7 +92,6 @@
 				action="/any/chirp/list" />
 			<acme:menu-suboption code="master.menu.inventor.artefact"
 				action="/any/artefact/list" />
-			<acme:menu-suboption code="master.menu.anonymous.chirp.create" action="/any/chirp/create"/>
 			<acme:menu-suboption code="master.menu.inventor.artefact.list" action="/inventor/artefact/list"/>
 			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronageReport.list" action="/inventor/patronage-report/list"/>
