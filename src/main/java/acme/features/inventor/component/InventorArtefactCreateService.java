@@ -23,14 +23,9 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 
 		@Override
 		public boolean authorise(final Request<Artefact> request) {
-			boolean result;
-			Inventor inventor;
 			
-			inventor = this.repository.findInventorById(request.getPrincipal().getActiveRoleId());
-			
-			result = request.isPrincipal(inventor);
-			
-			return result;
+			assert request != null;
+			return true;
 		}
 
 		@Override
@@ -48,7 +43,7 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "type", "info");
+			request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "type", "info","published");
 			model.setAttribute("confirmation", false);
 			model.setAttribute("readonly", false);
 		}

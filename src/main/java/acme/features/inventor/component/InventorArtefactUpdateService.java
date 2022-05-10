@@ -27,7 +27,7 @@ public class InventorArtefactUpdateService implements AbstractUpdateService<Inve
             Artefact artefact;
             artefact = this.repository.findArtefactById(id);
 
-            result = request.isPrincipal(artefact.getInventor());
+            result = !artefact.isPublished() && request.isPrincipal(artefact.getInventor());
 
             return result;
     }
@@ -47,7 +47,7 @@ public class InventorArtefactUpdateService implements AbstractUpdateService<Inve
         assert request != null;
         assert entity != null;
         assert model!=null;
-        request.unbind(entity, model, "name", "code", "type", "technology", "description","retailPrice","info");
+        request.unbind(entity, model, "name", "code", "type", "technology", "description","retailPrice","info","published");
     }
 
     @Override
@@ -68,7 +68,7 @@ public class InventorArtefactUpdateService implements AbstractUpdateService<Inve
 			Artefact existing;
 			
 			existing = this.repository.findArtefactByCode(entity.getCode());
-			errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "inventor.toolkit.form.error.duplicated");
+			errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "inventor.artefact.form.error.duplicated");
 		}
     }
 
@@ -76,7 +76,7 @@ public class InventorArtefactUpdateService implements AbstractUpdateService<Inve
     public void update(final Request<Artefact> request, final Artefact entity) {
         assert request != null;
         assert entity != null;
-
+        
         this.repository.save(entity);
 
     }

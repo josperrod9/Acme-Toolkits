@@ -24,9 +24,10 @@
 	<acme:input-url code="inventor.artefact.form.label.info" path="info" />
 	
 <jstl:choose>	 
-	<jstl:when test="${acme:anyOf(command, 'update,show') && published == false}">
+	<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && published == false}">
 			<acme:submit code="inventor.artefact.form.button.update" action="/inventor/artefact/update"/>
-			
+			<acme:submit code="inventor.artefact.form.button.delete" action="/inventor/artefact/delete"/>
+			<acme:submit code="inventor.artefact.form.button.publish" action="/inventor/artefact/publish"/>
 		</jstl:when>
 		<jstl:when test="${command == 'create'}">
 				<acme:input-select path="type" code="inventor.artefact.form.label.type">
