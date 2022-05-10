@@ -10,7 +10,7 @@
 	<acme:input-textbox code="inventor.patronage.form.label.creationDate" path="creationDate" readonly="true"/>
 	<acme:input-url code="inventor.patronage.form.label.info" path="info" readonly="true"/>
 	
-		<jstl:if test="${status != 'PROPOSED'}">
+	<jstl:if test="${status != 'PROPOSED'}">
 		<acme:input-textbox code="inventor.patronage.form.label.status" path="status" readonly="true"/>
 	</jstl:if>
 	
@@ -21,9 +21,6 @@
 			<acme:input-option code="DENIED" value="DENIED"/>
 		</acme:input-select>		
 	</jstl:if>
-			
-	<acme:submit test="${acme:anyOf(command, 'show, update') && status == 'PROPOSED'}" code="inventor.patronage.form.button.update" action="/inventor/patronage/update"/>
-	
-	
-	
+	<acme:button code="inventor.patronage.form.button.createPatronageReport" action="/inventor/patronage-report/create?masterId=${id}"/>
+	<acme:submit test="${acme:anyOf(command, 'show, update') && status == 'PROPOSED'}" code="inventor.patronage.form.button.update" action="/inventor/patronage/update"/>	
 </acme:form>

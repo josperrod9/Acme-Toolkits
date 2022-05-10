@@ -63,6 +63,9 @@ master.menu.inventor.user-accounts = Lista de Cuentas de usuario
 master.menu.inventor.chirp = Lista de Chirridos
 master.menu.inventor.artefact = Lista de Artefactos
 master.menu.inventor.toolkit = Lista de Cajas de herramientas
+master.menu.inventor.artefact.list = Mis artefactos
+master.menu.inventor.patronageReport.list = Mis reportes de patrocinio
+master.menu.inventor.patronage.list = Mis patrocinios
 
 # master.menu.user-account ####################################################
 
@@ -76,7 +79,7 @@ master.menu.user-account.toolkit = Lista de Cajas de herramientas
 
 # master.menu.authenticated ####################################################
 
-master.menu.authenticated.configuration.list = configuracion
+master.menu.authenticated.configuration.list = Configuración
 master.menu.authenticated = Autenticado
 master.menu.authenticated.announcement = Lista de Anuncios
 master.menu.authenticated.user-accounts =  Lista de Cuentas de usuario

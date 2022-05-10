@@ -15,6 +15,7 @@ inventor.patronage.form.label.budget = Presupuesto:
 inventor.patronage.form.label.info = Info:
 
 inventor.patronage.form.button.create = Crear
+inventor.patronage.form.button.createPatronageReport = Crear informe de patrocinio
 
 inventor.patronage.form.button.update = Actualizar
 inventor.patronage.form.label.new-status = Nuevo estado

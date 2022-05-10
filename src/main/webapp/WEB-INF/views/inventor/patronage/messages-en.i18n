@@ -15,6 +15,7 @@ inventor.patronage.form.label.budget = Budget:
 inventor.patronage.form.label.info = Info:
 
 inventor.patronage.form.button.create = Create
+inventor.patronage.form.button.createPatronageReport = Create patronage report
  
 inventor.patronage.form.button.update = Update
 inventor.patronage.form.label.new-status = New status
