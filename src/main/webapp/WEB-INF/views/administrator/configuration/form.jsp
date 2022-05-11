@@ -23,13 +23,7 @@
 	<acme:input-double code="administrator.configuration.form.label.strong-spam-threshold" path="strongSpamThreshold"/>
 	<acme:input-textarea code="administrator.configuration.form.label.weak-spam-terms" path="weakSpamTerm"/>
 	<acme:input-double code="administrator.configuration.form.label.weak-spam-threshold" path="weakSpamThreshold"/>
-	
-	<jstl:choose>	 
-		<jstl:when test="${command == 'update'}">
-			<acme:submit code="administrator.configuration.form.button.update" action="/administrator/configuration/update"/>
-		</jstl:when>	
-		<jstl:when test="${command == 'show'}">
-			<acme:button code="administrator.configuration.form.button.update1" action="/administrator/configuration/update"/>
-		</jstl:when>
-	</jstl:choose>
+
+	<acme:submit code="administrator.configuration.form.button.update" action="/administrator/configuration/update"/>
+
 </acme:form>

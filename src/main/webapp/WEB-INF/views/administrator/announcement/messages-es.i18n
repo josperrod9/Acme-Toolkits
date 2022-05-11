@@ -18,3 +18,8 @@ administrator.announcement.form.label.critical = Crítico:
 administrator.announcement.form.label.info = Información:
 administrator.announcement.form.label.creationMoment = Fecha de creación:
 administrator.announcement.form.label.confirmation = Confirmación 	
+
+administrator.announcement.form.label.notCritical = No es crítico
+administrator.announcement.form.label.isCritical = Es crítico
+
+administrator.announcement.form.button.create = Crear

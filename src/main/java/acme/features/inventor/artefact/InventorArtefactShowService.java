@@ -1,4 +1,4 @@
-package acme.features.inventor.component;
+package acme.features.inventor.artefact;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,10 +10,10 @@ import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorComponentShowService implements AbstractShowService<Inventor, Artefact> {
+public class InventorArtefactShowService implements AbstractShowService<Inventor, Artefact> {
 	
 	@Autowired
-	protected InventorComponentRepository repo;
+	protected InventorArtefactRepository repo;
 	
 	
 	@Override

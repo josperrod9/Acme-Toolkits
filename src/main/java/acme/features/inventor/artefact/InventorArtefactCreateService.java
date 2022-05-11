@@ -1,4 +1,4 @@
-package acme.features.inventor.component;
+package acme.features.inventor.artefact;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 	// Internal state ---------------------------------------------------------
 
 		@Autowired
-		protected InventorComponentRepository repository;
+		protected InventorArtefactRepository repository;
 
 		// AbstractCreateService<Administrator, Announcement> interface --------------
 
@@ -80,7 +80,7 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 				Artefact existing;
 				
 				existing = this.repository.findArtefactByCode(entity.getCode());
-				errors.state(request, existing == null, "code", "inventor.toolkit.form.error.duplicated");
+				errors.state(request, existing == null, "code", "inventor.artefact.form.error.duplicated");
 			}
 		}
 

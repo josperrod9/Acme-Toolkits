@@ -86,5 +86,5 @@ master.menu.authenticated.chirp = List Chirps
 master.menu.authenticated.artefact = List Artefact
 master.menu.authenticated.toolkit = List Toolkit
 master.menu.authenticated = Authenticated User
-master.menu.authenticated.configuration.list = configuration
+master.menu.authenticated.configuration.list = Configuration
 

@@ -17,7 +17,6 @@
 
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="any.chirp.list.label.title" path="title"/>	
-	<acme:input-textbox code="any.chirp.list.label.creationMoment" path="creationMoment"/>
 	<acme:input-textarea code="any.chirp.list.label.body" path="body"/>
 	<acme:input-textbox code="any.chirp.list.label.email" path="email"/>
 	<acme:input-textarea code="any.chirp.list.label.author" path="author"/>

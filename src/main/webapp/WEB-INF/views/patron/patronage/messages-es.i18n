@@ -42,6 +42,7 @@ patron.patronage.show.button.update = Actualizar
 patron.patronage.show.button.delete = Borrar
 patron.patronage.show.button.publish = Publicar
 
+patron.patronage.show.error.start-date-not-null = La fecha de inicio no debe estar vacía 
 patron.patronage.show.error.not-unique = El código debe de ser único.
 patron.patronage.show.error.incorrect-currency = La divisa introducida no corresponde con ninguna del sistema. Revise las divisas permitidas.
 patron.patronage.show.error.username-null = El nombre de usuario no puede estar vacío

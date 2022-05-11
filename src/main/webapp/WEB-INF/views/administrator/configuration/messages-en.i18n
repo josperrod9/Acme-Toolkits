@@ -15,3 +15,5 @@ administrator.configuration.form.label.strong-spam-threshold= Strong Spam Thresh
 administrator.configuration.form.label.weak-spam-terms = Weak Spam Spam Terms
 administrator.configuration.form.label.weak-spam-threshold = Weak Spam Threshold
 administrator.configuration.form.button.update = Update Configuration
+
+administrator.configuration.form.error.incorrect-currency = The default Currency isn't avaliable

@@ -32,3 +32,5 @@ inventor.artefact.form.button.create = Crear
 inventor.artefact.form.button.update = Actualizar
 inventor.artefact.form.button.delete = Borrar
 inventor.artefact.form.button.publish = Publicar
+
+inventor.artefact.form.error.duplicated = El código ya existe

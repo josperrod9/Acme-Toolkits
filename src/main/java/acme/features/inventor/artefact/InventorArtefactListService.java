@@ -1,4 +1,4 @@
-package acme.features.inventor.component;
+package acme.features.inventor.artefact;
 
 import java.util.Collection;
 
@@ -13,11 +13,11 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorComponentListService implements AbstractListService<Inventor,Artefact> {
+public class InventorArtefactListService implements AbstractListService<Inventor,Artefact> {
 	
 	
 	@Autowired
-	protected InventorComponentRepository repo;
+	protected InventorArtefactRepository repo;
 	
 	
 	@Override

@@ -28,13 +28,14 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 		assert request != null;
 		
 		boolean result;
-		
 		int id;
-		id = request.getModel().getInteger("id");
 		Patronage patronage;
-		patronage= this.repository.findOneById(id);
+		Patron patron;
 		
-		result = request.isPrincipal(patronage.getPatron())&&patronage.isNotPublished();
+		id= request.getModel().getInteger("id");
+		patronage = this.repository.findOneById(id);
+		patron = patronage.getPatron();
+		result = request.isPrincipal(patron)&&patronage.isNotPublished();
 		
 		return result;
 	}

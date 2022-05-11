@@ -5,7 +5,14 @@
 
 <acme:form>
 	<acme:input-textbox code="inventor.toolkit.form.label.title" path="title"/>
-	<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
+	<jstl:choose>
+    	<jstl:when test="${command == 'create'}">	
+    		<acme:input-textbox code="inventor.toolkit.form.label.code" path="code"/>
+    	</jstl:when>
+    	<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+    		<acme:input-textbox code="inventor.toolkit.form.label.code" path="code" readonly="${true}"/>
+    	</jstl:when>
+    </jstl:choose>
 	<acme:input-textbox code="inventor.toolkit.form.label.description" path="description"/>
 	<acme:input-textbox code="inventor.toolkit.form.label.assemblyNotes" path="assemblyNotes"/>
 	<acme:input-url code="inventor.toolkit.form.label.info" path="info"/>
