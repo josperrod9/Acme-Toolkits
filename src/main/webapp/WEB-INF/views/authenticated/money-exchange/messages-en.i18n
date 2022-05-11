@@ -8,11 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.chirp.list.label.creationMoment = Creation Moment
-any.chirp.list.label.title = Title
-any.chirp.list.label.author = Author
-any.chirp.list.label.email = Email
-any.chirp.list.label.body = Body
-any.chirp.list.label.confirmation = Confirmation
-any.chirp.form.button.create = Create
-any.chirp.list.button.create = Create
+authenticated.money-exchange.form.label.source = Source money:
+authenticated.money-exchange.form.label.target-currency = Target currency:
+authenticated.money-exchange.form.label.date = Exchange date:
+authenticated.money-exchange.form.label.target = Target money:
+	
+authenticated.money-exchange.form.button.perform = Perform exchange
+
+authenticated.money-exchange.form.label.api-error = Sorry, couldn't perform the exchange

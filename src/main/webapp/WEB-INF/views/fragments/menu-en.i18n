@@ -28,6 +28,7 @@ master.menu.anonymous.user-accounts = List User accounts
 master.menu.anonymous.chirp = List Chirps
 master.menu.anonymous.artefact = List Artefact
 master.menu.anonymous.toolkit = List Toolkit
+master.menu.anonymous.chirp.create = Create a chirp
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator

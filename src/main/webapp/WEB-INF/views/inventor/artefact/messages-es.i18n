@@ -24,3 +24,11 @@ inventor.artefact.list.label.code = Código
 inventor.artefact.list.label.retailPrice = Precio
 inventor.artefact.list.label.type = Tipo
 inventor.artefact.list.button.create = Create
+
+inventor.artefact.list.button.create = Crear
+inventor.artefact.list.button.update = Actualizar
+inventor.artefact.list.button.create = Crear
+inventor.artefact.form.button.create = Crear
+inventor.artefact.form.button.update = Actualizar
+inventor.artefact.form.button.delete = Borrar
+inventor.artefact.form.button.publish = Publicar

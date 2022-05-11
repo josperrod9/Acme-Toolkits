@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.toolkits.Artefact;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Inventor;
 
 
 @Repository
@@ -21,5 +22,9 @@ public interface InventorComponentRepository extends AbstractRepository{
 	@Query("select a.artefact from ArtefactToolkit a where a.toolkit.id = :masterId")
 	Collection<Artefact> findManyArtefactsByMasterId(int masterId);
 	
-
+	@Query("SELECT i FROM Inventor i WHERE i.id =:id")
+	Inventor findInventorById(int id);
+	
+	@Query("SELECT t FROM Artefact t WHERE t.code =:code")
+	Artefact findArtefactByCode(String code);
 }

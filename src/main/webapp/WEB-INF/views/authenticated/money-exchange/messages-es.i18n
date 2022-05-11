@@ -1,4 +1,4 @@
-# i18n-en.i18n
+# i18n-es.i18n
 #
 # Copyright (C) 2012-2022 Rafael Corchuelo.
 #
@@ -8,11 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.chirp.list.label.creationMoment = Creation Moment
-any.chirp.list.label.title = Title
-any.chirp.list.label.author = Author
-any.chirp.list.label.email = Email
-any.chirp.list.label.body = Body
-any.chirp.list.label.confirmation = Confirmation
-any.chirp.form.button.create = Create
-any.chirp.list.button.create = Create
+authenticated.money-exchange.form.label.source = Cantidad origen:
+authenticated.money-exchange.form.label.target-currency = Moneda destino:
+authenticated.money-exchange.form.label.date = Fecha del cambio:
+authenticated.money-exchange.form.label.target = Cantidad destino:
+	
+authenticated.money-exchange.form.button.perform = Realizar cambio
+
+authenticated.money-exchange.form.label.api-error = Lo sentimos, no se pudo hacer este cambio
