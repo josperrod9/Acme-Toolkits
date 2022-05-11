@@ -250,7 +250,7 @@ bg=orange</panel_attributes>
       <x>372</x>
       <y>576</y>
       <w>276</w>
-      <h>108</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -262,6 +262,7 @@ Patronage
 + budget: Money {NotNull, Valid}
 + creationDate: Date {NotNull, Past, Temporal(TIMESTAMP)}
 + startDate: Date {NotNull, Temporal(TIMESTAMP)}
++ notPublished: boolean;
 + endDate: Date {NotNull, Temporal(TIMESTAMP)}
 + info: String {URL}</panel_attributes>
     <additional_attributes/>
@@ -332,12 +333,12 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>360</x>
-      <y>678</y>
+      <y>690</y>
       <w>60</w>
-      <h>36</h>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;40.0;80.0;40.0;80.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
