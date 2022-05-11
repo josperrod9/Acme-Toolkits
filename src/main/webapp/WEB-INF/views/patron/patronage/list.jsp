@@ -30,6 +30,5 @@
 		width="14%" />
 	<acme:list-column code="patron.patronage.list.label.endDate" path="endDate"
 		width="14%" />
-	<acme:list-column code="patron.patronage.list.label.info" path="info"
-		width="14%" />
 </acme:list>
+<acme:button code="patron.patronage.list.button.create" action="/patron/patronage/create"/>

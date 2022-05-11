@@ -16,6 +16,9 @@ patron.patronage.list.label.creationDate = Creación
 patron.patronage.list.label.startDate = Comienzo del Patrocinio
 patron.patronage.list.label.endDate = Final del Patrocinio
 patron.patronage.list.label.info = Info
+patron.patronage.list.label.published = ¿Está publicado?
+
+patron.patronage.list.button.create = Create
 
 patron.patronage.show.label.status = Estado
 patron.patronage.show.label.status.proposed = Propuesto
@@ -33,3 +36,15 @@ patron.patronage.show.label.inventor.username = Inventor
 patron.patronage.show.label.inventor.company = Empresa del Inventor
 patron.patronage.show.label.inventor.statement = Declaración del Inventor
 patron.patronage.show.label.inventor.inventorInfo = Info del Inventor
+
+patron.patronage.show.button.create = Crear
+patron.patronage.show.button.update = Actualizar
+patron.patronage.show.button.delete = Borrar
+patron.patronage.show.button.publish = Publicar
+
+patron.patronage.show.error.not-unique = El código debe de ser único.
+patron.patronage.show.error.incorrect-currency = La divisa introducida no corresponde con ninguna del sistema. Revise las divisas permitidas.
+patron.patronage.show.error.username-null = El nombre de usuario no puede estar vacío
+patron.patronage.show.error.username-does-not-exist = El nombre de usuario correspondiente al inventor que introdujo no se encuentra en la base de datos. Por favor, revise el nombre de usuario.
+patron.patronage.show.error.start-date-not-enough = La fecha de inicio debe de ser, al menos, un mes después de este momento.
+patron.patronage.show.error.end-date-one-week-before-start-date = La fecha de finalización debe de ser, al menos, una semana desués de la fecha de inicio.

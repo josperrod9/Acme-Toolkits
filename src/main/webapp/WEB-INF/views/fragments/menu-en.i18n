@@ -34,6 +34,7 @@ master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = List User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
+master.menu.administrator.announcement = Create an announcement
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
@@ -83,6 +84,6 @@ master.menu.authenticated.user-accounts = List User accounts
 master.menu.authenticated.chirp = List Chirps
 master.menu.authenticated.artefact = List Artefact
 master.menu.authenticated.toolkit = List Toolkit
-master.menu.authenticated = authenticated user
+master.menu.authenticated = Authenticated User
 master.menu.authenticated.configuration.list = configuration
 
