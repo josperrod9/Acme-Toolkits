@@ -13,11 +13,11 @@ inventor.patronageReport.form.label.automaticSequenceNumber = Número de secuenc
 inventor.patronageReport.form.label.creationMoment = Fecha de creación:
 inventor.patronageReport.form.label.info = Información:
 
-
-inventor.patronageReport.form.button.create = Create
+inventor.patronageReport.form.label.confirmation = ¿Es la información correcta?
+inventor.patronageReport.form.button.create = Crear
  
 inventor.patronageReport.list.label.memorandum = Memorandum
 inventor.patronageReport.list.label.creationMoment = Fecha de creación
 inventor.patronageReport.list.label.info = Información
 
-inventor.toolkit.list.button.create = Create
+inventor.patronageReport.list.button.create = Crear 
