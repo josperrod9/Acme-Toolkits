@@ -10,9 +10,7 @@ import acme.entities.patronages.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.entities.UserAccount;
 import acme.framework.services.AbstractUpdateService;
-import acme.roles.Inventor;
 import acme.roles.Patron;
 
 @Service
@@ -112,14 +110,8 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert entity != null;
 		assert model != null;
 		
-		Inventor inventor;
-		inventor = entity.getInventor();
-		UserAccount inventorAccount;
-		inventorAccount = inventor.getUserAccount();
-		request.unbind(entity, model,"status", "code" , "legalStuff", "budget", "creationDate", "startDate", "endDate", "info","notPublished");
-		request.unbind(inventor, model, "company", "statement", "inventorInfo");
-		request.unbind(inventorAccount, model, "username");
-		
+		request.unbind(entity, model, "code", "status", "legalStuff", "budget","creationDate", "startDate", "endDate", "info",
+            "inventor.userAccount.username","inventor.company", "inventor.statement", "inventor.inventorInfo","notPublished");
 	}
 
 	@Override

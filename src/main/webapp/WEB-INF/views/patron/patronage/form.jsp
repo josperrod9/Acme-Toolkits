@@ -40,10 +40,10 @@
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="username"/>
 	    </jstl:when>
 	    <jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
-	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="username" readonly="${true}"/>
-	    	<acme:input-textbox code="patron.patronage.show.label.inventor.company" path="company" readonly="${true}"/>
-	    	<acme:input-textbox code="patron.patronage.show.label.inventor.statement" path="statement" readonly="${true}"/>
-	    	<acme:input-textbox code="patron.patronage.show.label.inventor.inventorInfo" path="inventorInfo" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="inventor.userAccount.username" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.inventor.company" path="inventor.company" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.inventor.statement" path="inventor.statement" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.inventor.inventorInfo" path="inventor.inventorInfo" readonly="${true}"/>
 	    </jstl:when>
     </jstl:choose>
     <acme:input-moment code="patron.patronage.show.label.startDate" path="startDate"/>
