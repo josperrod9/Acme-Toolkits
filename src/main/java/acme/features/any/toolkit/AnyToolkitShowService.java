@@ -9,8 +9,10 @@ import acme.entities.toolkits.ArtefactToolkit;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
+
 
 @Service
 public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit>{
@@ -19,6 +21,9 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit>{
 	
 	@Autowired
 	protected AnyToolkitRepository repository;
+	
+	@Autowired
+	protected AnyToolkitMoneyExchange AnyToolkitMoneyExchange;
 	
 	// AbstractShowService<Authenticated, Toolkit> interface ----------------------------
 
@@ -47,12 +52,16 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit>{
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
+		final String systemCurrency= this.repository.getDefaultCurrency();
 		double price=0;
 		final Collection<ArtefactToolkit> artefactToolkits = this.repository.findArtefactToolkitByToolKit(entity.getId());
+		
 		for(final ArtefactToolkit a :artefactToolkits) {
-			price += a.getAmount()*a.getArtefact().getRetailPrice().getAmount();
-		}
+		final Money artefactPrice=a.getArtefact().getRetailPrice();
+		
+			final Money priceExchanged=this.AnyToolkitMoneyExchange.computeMoneyExchange(artefactPrice, systemCurrency).getTarget();
+			price += a.getAmount()*priceExchanged.getAmount();
+			}
 		model.setAttribute("price", price);
 		request.unbind(entity, model,"code", "title", "description", "assemblyNotes", "info","id");
 		

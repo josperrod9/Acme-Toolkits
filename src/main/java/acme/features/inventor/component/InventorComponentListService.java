@@ -23,15 +23,25 @@ public class InventorComponentListService implements AbstractListService<Invento
 	@Override
 	public boolean authorise( final Request<Artefact> request) {
 		assert request != null;
-		return request.getPrincipal().isAuthenticated();
+		return true;
 	}
 	
 	
 	@Override
     public Collection<Artefact> findMany(final Request<Artefact> request) {
         final Principal principal = request.getPrincipal();
-		
-			return this.repo.findAllInventorArtefacts(principal.getActiveRoleId());
+		int masterId;
+			if(request.getModel().hasAttribute("masterId")) {
+				  masterId = request.getModel().getInteger("masterId");
+				 
+				return this.repo.findManyArtefactsByMasterId(masterId);
+			}
+			else {
+				return this.repo.findAllInventorArtefacts(principal.getActiveRoleId());
+			}
+					
+				
+
     }
 
 	

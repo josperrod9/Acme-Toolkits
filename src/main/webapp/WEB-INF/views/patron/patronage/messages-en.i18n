@@ -16,6 +16,9 @@ patron.patronage.list.label.creationDate = Creation
 patron.patronage.list.label.startDate = Patronage Start
 patron.patronage.list.label.endDate = Patronage End
 patron.patronage.list.label.info = Info
+patron.patronage.list.label.published = Is published?
+
+patron.patronage.list.button.create = Create
 
 patron.patronage.show.label.status = Status
 patron.patronage.show.label.status.proposed = PROPOSED
@@ -29,7 +32,19 @@ patron.patronage.show.label.startDate = Patronage Start
 patron.patronage.show.label.endDate = Patronage End
 patron.patronage.show.label.info = Info
 
+patron.patronage.show.button.create = Create
+patron.patronage.show.button.update = Update
+patron.patronage.show.button.delete = Delete
+patron.patronage.show.button.publish = Publish
+
 patron.patronage.show.label.inventor.username = Inventor
 patron.patronage.show.label.inventor.company = Inventor Company
 patron.patronage.show.label.inventor.statement = Inventor Statement
 patron.patronage.show.label.inventor.inventorInfo = Inventor Info
+
+patron.patronage.show.error.not-unique = Code must be unique
+patron.patronage.show.error.incorrect-currency = Currency entered does not match any of the system currencies. Check the allowed currencies.
+patron.patronage.show.error.username-null = Username cannot be empty
+patron.patronage.show.error.username-does-not-exist = The username corresponding to the inventor you entered is not in the database. Please check the username.
+patron.patronage.show.error.start-date-not-enough = Start date should be at least one month after this time.
+patron.patronage.show.error.end-date-one-week-before-start-date = End date must be at least one week after the start date.

@@ -18,17 +18,18 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 	
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
-		assert request != null;		
-		
-		boolean result;
-		int toolkitId;
-		Toolkit toolkit;
-		
-		toolkitId = request.getModel().getInteger("id");
-		toolkit =  this.repo.findToolkitById(toolkitId);
-		result = toolkit.getInventor().getId() == request.getPrincipal().getActiveRoleId();
-		
-		return result;
+		 assert request != null;
+
+	        boolean result;
+	        int id;
+	        id = request.getModel().getInteger("id");
+
+	        Toolkit toolkit;
+	        toolkit = this.repo.findToolkitById(id);
+
+	        result = request.isPrincipal(toolkit.getInventor());
+
+	        return result;
 	}
 
 	@Override
@@ -50,7 +51,7 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "info", "id");
+        request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "info", "id", "draftMode");
 		
 	}
 

@@ -19,3 +19,4 @@ authenticated.announcement.form.label.creationMoment = Creation Moment:
 authenticated.announcement.form.label.body = Body:
 authenticated.announcement.form.label.critical = Critical:
 authenticated.announcement.form.label.info = Info:
+administrator.announcement.list.button.create = Create an announcement 

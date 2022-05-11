@@ -17,13 +17,28 @@ public class InventorComponentController extends AbstractController<Inventor, Ar
 
     @Autowired
     protected InventorComponentShowService showService;
+    
+    @Autowired
+    protected InventorArtefactCreateService createService;
+    
+    @Autowired
+    protected InventorArtefactUpdateService updateService;
 
+    @Autowired
+    protected InventorArtefactPublishService publishService;
+    
+    @Autowired
+    protected InventorArtefactDeleteService deleteService;
     // Constructors -----------------------------------------------------------
 
     @PostConstruct
     protected void initialise() {
         super.addCommand("list", this.listService);
         super.addCommand("show", this.showService);
+        super.addCommand("create", this.createService);
+        super.addCommand("update", this.updateService);
+        super.addCommand("publish","update",this.publishService);
+        super.addCommand("delete", this.deleteService);
     }
 
 }

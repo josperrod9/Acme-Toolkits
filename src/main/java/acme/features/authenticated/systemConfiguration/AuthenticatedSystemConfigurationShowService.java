@@ -23,7 +23,7 @@ public class AuthenticatedSystemConfigurationShowService implements AbstractShow
 	@Override
 	public boolean authorise(final Request<Configuration> request) {
 		assert request != null;
-		return request.getPrincipal().isAuthenticated();
+		return true;
 	}
 
 	@Override

@@ -18,17 +18,18 @@ public class InventorComponentShowService implements AbstractShowService<Invento
 	
 	@Override
 	public boolean authorise(final Request<Artefact> request) {
-		assert request != null;
-		
-		boolean result;
-		int artefactId;
-		Artefact artefact;
-		
-		artefactId = request.getModel().getInteger("id");
-		artefact =  this.repo.findArtefactById(artefactId);
-		result = artefact.getInventor().getId() == request.getPrincipal().getActiveRoleId();
-		
-		return result;
+		 assert request != null;
+
+	        boolean result;
+	        int id;
+	        id = request.getModel().getInteger("id");
+
+	        Artefact artefact;
+	        artefact = this.repo.findArtefactById(id);
+
+	        result = request.isPrincipal(artefact.getInventor());
+
+	        return result;
 	}
 
 	@Override
@@ -50,7 +51,7 @@ public class InventorComponentShowService implements AbstractShowService<Invento
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "type", "info", "id");
+        request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "type", "info", "id","published");
 		
 	}
 
