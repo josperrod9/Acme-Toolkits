@@ -127,7 +127,7 @@ Toolkit
 + code: String {NotBlank, Unique, Pattern="^[A-Z]{3}-[0-9]{3}(-[A-Z])?$"}
 + title: String {NotBlank, Length(0,101)}
 + description: String {NotBlank, Length(0,256)}
-+ published: boolean
++ draftMode: boolean
 + assemblyNotes: String {NotBlank, Length(0,256)}
 + info: String {URL}
 / totalPrice: Double {Min(0)}</panel_attributes>
@@ -163,7 +163,7 @@ bg=orange</panel_attributes>
       <x>1260</x>
       <y>816</y>
       <w>234</w>
-      <h>102</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
