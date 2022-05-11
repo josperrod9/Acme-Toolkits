@@ -5,7 +5,14 @@
 
 <acme:form>
 	<acme:input-textbox code="inventor.artefact.form.label.name" path="name" />
-	<acme:input-textbox code="inventor.artefact.form.label.code" path="code"/>
+	<jstl:choose>
+    	<jstl:when test="${command == 'create'}">	
+    		<acme:input-textbox code="inventor.artefact.form.label.code" path="code"/>
+    	</jstl:when>
+    	<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+    		<acme:input-textbox code="inventor.artefact.form.label.code" path="code" readonly="${true}"/>
+    	</jstl:when>
+    </jstl:choose>
 		
 		<jstl:if test="${type == 'COMPONENT'}">
 			<acme:input-select path="type" code="inventor.artefact.form.label.type">
@@ -20,7 +27,7 @@
 	
 	<acme:input-textbox code="inventor.artefact.form.label.technology" path="technology" />
 	<acme:input-textbox code="inventor.artefact.form.label.description" path="description" />
-	<acme:input-textbox code="inventor.artefact.form.label.retailPrice" path="retailPrice"/>
+	<acme:input-money code="inventor.artefact.form.label.retailPrice" path="retailPrice"/>
 	<acme:input-url code="inventor.artefact.form.label.info" path="info" />
 	
 <jstl:choose>	 

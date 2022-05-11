@@ -15,3 +15,5 @@ administrator.configuration.form.label.strong-spam-threshold= Umbral de Spam fue
 administrator.configuration.form.label.weak-spam-terms = Términos débiles de spam
 administrator.configuration.form.label.weak-spam-threshold = Umbral de Spam débil
 administrator.configuration.form.button.update = Actualizar Configuración
+
+administrator.configuration.form.error.incorrect-currency = La divisa por defecto no se encuentra disponible

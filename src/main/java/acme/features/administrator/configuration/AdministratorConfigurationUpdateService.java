@@ -21,7 +21,7 @@ public class AdministratorConfigurationUpdateService implements AbstractUpdateSe
 		assert request != null;
 		return true;
 	}
-
+	
 	@Override
 	public void bind(final Request<Configuration> request, final Configuration entity, final Errors errors) {
 		assert request != null;
@@ -53,7 +53,21 @@ public class AdministratorConfigurationUpdateService implements AbstractUpdateSe
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
+		if(!errors.hasErrors("defaultCurrency")) {
+        	String acceptedCurrencies;
+            String[] currencies;
+            acceptedCurrencies = this.repository.findSystemConfiguration().getCurrency();
+            currencies = acceptedCurrencies.split(",");
+            boolean isCurrency = false;
+            String c;
+            c = entity.defaultCurrency;
+            for (final String currency : currencies) {
+            	if (c.equals(currency)) {
+            		isCurrency = true;
+            	}
+			}
+        	errors.state(request, isCurrency, "defaultCurrency", "administrator.configuration.form.error.incorrect-currency");
+        }
 	}
 
 	@Override

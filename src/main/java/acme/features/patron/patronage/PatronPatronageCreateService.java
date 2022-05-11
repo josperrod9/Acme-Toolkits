@@ -53,6 +53,9 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
         assert entity != null;
         assert errors != null;
         
+        Date startDate;
+        startDate = entity.getStartDate();
+        
         if(!errors.hasErrors("code")) {
         	errors.state(request, this.repository.findPatronageByCode(entity.getCode()) == null, "code", "patron.patronage.show.error.not-unique");
         }
@@ -74,8 +77,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
         }
         
         if(!errors.hasErrors("startDate")) {
-        	Date startDate; 
-        	startDate = entity.getStartDate();
+        	
         	Calendar calendar;
         	calendar = Calendar.getInstance();
         	calendar.setTime(entity.getCreationDate()); 
@@ -85,8 +87,6 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
         }
         
         if(!errors.hasErrors("endDate")) {
-        	Date startDate;
-        	startDate = entity.getStartDate();
         	Date endDate; 
         	endDate = entity.getEndDate();
         	Date moment; 

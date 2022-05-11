@@ -26,8 +26,9 @@ inventor.artefact.list.label.retailPrice = Retail Price
 inventor.artefact.list.label.type = Type
 inventor.artefact.list.button.create = Create
 inventor.artefact.list.button.update = Update
-inventor.artefact.list.button.create = Create
 inventor.artefact.form.button.create = Create
 inventor.artefact.form.button.update = Update
 inventor.artefact.form.button.delete = Delete
 inventor.artefact.form.button.publish = Publish
+
+inventor.artefact.form.error.duplicated = The code already exists

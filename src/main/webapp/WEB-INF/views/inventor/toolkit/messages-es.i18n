@@ -25,3 +25,5 @@ inventor.toolkit.form.button.artefacts = Artefactos
 inventor.toolkit.list.label.title = Título:
 inventor.toolkit.list.label.code = Código:
 inventor.toolkit.list.label.description = Descripción:
+
+inventor.toolkit.form.error.duplicated = El código ya existe

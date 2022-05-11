@@ -1,4 +1,4 @@
-package acme.features.inventor.component;
+package acme.features.inventor.artefact;
 
 import java.util.Collection;
 
@@ -11,7 +11,7 @@ import acme.roles.Inventor;
 
 
 @Repository
-public interface InventorComponentRepository extends AbstractRepository{
+public interface InventorArtefactRepository extends AbstractRepository{
 	@Query("select a from Artefact a WHERE a.inventor.id= :id")
 	Collection<Artefact> findAllInventorArtefacts(int id);
 

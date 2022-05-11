@@ -1,4 +1,4 @@
-package acme.features.inventor.component;
+package acme.features.inventor.artefact;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import acme.roles.Inventor;
 public class InventorArtefactUpdateService implements AbstractUpdateService<Inventor,Artefact>{
 
     @Autowired
-    protected InventorComponentRepository repository;
+    protected InventorArtefactRepository repository;
 
     @Override
     public boolean authorise(final Request<Artefact> request) {
