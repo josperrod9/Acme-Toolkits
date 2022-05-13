@@ -21,6 +21,19 @@
 			<acme:input-option code="DENIED" value="DENIED"/>
 		</acme:input-select>		
 	</jstl:if>
+	
+	<jstl:choose>
+		<jstl:when test="${command == 'create'}">		
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.username" path="username"/>
+	    </jstl:when>
+	    
+		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.username" path="patron.userAccount.username" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.company" path="patron.company" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.statement" path="patron.statement" readonly="${true}"/>
+		</jstl:when>	
+	
+	</jstl:choose>
 	<acme:button code="inventor.patronage.form.button.createPatronageReport" action="/inventor/patronage-report/create?masterId=${id}"/>
 	<acme:submit test="${acme:anyOf(command, 'show, update') && status == 'PROPOSED'}" code="inventor.patronage.form.button.update" action="/inventor/patronage/update"/>	
 </acme:form>
