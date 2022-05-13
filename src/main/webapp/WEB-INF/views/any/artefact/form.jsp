@@ -21,8 +21,8 @@
 	<acme:input-textbox code="any.artefact.form.label.technology" path="technology" readonly="true"/>
 	<acme:input-textbox code="any.artefact.form.label.description" path="description" readonly="true"/>
 	<acme:input-money code="any.artefact.form.label.retailPrice" path="retailPrice" readonly="true"/>
-	<acme:input-money code="any.artefact.form.label.money" path="money" readonly="true"/>
 	<acme:input-url code="any.artefact.form.label.info" path="info" readonly="true"/>
+		<acme:input-money code="any.artefact.form.label.money" path="money" readonly="true"/>
 	
 		<jstl:if test="${type == 'COMPONENT'}">
 			<acme:input-select path="type" code="any.artefact.form.label.type">
