@@ -20,6 +20,10 @@ inventor.patronage.form.button.createPatronageReport = Crear informe de patrocin
 inventor.patronage.form.button.update = Actualizar
 inventor.patronage.form.label.new-status = Nuevo estado
 inventor.patronage.form.label.creationDate = Fecha de creación
+
+patron.patronage.show.label.patron.username = Patrón
+patron.patronage.show.label.patron.company = Empresa del Patrón 
+patron.patronage.show.label.patron.statement = Declaración del patrón
  
 inventor.patronage.list.label.code = Código:
 inventor.patronage.list.label.legalStuff = Aviso Legal: 

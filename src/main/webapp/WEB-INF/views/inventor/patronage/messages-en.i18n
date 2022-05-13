@@ -21,6 +21,10 @@ inventor.patronage.form.button.update = Update
 inventor.patronage.form.label.new-status = New status
 inventor.patronage.form.label.creationDate = Creation date
 
+patron.patronage.show.label.patron.username = Patron
+patron.patronage.show.label.patron.company = Patron Company
+patron.patronage.show.label.patron.statement = Patron Statement
+
 inventor.patronage.list.label.code = Code:
 inventor.patronage.list.label.legalStuff = LegalStuff: 
 inventor.patronage.list.label.budget = Budget:
