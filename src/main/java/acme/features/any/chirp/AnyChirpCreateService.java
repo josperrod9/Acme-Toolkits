@@ -37,7 +37,7 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 			assert entity != null;
 			assert errors != null;
 
-			request.bind(entity, errors,"creationMoment", "title", "author", "body", "email");
+			request.bind(entity, errors, "title", "author", "body", "email");
 		}
 
 		@Override

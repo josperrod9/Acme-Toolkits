@@ -5,8 +5,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.announcements.*;
-
+import acme.entities.announcements.Announcement;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -37,7 +36,7 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 			assert entity != null;
 			assert errors != null;
 
-			request.bind(entity, errors,"creationMoment" ,"title", "body", "critical", "info");
+			request.bind(entity, errors,"title", "body", "critical", "info");
 		}
 
 		@Override
@@ -46,7 +45,7 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "creationMoment" ,"title", "body", "critical", "info");
+			request.unbind(entity, model,"title", "body", "critical", "info");
 			model.setAttribute("confirmation", false);
 			model.setAttribute("readonly", false);
 		}

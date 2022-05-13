@@ -78,7 +78,10 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
             		isCurrency = true;
             	}
 			}
+            Double amount;
+            amount=entity.getBudget().getAmount();
         	errors.state(request, isCurrency, "budget", "patron.patronage.show.error.incorrect-currency");
+        	errors.state(request, amount>0, "budget", "patron.patronage.show.error.negative-budget");
         }
         
         if(!errors.hasErrors("startDate")) {
@@ -92,7 +95,7 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
         	errors.state(request, startDate.after(calendar.getTime()), "startDate", "patron.patronage.show.error.start-date-not-enough");
         }
         
-        if(!errors.hasErrors("endDate")) {
+        if(!errors.hasErrors("endDate")&&!errors.hasErrors("startDate")) {
         	Date startDate;
         	startDate = entity.getStartDate();
         	Date endDate; 

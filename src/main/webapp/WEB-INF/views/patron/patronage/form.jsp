@@ -19,11 +19,18 @@
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
 			<acme:input-select code="patron.patronage.show.label.status" path="status" readonly="${true}">
-				<acme:input-option code="patron.patronage.show.label.status.proposed" value="PROPOSED" selected="${status == 'PROPOSED'}"/>
+				<acme:input-option code="patron.patronage.show.label.status.proposed" value="PROPOSED" selected="${status == 'PROPOSED'}" />
 				<acme:input-option code="patron.patronage.show.label.status.accepted" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
 				<acme:input-option code="patron.patronage.show.label.status.denied" value="DENIED" selected="${status == 'DENIED'}"/>
 			</acme:input-select>
 		</jstl:when>
+		<jstl:when test="${command == 'create'}">	
+    		<acme:input-select code="patron.patronage.show.label.status" path="status">
+				<acme:input-option code="patron.patronage.show.label.status.proposed" value="PROPOSED" selected="${status == 'PROPOSED'}" />
+				<acme:input-option code="patron.patronage.show.label.status.accepted" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
+				<acme:input-option code="patron.patronage.show.label.status.denied" value="DENIED" selected="${status == 'DENIED'}"/>
+			</acme:input-select>
+    	</jstl:when>
 	</jstl:choose>
 	<jstl:choose>
     	<jstl:when test="${command == 'create'}">	

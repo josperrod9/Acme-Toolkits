@@ -21,7 +21,6 @@
 		<acme:input-option code="administrator.announcement.form.label.notCritical" value="false" selected="${critical == false}"/>
 		<acme:input-option code="administrator.announcement.form.label.isCritical" value="true" selected="${critical == true}"/>
 	</acme:input-select>
-	<acme:input-textbox code="administrator.announcement.form.label.creationMoment" path="creationMoment"/>
 	<acme:input-textarea code="administrator.announcement.form.label.body" path="body"/>
 	<acme:input-textbox code="administrator.announcement.form.label.info" path="info"/>
 			<acme:input-checkbox code="administrator.announcement.form.label.confirmation" path="confirmation"/>

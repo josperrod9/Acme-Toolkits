@@ -42,6 +42,7 @@ patron.patronage.show.label.inventor.company = Inventor Company
 patron.patronage.show.label.inventor.statement = Inventor Statement
 patron.patronage.show.label.inventor.inventorInfo = Inventor Info
 
+patron.patronage.show.error.negative-budget = The amount must be a positive number
 patron.patronage.show.error.start-date-not-null = Start Date can't be empty 
 patron.patronage.show.error.not-unique = Code must be unique
 patron.patronage.show.error.incorrect-currency = Currency entered does not match any of the system currencies. Check the allowed currencies.
