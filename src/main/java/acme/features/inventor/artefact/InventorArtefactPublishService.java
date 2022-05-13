@@ -69,6 +69,25 @@ public class InventorArtefactPublishService implements AbstractUpdateService<Inv
 				existing = this.repository.findArtefactByCode(entity.getCode());
 				errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "inventor.artefact.form.error.duplicated");
 			}
+	        if(!errors.hasErrors("retailPrice")) {
+	        	String acceptedCurrencies;
+	            String[] currencies;
+	            acceptedCurrencies = this.repository.findConfiguration().getCurrency();
+	            currencies = acceptedCurrencies.split(",");
+	            boolean isCurrency = false;
+	            String c;
+	            c = entity.getRetailPrice().getCurrency();
+	            for (final String currency : currencies) {
+	            	if (c.equals(currency)) {
+	            		isCurrency = true;
+	            	}
+				}
+	            Double amount;
+	            amount=entity.getRetailPrice().getAmount();
+	        	errors.state(request, isCurrency, "retailPrice", "inventor.artefact.form.error.incorrect-currency");
+	        	errors.state(request, amount>0, "retailPrice", "inventor.artefact.form.error.negative-budget");
+	        }
+
 	    }
 
 	    @Override

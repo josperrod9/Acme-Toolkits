@@ -32,3 +32,5 @@ inventor.artefact.form.button.delete = Delete
 inventor.artefact.form.button.publish = Publish
 
 inventor.artefact.form.error.duplicated = The code already exists
+inventor.artefact.form.error.negative-budget = The amount must be a positive number
+inventor.artefact.form.error.incorrect-currency = Currency entered does not match any of the system currencies. Check the allowed currencies.
