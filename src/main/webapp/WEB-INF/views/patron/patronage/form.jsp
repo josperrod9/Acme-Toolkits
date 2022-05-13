@@ -16,22 +16,17 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
-	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
-			<acme:input-select code="patron.patronage.show.label.status" path="status" readonly="${true}">
-				<acme:input-option code="patron.patronage.show.label.status.proposed" value="PROPOSED" selected="${status == 'PROPOSED'}" />
-				<acme:input-option code="patron.patronage.show.label.status.accepted" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
-				<acme:input-option code="patron.patronage.show.label.status.denied" value="DENIED" selected="${status == 'DENIED'}"/>
-			</acme:input-select>
-		</jstl:when>
-		<jstl:when test="${command == 'create'}">	
-    		<acme:input-select code="patron.patronage.show.label.status" path="status">
-				<acme:input-option code="patron.patronage.show.label.status.proposed" value="PROPOSED" selected="${status == 'PROPOSED'}" />
-				<acme:input-option code="patron.patronage.show.label.status.accepted" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>
-				<acme:input-option code="patron.patronage.show.label.status.denied" value="DENIED" selected="${status == 'DENIED'}"/>
-			</acme:input-select>
-    	</jstl:when>
-	</jstl:choose>
+	
+	<jstl:if test="${status == 'PROPOSED'}">
+	<acme:input-textbox code="patron.patronage.show.label.status" path="status" readonly="true"/>
+    </jstl:if> 
+    <jstl:if test="${status == 'ACCEPTED'}">
+	<acme:input-textbox code="patron.patronage.show.label.status" path="status" readonly="true"/>
+    </jstl:if>  
+    <jstl:if test="${status == 'DENIED'}">
+	<acme:input-textbox code="patron.patronage.show.label.status" path="status" readonly="true"/> 
+    </jstl:if>
+
 	<jstl:choose>
     	<jstl:when test="${command == 'create'}">	
     		<acme:input-textbox code="patron.patronage.show.label.code" path="code"/>
@@ -44,7 +39,11 @@
     <acme:input-money code="patron.patronage.show.label.budget" path="budget"/>
     <jstl:choose>
     	<jstl:when test="${command == 'create'}">		
-	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="username"/>
+	    	<acme:input-select code="patron.patronage.show.label.inventor.username" path="username">
+	   			<jstl:forEach items="${inventors}" var="inventor">
+					<acme:input-option code="${inventor}" value="${inventor}"/>
+				</jstl:forEach>
+			</acme:input-select>
 	    </jstl:when>
 	    <jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="inventor.userAccount.username" readonly="${true}"/>
