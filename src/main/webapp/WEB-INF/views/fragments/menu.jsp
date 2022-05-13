@@ -54,12 +54,7 @@
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 		
-					<acme:menu-suboption code="master.menu.administrator.toolkit"
-				action="/any/toolkit/list" />
-			<acme:menu-suboption code="master.menu.administrator.chirp"
-				action="/any/chirp/list" />
-			<acme:menu-suboption code="master.menu.administrator.artefact"
-				action="/any/artefact/list" />
+					
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-separator/>
@@ -76,25 +71,11 @@
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
 			<acme:menu-suboption code="master.menu.patron.dashboard" action="/patron/patron-dashboard/show"/>
-			<acme:menu-suboption code="master.menu.patron.user-accounts"
-				action="/any/user-account/list" />
-			<acme:menu-suboption code="master.menu.patron.toolkit"
-				action="/any/toolkit/list" />
-			<acme:menu-suboption code="master.menu.patron.chirp"
-				action="/any/chirp/list" />
-			<acme:menu-suboption code="master.menu.patron.artefact"
-				action="/any/artefact/list" />
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.user-accounts"
-				action="/any/user-account/list" />
-					<acme:menu-suboption code="master.menu.inventor.toolkit"
-				action="/any/toolkit/list" />
-			<acme:menu-suboption code="master.menu.inventor.chirp"
-				action="/any/chirp/list" />
-			<acme:menu-suboption code="master.menu.inventor.artefact"
-				action="/any/artefact/list" />
+			
 			<acme:menu-suboption code="master.menu.inventor.artefact.list" action="/inventor/artefact/list"/>
 			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
 			<acme:menu-suboption code="master.menu.inventor.patronageReport.list" action="/inventor/patronage-report/list"/>
