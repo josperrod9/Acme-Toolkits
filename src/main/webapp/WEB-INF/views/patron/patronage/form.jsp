@@ -37,6 +37,8 @@
     </jstl:choose>
     <acme:input-textarea code="patron.patronage.show.label.legalStuff" path="legalStuff"/>
     <acme:input-money code="patron.patronage.show.label.budget" path="budget"/>
+     <acme:input-money code="patron.patronage.show.label.money" path="money"/>
+    
     <jstl:choose>
     	<jstl:when test="${command == 'create'}">		
 	    	<acme:input-select code="patron.patronage.show.label.inventor.username" path="username">

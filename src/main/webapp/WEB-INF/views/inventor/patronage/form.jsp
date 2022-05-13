@@ -7,6 +7,7 @@
    	<acme:input-textbox code="inventor.patronage.form.label.code" path="code" readonly="true"/>
 	<acme:input-textbox code="inventor.patronage.form.label.legalStuff" path="legalStuff" readonly="true"/>
 	<acme:input-textbox code="inventor.patronage.form.label.budget" path="budget" readonly="true"/>
+	<acme:input-textbox code="inventor.patronage.form.label.money" path="money" readonly="true"/>
 	<acme:input-textbox code="inventor.patronage.form.label.creationDate" path="creationDate" readonly="true"/>
 	<acme:input-url code="inventor.patronage.form.label.info" path="info" readonly="true"/>
 	

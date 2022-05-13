@@ -23,7 +23,7 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit>{
 	protected AnyToolkitRepository repository;
 	
 	@Autowired
-	protected AnyToolkitMoneyExchange AnyToolkitMoneyExchange;
+	protected AnyToolkitMoneyExchange anyToolkitMoneyExchange;
 	
 	// AbstractShowService<Authenticated, Toolkit> interface ----------------------------
 
@@ -53,16 +53,22 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit>{
 		assert entity != null;
 		assert model != null;
 		final String systemCurrency= this.repository.getDefaultCurrency();
-		double price=0;
+		double price=0.;
+		Money moneyInternational;
 		final Collection<ArtefactToolkit> artefactToolkits = this.repository.findArtefactToolkitByToolKit(entity.getId());
 		
 		for(final ArtefactToolkit a :artefactToolkits) {
 		final Money artefactPrice=a.getArtefact().getRetailPrice();
 		
-			final Money priceExchanged=this.AnyToolkitMoneyExchange.computeMoneyExchange(artefactPrice, systemCurrency).getTarget();
+			final Money priceExchanged=this.anyToolkitMoneyExchange.computeMoneyExchange(artefactPrice, systemCurrency).getTarget();
 			price += a.getAmount()*priceExchanged.getAmount();
-			}
-		model.setAttribute("price", price);
+		}
+		
+		moneyInternational=new Money();
+		moneyInternational.setAmount(price);
+		moneyInternational.setCurrency(systemCurrency);
+		
+		model.setAttribute("money", moneyInternational);
 		request.unbind(entity, model,"code", "title", "description", "assemblyNotes", "info","id");
 		
 	}

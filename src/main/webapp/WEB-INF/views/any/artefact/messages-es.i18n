@@ -9,10 +9,11 @@
 # they accept any liabilities with respect to them.
 
 ####List
-any.artefact.list.label.type = Tipo
-any.artefact.list.label.name = Nombre
-any.artefact.list.label.code = Código
-any.artefact.list.label.retailPrice = Precio de Venta
+any.artefact.list.label.type = Tipo:
+any.artefact.list.label.name = Nombre:
+any.artefact.list.label.code = Código:
+any.artefact.list.label.retailPrice = Precio de Venta:
+any.artefact.list.label.money = Valor en moneda por defecto:
 
 ####Form
 any.artefact.form.label.name = Nombre:
@@ -24,3 +25,4 @@ any.artefact.form.label.retailPrice = Precio de Venta:
 any.artefact.form.label.info = Información:
 any.artefact.form.label.type.component = COMPONENTE
 any.artefact.form.label.type.tool = HERRAMIENTA
+any.artefact.form.label.money=Valor en moneda por defecto

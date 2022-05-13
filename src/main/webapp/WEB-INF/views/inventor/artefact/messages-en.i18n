@@ -17,9 +17,10 @@ inventor.artefact.form.label.type.tool = TOOL
 inventor.artefact.form.label.technology = Technology:
 inventor.artefact.form.label.description = Description:
 inventor.artefact.form.label.info = Info:
-
+inventor.artefact.form.label.money=Default currency value:
 
  
+ inventor.artefact.list.label.money=Default currency value:
 inventor.artefact.list.label.name = Name
 inventor.artefact.list.label.code = Code
 inventor.artefact.list.label.retailPrice = Retail Price

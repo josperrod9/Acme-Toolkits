@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.patronages.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
@@ -14,7 +15,8 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 	
 	@Autowired
 	protected InventorPatronageRepository repo;
-	
+	@Autowired
+	protected InventorPatronageMoneyExchange inventorPatronageMoneyExchange;
 	
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
@@ -50,6 +52,10 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		assert request != null;
         assert entity != null;
         assert model != null;
+        
+        final String systemCurrency= this.repo.getDefaultCurrency();
+		final Money priceExchanged=this.inventorPatronageMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency).getTarget();
+		model.setAttribute("money", priceExchanged);
 
         request.unbind(entity, model, "status", "code", "legalStuff","creationDate","budget","info","id","patron.userAccount.username","patron.company","patron.statement");
 		

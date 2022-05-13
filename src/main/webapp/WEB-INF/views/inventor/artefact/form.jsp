@@ -21,6 +21,7 @@
 	<acme:input-textbox code="inventor.artefact.form.label.technology" path="technology" />
 	<acme:input-textbox code="inventor.artefact.form.label.description" path="description" />
 	<acme:input-money code="inventor.artefact.form.label.retailPrice" path="retailPrice"/>
+	<acme:input-money code="inventor.artefact.form.label.money" path="money"/>
 	<acme:input-url code="inventor.artefact.form.label.info" path="info" />
 	
 <jstl:choose>	 

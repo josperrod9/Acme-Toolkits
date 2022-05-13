@@ -24,6 +24,8 @@
 		width="14%" />
 	<acme:list-column code="patron.patronage.list.label.budget" path="budget" 
 		width="14%" />
+	<acme:list-column code="patron.patronage.list.label.money" path="money" 
+		width="14%" />
 	<acme:list-column code="patron.patronage.list.label.creationDate" path="creationDate" 
 		width="14%" />
 	<acme:list-column code="patron.patronage.list.label.startDate" path="startDate"
