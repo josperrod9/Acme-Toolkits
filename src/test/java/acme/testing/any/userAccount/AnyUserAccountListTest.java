@@ -19,7 +19,7 @@ public class AnyUserAccountListTest extends TestHarness{
     	
         super.clickOnMenu("Anonymous", "List User accounts");
         super.checkListingExists();
-        super.sortListing(1, "asc");
+        super.sortListing(0, "asc");
 
         super.checkColumnHasValue(recordIndex, 0, username);
         super.checkColumnHasValue(recordIndex, 1, name);

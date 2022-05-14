@@ -15,17 +15,16 @@ public class AnyChirpListTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/chirp/list-all.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex, final String creationMoment, final String title, final String author, final String email, final String body) {
+	public void positiveTest(final int recordIndex, final String title, final String author, final String email, final String body) {
 
 		super.clickOnMenu("Anonymous", "List Chirps");
 		super.checkListingExists();
 		super.sortListing(2, "asc");
 
-		super.checkColumnHasValue(recordIndex, 0, creationMoment);
-		super.checkColumnHasValue(recordIndex, 1, title);
-		super.checkColumnHasValue(recordIndex, 2, author);
-		super.checkColumnHasValue(recordIndex, 3, email);
-		super.checkColumnHasValue(recordIndex, 4, body);
+		super.checkColumnHasValue(recordIndex, 0, title);
+		super.checkColumnHasValue(recordIndex, 1, author);
+		super.checkColumnHasValue(recordIndex, 2, email);
+		super.checkColumnHasValue(recordIndex, 3, body);
 
 	}
 	
