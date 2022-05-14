@@ -9,5 +9,4 @@
 	<acme:list-column code="inventor.artefact.list.label.retailPrice" path="retailPrice" width="50%"/>	
 	<acme:list-column code="inventor.artefact.list.label.type" path="type" width="50%"/>	
 </acme:list>
-
 <acme:button code="inventor.artefact.list.button.create" action="/inventor/artefact/create"/>
