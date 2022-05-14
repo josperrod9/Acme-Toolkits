@@ -12,9 +12,9 @@
     	<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
     		<acme:input-textbox code="inventor.artefact.form.label.code" path="code" readonly="${true}"/>
     		<acme:input-select path="type" code="inventor.artefact.form.label.type">
-                                <acme:input-option code="inventor.artefact.form.label.type.component" value="COMPONENT" />
-                                <acme:input-option code="inventor.artefact.form.label.type.tool" value="TOOL" />
-                </acme:input-select> 
+            	<acme:input-option code="inventor.artefact.form.label.type.component" value="COMPONENT" selected="${type == 'COMPONENT'}"/>
+                <acme:input-option code="inventor.artefact.form.label.type.tool" value="TOOL" selected="${type == 'TOOL'}"/>
+            </acme:input-select> 
     	</jstl:when>
     </jstl:choose>
 		

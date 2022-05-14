@@ -18,7 +18,7 @@ public class InventorArtefactUpdateTest extends TestHarness{
 	@Order(10)
 	public void positiveTest (final int recordIndex, final String type, final String name, final String retailPrice,
 		final String technology, final String description, final String info) {
-		
+				
 		super.signIn("inventor1", "inventor1");
 	
 		super.clickOnMenu("Inventor", "My Artefacts");

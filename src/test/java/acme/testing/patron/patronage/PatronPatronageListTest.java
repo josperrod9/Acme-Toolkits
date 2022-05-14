@@ -1,4 +1,4 @@
-package acme.testing.patron.patronageReport;
+package acme.testing.patron.patronage;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -38,15 +38,14 @@ public class PatronPatronageListTest extends TestHarness {
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("legalStuff", legalStuff);
 		super.checkInputBoxHasValue("budget", budget);
-		super.checkInputBoxHasValue("creationDate", creationDate);
 		super.checkInputBoxHasValue("startDate", startDate);
 		super.checkInputBoxHasValue("endDate", endDate);
 		super.checkInputBoxHasValue("info", info);
 		
-		super.checkInputBoxHasValue("username", inventor);
-		super.checkInputBoxHasValue("company", inventorCompany);
-    	super.checkInputBoxHasValue("statement", inventorStatement);
-    	super.checkInputBoxHasValue("inventorInfo", inventorInfo);
+		super.checkInputBoxHasValue("inventor.userAccount.username", inventor);
+		super.checkInputBoxHasValue("inventor.company", inventorCompany);
+    	super.checkInputBoxHasValue("inventor.statement", inventorStatement);
+    	super.checkInputBoxHasValue("inventor.inventorInfo", inventorInfo);
     	
     	
 		
