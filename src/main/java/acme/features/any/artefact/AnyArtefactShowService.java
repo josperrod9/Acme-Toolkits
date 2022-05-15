@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.toolkits.Artefact;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
@@ -16,6 +17,9 @@ public class AnyArtefactShowService implements AbstractShowService<Any, Artefact
 	
 	@Autowired
 	protected AnyArtefactRepository repository;
+	@Autowired
+	protected AnyArtefactMoneyExchange anyArtefactMoneyExchange;
+	
 	
 	// AbstractShowService<Any, Artefact> interface --------------
 	
@@ -41,7 +45,9 @@ public class AnyArtefactShowService implements AbstractShowService<Any, Artefact
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
+		final String systemCurrency= this.repository.getDefaultCurrency();
+		final Money priceExchanged=this.anyArtefactMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
+		model.setAttribute("money", priceExchanged);
 		request.unbind(entity, model, "name","code","type","technology","description","retailPrice","info");
 		
 	}

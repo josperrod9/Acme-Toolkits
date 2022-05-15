@@ -17,7 +17,7 @@ patron.patronage.list.label.startDate = Comienzo del Patrocinio
 patron.patronage.list.label.endDate = Final del Patrocinio
 patron.patronage.list.label.info = Info
 patron.patronage.list.label.published = ¿Está publicado?
-
+patron.patronage.list.label.money =Valor en moneda por defecto:
 patron.patronage.list.button.create = Create
 
 patron.patronage.show.label.status = Estado
@@ -31,6 +31,8 @@ patron.patronage.show.label.creationDate = Creación
 patron.patronage.show.label.startDate = Comienzo del Patrocinio
 patron.patronage.show.label.endDate = Final del Patrocinio
 patron.patronage.show.label.info = Info
+patron.patronage.show.label.money= Valor en moneda por defecto:
+
 
 patron.patronage.show.label.inventor.username = Inventor
 patron.patronage.show.label.inventor.company = Empresa del Inventor

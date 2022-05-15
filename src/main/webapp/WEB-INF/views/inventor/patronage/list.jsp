@@ -7,4 +7,5 @@
 	<acme:list-column code="inventor.patronage.list.label.code" path="code" width="30%"/>
 	<acme:list-column code="inventor.patronage.list.label.legalStuff" path="legalStuff" width="50%"/>	
 	<acme:list-column code="inventor.patronage.list.label.budget" path="budget" width="50%"/>	
+	<acme:list-column code="inventor.patronage.list.label.money" path="money" width="50%"/>
 </acme:list>

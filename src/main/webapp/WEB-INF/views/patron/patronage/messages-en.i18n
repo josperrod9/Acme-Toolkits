@@ -17,7 +17,7 @@ patron.patronage.list.label.startDate = Patronage Start
 patron.patronage.list.label.endDate = Patronage End
 patron.patronage.list.label.info = Info
 patron.patronage.list.label.published = Is published?
-
+patron.patronage.list.label.money =Default currency value:
 patron.patronage.list.button.create = Create
 
 patron.patronage.show.label.status = Status
@@ -31,6 +31,7 @@ patron.patronage.show.label.creationDate = Creation
 patron.patronage.show.label.startDate = Patronage Start
 patron.patronage.show.label.endDate = Patronage End
 patron.patronage.show.label.info = Info
+patron.patronage.show.label.money= Default currency value:
 
 patron.patronage.show.button.create = Create
 patron.patronage.show.button.update = Update

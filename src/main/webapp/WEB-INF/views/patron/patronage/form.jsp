@@ -37,6 +37,8 @@
     </jstl:choose>
     <acme:input-textarea code="patron.patronage.show.label.legalStuff" path="legalStuff"/>
     <acme:input-money code="patron.patronage.show.label.budget" path="budget"/>
+        <acme:input-money code="patron.patronage.show.label.money" path="money"/>
+    
     <jstl:choose>
     	<jstl:when test="${command == 'create'}">		
 	    	<acme:input-select code="patron.patronage.show.label.inventor.username" path="username">
@@ -44,18 +46,20 @@
 					<acme:input-option code="${inventor}" value="${inventor}"/>
 				</jstl:forEach>
 			</acme:input-select>
+			
 	    </jstl:when>
 	    <jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="inventor.userAccount.username" readonly="${true}"/>
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.company" path="inventor.company" readonly="${true}"/>
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.statement" path="inventor.statement" readonly="${true}"/>
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.inventorInfo" path="inventor.inventorInfo" readonly="${true}"/>
+		 
 	    </jstl:when>
     </jstl:choose>
     <acme:input-moment code="patron.patronage.show.label.startDate" path="startDate"/>
     <acme:input-moment code="patron.patronage.show.label.endDate" path="endDate"/>
     <acme:input-url code="patron.patronage.show.label.info" path="info"/>
- 
+
     <jstl:choose>
 		<jstl:when test="${command == 'show' && notPublished == false}">
 			<acme:button code="patron.patronage.form.button.patronage-reports"

@@ -31,4 +31,7 @@ public interface InventorArtefactRepository extends AbstractRepository{
 	
 	@Query("select c from Configuration c")
 	Configuration findConfiguration();
+	
+	@Query("select c.defaultCurrency  from Configuration c")
+	String getDefaultCurrency();
 }

@@ -30,6 +30,9 @@ public interface PatronPatronageRepository extends AbstractRepository{
 	@Query("select c from Configuration c")
 	Configuration findConfiguration();
 	
+	@Query("select c.defaultCurrency  from Configuration c")
+	String getDefaultCurrency();
+	
 
 	@Query("select p from Patronage p where p.code = :code")
 	Patronage findPatronageByCode(String code);

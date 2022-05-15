@@ -13,6 +13,7 @@ any.artefact.list.label.type = Type
 any.artefact.list.label.name = Name
 any.artefact.list.label.code = Code
 any.artefact.list.label.retailPrice = Retail Price 
+any.artefact.list.label.money = Default currency value
 
 ####Form
 any.artefact.form.label.name = Name:
@@ -24,3 +25,4 @@ any.artefact.form.label.retailPrice = Retail Price:
 any.artefact.form.label.info = Info:
 any.artefact.form.label.type.component = COMPONENT
 any.artefact.form.label.type.tool = TOOL
+any.artefact.form.label.money=Default currency value
