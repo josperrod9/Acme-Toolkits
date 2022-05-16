@@ -30,3 +30,4 @@ inventor.toolkit.list.label.description = Descripción:
 
 inventor.toolkit.form.error.duplicated = El código ya existe
 inventor.toolkit.form.error.withoutArtefacts = No se puede publicar una caja de herramientas sin artefactos
+inventor.toolkit.form.error.spam = Este texto contiene spam

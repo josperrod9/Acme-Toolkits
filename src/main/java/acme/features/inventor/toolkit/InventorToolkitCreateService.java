@@ -3,7 +3,9 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.Configuration;
 import acme.entities.toolkits.Toolkit;
+import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -67,6 +69,36 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		SpamDetector spamDetector;
+		String strongSpamTerms;
+		String weakSpamTerms;
+		double strongSpamThreshold;
+		double weakSpamThreshold;
+
+		spamDetector = new SpamDetector();
+		Configuration configuration = this.repo.findConfig();
+		strongSpamTerms = configuration.getStrongSpamTerm();
+		weakSpamTerms = configuration.getWeakSpamTerm();
+		strongSpamThreshold = configuration.getStrongSpamThreshold();
+		weakSpamThreshold = configuration.getWeakSpamThreshold();
+
+		if(!errors.hasErrors("title")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
+				"title", "inventor.toolkit.form.error.spam");
+		}
+
+		if(!errors.hasErrors("description")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getDescription())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
+				"description", "inventor.toolkit.form.error.spam");
+		}
+
+		if(!errors.hasErrors("assemblyNotes")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getAssemblyNotes())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAssemblyNotes()),
+				"assemblyNotes", "inventor.toolkit.form.error.spam");
+		}
 		
 		if(!errors.hasErrors("code")) {
 			Toolkit existing;

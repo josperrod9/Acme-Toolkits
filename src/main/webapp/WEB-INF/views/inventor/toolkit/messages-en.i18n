@@ -29,3 +29,4 @@ inventor.toolkit.list.label.description = Description:
 
 inventor.toolkit.form.error.duplicated = The code already exists
 inventor.toolkit.form.error.withoutArtefacts = A toolkit without artefacts can't be published
+inventor.toolkit.form.error.spam = Text contains spam

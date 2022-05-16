@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.announcements.Announcement;
+import acme.entities.configuration.Configuration;
+import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -73,6 +75,30 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
+			SpamDetector spamDetector;
+			String strongSpamTerms;
+			String weakSpamTerms;
+			double strongSpamThreshold;
+			double weakSpamThreshold;
+
+			spamDetector = new SpamDetector();
+			Configuration configuration = this.repository.findConfig();
+			strongSpamTerms = configuration.getStrongSpamTerm();
+			weakSpamTerms = configuration.getWeakSpamTerm();
+			strongSpamThreshold = configuration.getStrongSpamThreshold();
+			weakSpamThreshold = configuration.getWeakSpamThreshold();
+
+			if(!errors.hasErrors("title")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
+					"title", "administrator.announcement.form.error.spam");
+			}
+
+			if(!errors.hasErrors("body")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getBody())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getBody()),
+					"body", "administrator.announcement.form.error.spam");
+			}
 
 			boolean confirmation;
 
