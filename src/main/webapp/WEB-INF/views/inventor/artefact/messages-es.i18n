@@ -39,4 +39,5 @@ inventor.artefact.form.button.publish = Publicar
 inventor.artefact.form.error.duplicated = El código ya existe
 inventor.artefact.form.error.negative-budget = La cantidad debe ser un número positivo
 inventor.artefact.form.error.incorrect-currency = La divisa introducida no corresponde con ninguna del sistema. Revise las divisas permitidas.
+inventor.artefact.form.error.spam = El texto contiene spam.
 

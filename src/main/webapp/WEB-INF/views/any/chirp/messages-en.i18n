@@ -16,3 +16,5 @@ any.chirp.list.label.body = Body
 any.chirp.list.label.confirmation = Confirmation
 any.chirp.form.button.create = Create
 any.chirp.list.button.create = Create
+
+any.chirp.form.error.spam = Text contains spam 

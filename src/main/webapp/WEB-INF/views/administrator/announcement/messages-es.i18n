@@ -23,3 +23,4 @@ administrator.announcement.form.label.notCritical = No es crítico
 administrator.announcement.form.label.isCritical = Es crítico
 
 administrator.announcement.form.button.create = Crear
+administrator.announcement.form.error.spam = El texto contiene palabras consideradas spam

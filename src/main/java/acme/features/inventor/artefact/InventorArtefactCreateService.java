@@ -3,7 +3,9 @@ package acme.features.inventor.artefact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.Configuration;
 import acme.entities.toolkits.Artefact;
+import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -75,6 +77,36 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
+			SpamDetector spamDetector;
+			String strongSpamTerms;
+			String weakSpamTerms;
+			double strongSpamThreshold;
+			double weakSpamThreshold;
+
+			spamDetector = new SpamDetector();
+			Configuration configuration = this.repository.findConfiguration();
+			strongSpamTerms = configuration.getStrongSpamTerm();
+			weakSpamTerms = configuration.getWeakSpamTerm();
+			strongSpamThreshold = configuration.getStrongSpamThreshold();
+			weakSpamThreshold = configuration.getWeakSpamThreshold();
+
+			if(!errors.hasErrors("name")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getName())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getName()),
+					"name", "inventor.artefact.form.error.spam");
+			}
+
+			if(!errors.hasErrors("description")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getDescription())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
+					"description", "inventor.artefact.form.error.spam");
+			}
+
+			if(!errors.hasErrors("technology")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTechnology())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTechnology()),
+					"technology", "inventor.artefact.form.error.spam");
+			}
 
 			if(!errors.hasErrors("code")) {
 				Artefact existing;

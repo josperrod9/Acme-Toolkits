@@ -21,3 +21,4 @@ administrator.announcement.form.label.notCritical = Not Critical
 administrator.announcement.form.label.isCritical = Critical
 
 administrator.announcement.form.button.create = Create
+administrator.announcement.form.error.spam = Text contains spam
