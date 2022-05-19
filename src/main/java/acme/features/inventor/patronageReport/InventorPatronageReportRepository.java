@@ -13,9 +13,6 @@ import acme.roles.Inventor;
 
 @Repository
 public interface InventorPatronageReportRepository extends AbstractRepository{
-	
-	@Query("SELECT p FROM PatronageReport p WHERE p.patronage.inventor.id = :id")
-	Collection<PatronageReport> findAllInventorPatronageReports(int id);
 
 	@Query("SELECT p FROM PatronageReport p WHERE p.id =:id")
 	PatronageReport findPatronageReportById(int id);
@@ -28,6 +25,12 @@ public interface InventorPatronageReportRepository extends AbstractRepository{
 
 	@Query("SELECT p FROM Patronage p WHERE p.code =:code")
 	Patronage findPatronageByCode(String code);
+
+	@Query("SELECT p.automaticSequenceNumber FROM PatronageReport p")
+	Collection<String> findAllAutomaticSequenceNumberOfPatronagesReports();
+
+	@Query("SELECT p FROM PatronageReport p where p.patronage.id=:masterId")
+	Collection<PatronageReport> findPatronageReportsByPatronageId(int masterId);
 	
 	
 }

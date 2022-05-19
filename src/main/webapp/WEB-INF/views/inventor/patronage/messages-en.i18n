@@ -14,7 +14,7 @@ inventor.patronage.form.label.legalStuff = LegalStuff:
 inventor.patronage.form.label.budget = Budget:
 inventor.patronage.form.label.info = Info:
 inventor.patronage.form.label.money= Default currency value:
-
+inventor.patronage.form.button.patronageReport = Patronage Reports
 
 inventor.patronage.form.button.create = Create
 inventor.patronage.form.button.createPatronageReport = Create patronage report

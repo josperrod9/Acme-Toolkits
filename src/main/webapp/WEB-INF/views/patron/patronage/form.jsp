@@ -37,7 +37,7 @@
     </jstl:choose>
     <acme:input-textarea code="patron.patronage.show.label.legalStuff" path="legalStuff"/>
     <acme:input-money code="patron.patronage.show.label.budget" path="budget"/>
-        <acme:input-money code="patron.patronage.show.label.money" path="money"/>
+        
     
     <jstl:choose>
     	<jstl:when test="${command == 'create'}">		
@@ -49,6 +49,7 @@
 			
 	    </jstl:when>
 	    <jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+	    <acme:input-money code="patron.patronage.show.label.money" path="money" readonly="${true}"/>
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.username" path="inventor.userAccount.username" readonly="${true}"/>
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.company" path="inventor.company" readonly="${true}"/>
 	    	<acme:input-textbox code="patron.patronage.show.label.inventor.statement" path="inventor.statement" readonly="${true}"/>

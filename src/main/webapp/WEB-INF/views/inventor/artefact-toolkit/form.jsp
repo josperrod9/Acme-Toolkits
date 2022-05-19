@@ -21,7 +21,7 @@
                     	<acme:input-option code="${artefact.name} - ${artefact.type} - ${artefact.retailPrice} " value="${artefact.id}"/>
                		</jstl:forEach>
                 </acme:input-select> 
-			<acme:submit code="inventor.artefact.form.button.create" action="/inventor/artefact-toolkit/create"/>
+			<acme:submit code="inventor.artefactToolkit.form.button.create" action="/inventor/artefact-toolkit/create"/>
 		</jstl:when>
 	</jstl:choose>
 </acme:form>

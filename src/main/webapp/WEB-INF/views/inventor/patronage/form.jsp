@@ -36,5 +36,6 @@
 	
 	</jstl:choose>
 	<acme:button code="inventor.patronage.form.button.createPatronageReport" action="/inventor/patronage-report/create?masterId=${id}"/>
+	<acme:button code="inventor.patronage.form.button.patronageReport" action="/inventor/patronage-report/list?masterId=${id}"/>
 	<acme:submit test="${acme:anyOf(command, 'show, update') && status == 'PROPOSED'}" code="inventor.patronage.form.button.update" action="/inventor/patronage/update"/>	
 </acme:form>

@@ -1,5 +1,6 @@
 package acme.features.inventor.patronageReport;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.Formatter;
 import java.util.Random;
@@ -61,6 +62,7 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		int masterId;
 		Patronage patronage;
 		String automaticSequenceNumber;
+		final Collection<String> automaticSequenceNumbers = this.repo.findAllAutomaticSequenceNumberOfPatronagesReports();
 		Random randomNumber;
 		randomNumber = new Random();
 		
@@ -72,6 +74,11 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
         fmt = new Formatter();
         fmt.format("%04d",randomNumber.nextInt(10000));
         automaticSequenceNumber = patronage.getCode()+":"+fmt;
+        
+        while(automaticSequenceNumbers.contains(automaticSequenceNumber)) {
+        	fmt.format("%04d",randomNumber.nextInt(10000));
+            automaticSequenceNumber = patronage.getCode()+":"+fmt;
+        }
         fmt.close();
         
         result.setAutomaticSequenceNumber(automaticSequenceNumber);

@@ -8,11 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.money-exchange.form.label.source = Cantidad origen:
-authenticated.money-exchange.form.label.target-currency = Moneda destino:
-authenticated.money-exchange.form.label.date = Fecha del cambio:
-authenticated.money-exchange.form.label.target = Cantidad destino:
-	
-authenticated.money-exchange.form.button.perform = Realizar cambio
 
-authenticated.money-exchange.form.label.api-error = Lo sentimos, no se pudo hacer este cambio
+any.artefactToolkit.form.label.artefact.name = Nombre del artefacto
+any.artefactToolkit.form.label.artefact.type = Tipo de artefacto
+any.artefactToolkit.form.label.artefact.code = Código del artefacto
+any.artefactToolkit.form.label.artefacts = Artefactos
+any.artefactToolkit.list.label.amount = Cantidad
+any.artefactToolkit.list.label.artefact.name = Nombre del artefacto

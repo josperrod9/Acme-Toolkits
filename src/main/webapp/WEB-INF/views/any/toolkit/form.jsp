@@ -22,5 +22,5 @@
 	<acme:input-textbox code="any.toolkit.form.label.assemblyNotes" path="assemblyNotes" readonly="true"/>
 	<acme:input-textbox code="any.toolkit.form.label.info" path="info" readonly="true"/>
 	<acme:input-textbox code="any.toolkit.form.label.price" path="money" readonly="true"/>
-	<acme:button code="any.toolkit.form.button.artefacts" action="/any/artefact/list?masterId=${id}"/>
+	<acme:button code="any.toolkit.form.button.artefacts" action="/any/artefact-toolkit/list?masterId=${id}"/>
 </acme:form>

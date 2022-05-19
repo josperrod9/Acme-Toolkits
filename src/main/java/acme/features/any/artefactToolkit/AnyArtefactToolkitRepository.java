@@ -1,4 +1,4 @@
-package acme.features.inventor.artefactToolkit;
+package acme.features.any.artefactToolkit;
 
 import java.util.Collection;
 
@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 
 
 @Repository
-public interface InventorArtefactToolkitRepository extends AbstractRepository{
+public interface AnyArtefactToolkitRepository extends AbstractRepository{
 	@Query("select a from Artefact a where a.published = true")
 	Collection<Artefact> findAllArtefacts();
 
