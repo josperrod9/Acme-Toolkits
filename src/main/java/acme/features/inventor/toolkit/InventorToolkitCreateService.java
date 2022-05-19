@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.configuration.Configuration;
 import acme.entities.toolkits.Toolkit;
-import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import spamDetector.SpamDetector;
 
 @Service
 public class InventorToolkitCreateService implements AbstractCreateService<Inventor, Toolkit>{
@@ -76,7 +76,7 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		double weakSpamThreshold;
 
 		spamDetector = new SpamDetector();
-		Configuration configuration = this.repo.findConfig();
+		final Configuration configuration = this.repo.findConfig();
 		strongSpamTerms = configuration.getStrongSpamTerm();
 		weakSpamTerms = configuration.getWeakSpamTerm();
 		strongSpamThreshold = configuration.getStrongSpamThreshold();

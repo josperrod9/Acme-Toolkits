@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.chirps.Chirp;
 import acme.entities.configuration.Configuration;
-import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractCreateService;
+import spamDetector.SpamDetector;
 
 @Service
 public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> {
@@ -86,7 +86,7 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 			double weakSpamThreshold;
 
 			spamDetector = new SpamDetector();
-			Configuration configuration = this.repository.findConfig();
+			final Configuration configuration = this.repository.findConfig();
 			strongSpamTerms = configuration.getStrongSpamTerm();
 			weakSpamTerms = configuration.getWeakSpamTerm();
 			strongSpamThreshold = configuration.getStrongSpamThreshold();

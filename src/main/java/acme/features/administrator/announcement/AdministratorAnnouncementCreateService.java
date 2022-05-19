@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.announcements.Announcement;
 import acme.entities.configuration.Configuration;
-import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Administrator;
 import acme.framework.services.AbstractCreateService;
+import spamDetector.SpamDetector;
 
 @Service
 public class AdministratorAnnouncementCreateService implements AbstractCreateService<Administrator, Announcement> {
@@ -82,7 +82,7 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 			double weakSpamThreshold;
 
 			spamDetector = new SpamDetector();
-			Configuration configuration = this.repository.findConfig();
+			final Configuration configuration = this.repository.findConfig();
 			strongSpamTerms = configuration.getStrongSpamTerm();
 			weakSpamTerms = configuration.getWeakSpamTerm();
 			strongSpamThreshold = configuration.getStrongSpamThreshold();

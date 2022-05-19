@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.configuration.Configuration;
 import acme.entities.toolkits.Artefact;
-import acme.features.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
+import spamDetector.SpamDetector;
 
 @Service
 public class InventorArtefactCreateService implements AbstractCreateService<Inventor, Artefact> {
@@ -84,7 +84,7 @@ public class InventorArtefactCreateService implements AbstractCreateService<Inve
 			double weakSpamThreshold;
 
 			spamDetector = new SpamDetector();
-			Configuration configuration = this.repository.findConfiguration();
+			final Configuration configuration = this.repository.findConfiguration();
 			strongSpamTerms = configuration.getStrongSpamTerm();
 			weakSpamTerms = configuration.getWeakSpamTerm();
 			strongSpamThreshold = configuration.getStrongSpamThreshold();
