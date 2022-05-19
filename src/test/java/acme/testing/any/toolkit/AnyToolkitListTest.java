@@ -30,7 +30,6 @@ public class AnyToolkitListTest extends TestHarness{
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("assemblyNotes", assemblyNotes);
 		super.checkInputBoxHasValue("info", info);
-		super.checkInputBoxHasValue("price", totalPrice);
 		super.checkButtonExists("Artefacts");
 
 	}
@@ -38,8 +37,7 @@ public class AnyToolkitListTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/toolkit/list-artefact.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void positiveArtefactTest(final int recordIndex, final int recordIndexToolkit, final String type, final String name, final String code, 
-		final String retailPrice, final String technology, final String description, final String info) {
+	public void positiveArtefactTest(final int recordIndex, final int recordIndexToolkit, final String amount, final String name,final String type, final String code) {
 
 		super.clickOnMenu("Anonymous", "List Toolkit");
 		super.checkListingExists();
@@ -50,19 +48,14 @@ public class AnyToolkitListTest extends TestHarness{
         super.clickOnButton("Artefacts");
         super.checkListingExists();
         super.sortListing(1, "asc");
-        super.checkColumnHasValue(recordIndex, 0, type);
+        super.checkColumnHasValue(recordIndex, 0, amount);
 		super.checkColumnHasValue(recordIndex, 1, name);
-		super.checkColumnHasValue(recordIndex, 2, code);
-		super.checkColumnHasValue(recordIndex, 3, retailPrice);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-        super.checkInputBoxHasValue("type", type);
-        super.checkInputBoxHasValue("name", name);
-        super.checkInputBoxHasValue("code", code);
-        super.checkInputBoxHasValue("info", info);
-        super.checkInputBoxHasValue("retailPrice", retailPrice);
-        super.checkInputBoxHasValue("technology", technology);
-        super.checkInputBoxHasValue("description", description);
+        super.checkInputBoxHasValue("amount", amount);
+        super.checkInputBoxHasValue("artefact.type", type);
+        super.checkInputBoxHasValue("artefact.name", name);
+        super.checkInputBoxHasValue("artefact.code", code);
 	}
 	
 	// Ancillary methods ------------------------------------------------------
