@@ -46,6 +46,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**/fragments/**" kind="src" path="acme-framework"/>
-	<classpathentry kind="lib" path="C:/Users/andre/UNI/Workspace-22.0/Workspace-22.0/Projects/Acme-Toolkits_3/SpamDetector.jar"/>
+	<classpathentry kind="lib" path="SpamDetector.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
