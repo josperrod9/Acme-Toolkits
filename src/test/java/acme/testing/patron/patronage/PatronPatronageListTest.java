@@ -26,10 +26,10 @@ public class PatronPatronageListTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, legalStuff);
-		super.checkColumnHasValue(recordIndex, 3, budget);
-		super.checkColumnHasValue(recordIndex, 4, creationDate);
-		super.checkColumnHasValue(recordIndex, 5, startDate);
-		super.checkColumnHasValue(recordIndex, 6, endDate);
+		super.checkColumnHasValue(recordIndex, 3, creationDate);
+		super.checkColumnHasValue(recordIndex, 4, startDate);
+		super.checkColumnHasValue(recordIndex, 5, endDate);
+		super.checkColumnHasValue(recordIndex, 6, budget);
 
 		
 		super.clickOnListingRecord(recordIndex);

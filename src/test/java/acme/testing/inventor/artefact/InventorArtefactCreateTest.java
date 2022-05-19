@@ -44,7 +44,7 @@ public class InventorArtefactCreateTest  extends TestHarness{
 		super.checkColumnHasValue(recordIndex, 0, name);
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, retailPrice);
-		super.checkColumnHasValue(recordIndex, 3, type);
+		super.checkColumnHasValue(recordIndex, 4, type);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
