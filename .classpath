@@ -46,6 +46,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**/fragments/**" kind="src" path="acme-framework"/>
-	<classpathentry kind="lib" path="SpamDetector.jar"/>
+	<classpathentry kind="lib" path="bin/SpamDetector.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
