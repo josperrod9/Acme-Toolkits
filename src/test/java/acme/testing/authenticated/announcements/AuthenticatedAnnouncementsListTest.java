@@ -16,23 +16,23 @@ public class AuthenticatedAnnouncementsListTest extends TestHarness{
 	@CsvFileSource(resources = "/authenticated/announcements/list-all.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String title, final String creationMoment, final String body, 
-		final String critical, final String info) {
+		final String criticalList,final String criticalForm, final String info) {
 
 		super.signIn("inventor1", "inventor1");
 		
-		super.clickOnMenu("authenticated user", "List Announcement");
+		super.clickOnMenu("Authenticated User", "List Announcement");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, creationMoment);
-		super.checkColumnHasValue(recordIndex, 2, critical);
+		super.checkColumnHasValue(recordIndex, 2, criticalList);
 		super.clickOnListingRecord(recordIndex);
         super.checkFormExists();
         super.checkInputBoxHasValue("title", title);
         super.checkInputBoxHasValue("creationMoment", creationMoment);
         super.checkInputBoxHasValue("body", body);
-        super.checkInputBoxHasValue("critical", critical);
+        super.checkInputBoxHasValue("critical", criticalForm);
         super.checkInputBoxHasValue("info", info);
         
         super.signOut();

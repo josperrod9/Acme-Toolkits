@@ -13,6 +13,10 @@ inventor.patronage.form.label.code = Código:
 inventor.patronage.form.label.legalStuff = Aviso Legal:
 inventor.patronage.form.label.budget = Presupuesto:
 inventor.patronage.form.label.info = Info:
+inventor.patronage.form.label.money= Valor en moneda por defecto:
+inventor.patronage.form.button.patronageReport = Informes de patrocinios
+
+
 
 inventor.patronage.form.button.create = Crear
 inventor.patronage.form.button.createPatronageReport = Crear informe de patrocinio
@@ -20,9 +24,13 @@ inventor.patronage.form.button.createPatronageReport = Crear informe de patrocin
 inventor.patronage.form.button.update = Actualizar
 inventor.patronage.form.label.new-status = Nuevo estado
 inventor.patronage.form.label.creationDate = Fecha de creación
+
+patron.patronage.show.label.patron.username = Patrón
+patron.patronage.show.label.patron.company = Empresa del Patrón 
+patron.patronage.show.label.patron.statement = Declaración del patrón
  
 inventor.patronage.list.label.code = Código:
 inventor.patronage.list.label.legalStuff = Aviso Legal: 
 inventor.patronage.list.label.budget = Presupuesto:
-
+inventor.patronage.list.label.money =Valor en moneda por defecto:
 inventor.patronage.list.button.create = Crear

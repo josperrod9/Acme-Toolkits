@@ -1,0 +1,4 @@
+recordIndex,name,retailPrice,technology,description,info
+0,Hammer,"EUR 12.15",steel,i have changed price and description,https://google.com/
+0,Hammer,"EUR 30.15",steel,i have changed description and price,https://google.com/
+0,Hammer,"EUR 30.15",steel,i have changed description and delete info url,

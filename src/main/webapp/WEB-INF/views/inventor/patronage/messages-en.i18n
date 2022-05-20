@@ -13,6 +13,8 @@ inventor.patronage.form.label.code = Code:
 inventor.patronage.form.label.legalStuff = LegalStuff:
 inventor.patronage.form.label.budget = Budget:
 inventor.patronage.form.label.info = Info:
+inventor.patronage.form.label.money= Default currency value:
+inventor.patronage.form.button.patronageReport = Patronage Reports
 
 inventor.patronage.form.button.create = Create
 inventor.patronage.form.button.createPatronageReport = Create patronage report
@@ -21,8 +23,12 @@ inventor.patronage.form.button.update = Update
 inventor.patronage.form.label.new-status = New status
 inventor.patronage.form.label.creationDate = Creation date
 
+patron.patronage.show.label.patron.username = Patron
+patron.patronage.show.label.patron.company = Patron Company
+patron.patronage.show.label.patron.statement = Patron Statement
+
 inventor.patronage.list.label.code = Code:
 inventor.patronage.list.label.legalStuff = LegalStuff: 
 inventor.patronage.list.label.budget = Budget:
-
+inventor.patronage.list.label.money= Default currency value:
 inventor.patronage.list.button.create = Create

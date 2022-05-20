@@ -18,7 +18,7 @@ public class AuthenticatedConfigurationTest extends TestHarness{
 
 		super.signIn("inventor2","inventor2");
 		
-		super.clickOnMenu("authenticated user", "configuration");
+		super.clickOnMenu("Authenticated User", "Configuration");
 		super.checkFormExists();
 		super.checkInputBoxHasValue("defaultCurrency", defaultCurrency);
 		super.checkInputBoxHasValue("currency", currency);

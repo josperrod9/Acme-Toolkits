@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.data.jpa.repository.Query;
 
 import acme.entities.announcements.*;
+import acme.entities.configuration.Configuration;
 import acme.framework.repositories.AbstractRepository;
 
 public interface AdministratorAnnouncementRepository extends AbstractRepository{
@@ -18,4 +19,7 @@ public interface AdministratorAnnouncementRepository extends AbstractRepository{
 
 	@Query("select a from Announcement a where a.creationMoment > :deadline")
 	Collection<Announcement> findRecentAnnouncements(Date deadline);
+	
+	@Query("select c from Configuration c")
+	Configuration findConfig();
 }

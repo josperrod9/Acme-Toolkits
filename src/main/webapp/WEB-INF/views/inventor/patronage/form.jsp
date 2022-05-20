@@ -9,6 +9,7 @@
 	<acme:input-textbox code="inventor.patronage.form.label.budget" path="budget" readonly="true"/>
 	<acme:input-textbox code="inventor.patronage.form.label.creationDate" path="creationDate" readonly="true"/>
 	<acme:input-url code="inventor.patronage.form.label.info" path="info" readonly="true"/>
+	<acme:input-textbox code="inventor.patronage.form.label.money" path="money" readonly="true"/>
 	
 	<jstl:if test="${status != 'PROPOSED'}">
 		<acme:input-textbox code="inventor.patronage.form.label.status" path="status" readonly="true"/>
@@ -21,6 +22,22 @@
 			<acme:input-option code="DENIED" value="DENIED"/>
 		</acme:input-select>		
 	</jstl:if>
+	
+	<jstl:choose>
+		<jstl:when test="${command == 'create'}">		
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.username" path="username"/>
+	    </jstl:when>
+	    
+		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.username" path="patron.userAccount.username" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.company" path="patron.company" readonly="${true}"/>
+	    	<acme:input-textbox code="patron.patronage.show.label.patron.statement" path="patron.statement" readonly="${true}"/>
+		</jstl:when>	
+	
+	</jstl:choose>
+	<jstl:if test="${status == 'ACCEPTED'}">
 	<acme:button code="inventor.patronage.form.button.createPatronageReport" action="/inventor/patronage-report/create?masterId=${id}"/>
+	</jstl:if>
+	<acme:button code="inventor.patronage.form.button.patronageReport" action="/inventor/patronage-report/list?masterId=${id}"/>
 	<acme:submit test="${acme:anyOf(command, 'show, update') && status == 'PROPOSED'}" code="inventor.patronage.form.button.update" action="/inventor/patronage/update"/>	
 </acme:form>

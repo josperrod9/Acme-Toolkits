@@ -18,11 +18,11 @@
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="administrator.announcement.form.label.title" path="title"/>	
 	<acme:input-select code="administrator.announcement.form.label.critical" path="critical">
-		<acme:input-option code="administrator.announcement.form.label.notCritical" value="false" selected="${critical == false}"/>
-		<acme:input-option code="administrator.announcement.form.label.isCritical" value="true" selected="${critical == true}"/>
+	<acme:input-option code="administrator.announcement.form.label.notCritical" value="false" selected="${critical == false}"/>
+	<acme:input-option code="administrator.announcement.form.label.isCritical" value="true" selected="${critical == true}"/>
 	</acme:input-select>
 	<acme:input-textarea code="administrator.announcement.form.label.body" path="body"/>
 	<acme:input-textbox code="administrator.announcement.form.label.info" path="info"/>
-			<acme:input-checkbox code="administrator.announcement.form.label.confirmation" path="confirmation"/>
+	<acme:input-checkbox code="administrator.announcement.form.label.confirmation" path="confirmation"/>
 	<acme:submit test="${command == 'create'}" code="administrator.announcement.form.button.create" action="/administrator/announcement/create"/>
 </acme:form> 

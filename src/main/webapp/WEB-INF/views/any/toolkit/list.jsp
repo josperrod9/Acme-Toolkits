@@ -18,7 +18,8 @@
 
 <acme:list>
 
-	<acme:list-column code="any.toolkit.list.label.title" path="title" width="60%"/>
+	<acme:list-column code="any.toolkit.list.label.title" path="title" width="45%"/>
 	<acme:list-column code="any.toolkit.list.label.code" path="code" width="40%"/>
+	<acme:list-column code="any.toolkit.list.label.totalPrice" path="money" width="15%"/>	
 
 </acme:list>

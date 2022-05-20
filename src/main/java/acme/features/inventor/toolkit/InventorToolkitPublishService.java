@@ -1,8 +1,11 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.toolkits.Artefact;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -71,13 +74,15 @@ public class InventorToolkitPublishService  implements AbstractUpdateService<Inv
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
+		Collection<Artefact> artefacts;
+		artefacts = this.repository.findManyArtefactByToolkitId(entity.getId());
 		if(!errors.hasErrors("code")) {
 			Toolkit existing;
 			
 			existing = this.repository.findToolkitByCode(entity.getCode());
 			errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "inventor.toolkit.form.error.duplicated");
 		}
+			errors.state(request, !artefacts.isEmpty(), "*", "inventor.toolkit.form.error.noArtefact");
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package acme.testing.systemConfiguration;
+package acme.testing.administrator.systemConfiguration;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;

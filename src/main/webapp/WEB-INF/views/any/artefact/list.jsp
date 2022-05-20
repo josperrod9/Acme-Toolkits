@@ -19,6 +19,7 @@
 <acme:list>
 	<acme:list-column code="any.artefact.list.label.type" path="type" width="30%"/>	
 	<acme:list-column code="any.artefact.list.label.name" path="name" width="20%"/>
-	<acme:list-column code="any.artefact.list.label.code" path="code" width="30%"/>
-	<acme:list-column code="any.artefact.list.label.retailPrice" path="retailPrice" width="20%"/>	
+	<acme:list-column code="any.artefact.list.label.code" path="code" width="20%"/>
+	<acme:list-column code="any.artefact.list.label.retailPrice" path="retailPrice" width="15%"/>	
+	<acme:list-column code="any.artefact.list.label.money" path="money" width="15%"/>	
 </acme:list>

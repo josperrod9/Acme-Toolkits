@@ -17,4 +17,8 @@ public interface AnyArtefactRepository extends AbstractRepository{
 	Artefact findArtefactById(int id);
 	@Query("select a.artefact from ArtefactToolkit a where a.toolkit.id = :masterId and a.artefact.published = true")
     Collection<Artefact> findManyArtifactsByMasterId(int masterId);
+	@Query("select c.defaultCurrency  from Configuration c")
+	String getDefaultCurrency();
+	@Query("select at.amount from ArtefactToolkit at where at.artefact.id=:artefactId and at.toolkit.id=:toolkitId")
+	String findAmountByArtefactId(int artefactId, int toolkitId);
 }

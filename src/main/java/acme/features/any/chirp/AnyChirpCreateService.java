@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.chirps.Chirp;
+import acme.entities.configuration.Configuration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractCreateService;
+import spamDetector.SpamDetector;
 
 @Service
 public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> {
@@ -77,6 +79,37 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 			assert errors != null;
 
 			boolean confirmation;
+			SpamDetector spamDetector;
+			String strongSpamTerms;
+			String weakSpamTerms;
+			double strongSpamThreshold;
+			double weakSpamThreshold;
+
+			spamDetector = new SpamDetector();
+			final Configuration configuration = this.repository.findConfig();
+			strongSpamTerms = configuration.getStrongSpamTerm();
+			weakSpamTerms = configuration.getWeakSpamTerm();
+			strongSpamThreshold = configuration.getStrongSpamThreshold();
+			weakSpamThreshold = configuration.getWeakSpamThreshold();
+
+			if(!errors.hasErrors("title")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
+					"title", "any.chirp.form.error.spam");
+			}
+
+			if(!errors.hasErrors("author")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getAuthor())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAuthor()),
+					"author", "any.chirp.form.error.spam");
+			}
+
+			if(!errors.hasErrors("body")) {
+				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getBody())
+					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getBody()),
+					"body", "any.chirp.form.error.spam");
+			}
+
 
 			confirmation = request.getModel().getBoolean("confirmation");
 			errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");

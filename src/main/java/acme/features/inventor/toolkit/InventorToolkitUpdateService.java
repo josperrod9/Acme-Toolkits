@@ -3,12 +3,14 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.Configuration;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
+import spamDetector.SpamDetector;
 
 @Service
 public class InventorToolkitUpdateService implements AbstractUpdateService<Inventor, Toolkit>{
@@ -70,6 +72,19 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		SpamDetector spamDetector;
+		String strongSpamTerms;
+		String weakSpamTerms;
+		double strongSpamThreshold;
+		double weakSpamThreshold;
+
+		spamDetector = new SpamDetector();
+		final Configuration configuration = this.repository.findConfig();
+		strongSpamTerms = configuration.getStrongSpamTerm();
+		weakSpamTerms = configuration.getWeakSpamTerm();
+		strongSpamThreshold = configuration.getStrongSpamThreshold();
+		weakSpamThreshold = configuration.getWeakSpamThreshold();
+
 		
 		if(!errors.hasErrors("code")) {
 			Toolkit existing;
@@ -77,6 +92,25 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 			existing = this.repository.findToolkitByCode(entity.getCode());
 			errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "inventor.toolkit.form.error.duplicated");
 		}
+		
+		if(!errors.hasErrors("title")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
+				"title", "inventor.toolkit.form.error.spam");
+		}
+
+		if(!errors.hasErrors("description")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getDescription())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
+				"description", "inventor.toolkit.form.error.spam");
+		}
+
+		if(!errors.hasErrors("assemblyNotes")) {
+			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getAssemblyNotes())
+				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAssemblyNotes()),
+				"assemblyNotes", "inventor.toolkit.form.error.spam");
+		}
+		
 	}
 
 	@Override

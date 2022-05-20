@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import acme.entities.patronages.PatronageReport;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
@@ -29,8 +28,9 @@ public class InventorPatronageReportListService implements AbstractListService<I
 	
 	@Override
     public Collection<PatronageReport> findMany(final Request<PatronageReport> request) {
-        final Principal principal = request.getPrincipal();
-        return this.repo.findAllInventorPatronageReports(principal.getActiveRoleId());
+        int masterId;
+        masterId = request.getModel().getInteger("masterId");
+        return this.repo.findPatronageReportsByPatronageId(masterId);
     }
 
     @Override

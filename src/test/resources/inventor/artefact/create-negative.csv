@@ -1,0 +1,6 @@
+recordIndex,type,name,code,retailPrice,technology,description,info
+0,TOOL, ,ACD-111-D,EUR 9.10,steel,TOOL WITH BLANK NAME,https://google.com/
+1,COMPONENT,code already in use,ZZZ-666-N,GBP 56.34,Aluminum,Code already in use,https://github.com/
+2,COMPONENT,code doesnt match pattern ,ABCD,GBP 56.34,Aluminum,Code doesnt match pattern,https://github.com/
+3,COMPONENT,really long technology ,ABCD,GBP 56.34,BLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLABBLABLABLAB,really long technology ,https://github.com/
+4,TOOL,invalid info ,DDY-321-J,EUR 9.20,steel,invalid url info,abcde

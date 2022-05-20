@@ -1,4 +1,4 @@
-package acme.testing.patron.patronageReport;
+package acme.testing.patron.patronage;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -26,10 +26,10 @@ public class PatronPatronageListTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, legalStuff);
-		super.checkColumnHasValue(recordIndex, 3, budget);
-		super.checkColumnHasValue(recordIndex, 4, creationDate);
-		super.checkColumnHasValue(recordIndex, 5, startDate);
-		super.checkColumnHasValue(recordIndex, 6, endDate);
+		super.checkColumnHasValue(recordIndex, 3, creationDate);
+		super.checkColumnHasValue(recordIndex, 4, startDate);
+		super.checkColumnHasValue(recordIndex, 5, endDate);
+		super.checkColumnHasValue(recordIndex, 6, budget);
 
 		
 		super.clickOnListingRecord(recordIndex);
@@ -38,15 +38,14 @@ public class PatronPatronageListTest extends TestHarness {
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("legalStuff", legalStuff);
 		super.checkInputBoxHasValue("budget", budget);
-		super.checkInputBoxHasValue("creationDate", creationDate);
 		super.checkInputBoxHasValue("startDate", startDate);
 		super.checkInputBoxHasValue("endDate", endDate);
 		super.checkInputBoxHasValue("info", info);
 		
-		super.checkInputBoxHasValue("username", inventor);
-		super.checkInputBoxHasValue("company", inventorCompany);
-    	super.checkInputBoxHasValue("statement", inventorStatement);
-    	super.checkInputBoxHasValue("inventorInfo", inventorInfo);
+		super.checkInputBoxHasValue("inventor.userAccount.username", inventor);
+		super.checkInputBoxHasValue("inventor.company", inventorCompany);
+    	super.checkInputBoxHasValue("inventor.statement", inventorStatement);
+    	super.checkInputBoxHasValue("inventor.inventorInfo", inventorInfo);
     	
     	
 		
@@ -58,7 +57,7 @@ public class PatronPatronageListTest extends TestHarness {
 	@Order(20)
 	public void positiveTest1(final int recordIndex,final int recordIndexReport, final String creationMoment,
 		final String memorandum, final String information, final String automaticSequenceNumber) {
-		super.signIn("patron1", "patron1");
+		super.signIn("patron3", "patron3");
 		super.clickOnMenu("Patron", "Patronages");
 		
 		super.clickOnListingRecord(recordIndex);

@@ -21,9 +21,15 @@ inventor.toolkit.form.button.update = Actualizar
 inventor.toolkit.form.button.delete = Eliminar
 inventor.toolkit.form.button.publish = Publicar
 inventor.toolkit.form.button.artefacts = Artefactos
+inventor.toolkit.form.label.price = Precio Total
  
 inventor.toolkit.list.label.title = Título:
 inventor.toolkit.list.label.code = Código:
 inventor.toolkit.list.label.description = Descripción:
+inventor.toolkit.list.label.totalPrice = Precio Total
+
 
 inventor.toolkit.form.error.duplicated = El código ya existe
+inventor.toolkit.form.error.withoutArtefacts = No se puede publicar una caja de herramientas sin artefactos
+inventor.toolkit.form.error.spam = Este texto contiene spam
+inventor.toolkit.form.error.noArtefact = No puedes publicar esta caja de herramientas ya que no tiene ningun artefacto
