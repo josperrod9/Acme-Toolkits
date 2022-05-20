@@ -50,6 +50,7 @@ public class InventorArtefactToolkitUpdateService implements AbstractUpdateServi
         assert entity != null;
         assert model!=null;
         request.unbind(entity, model,"amount","artefact.name","artefact.type","artefact.code");
+        model.setAttribute("draftMode", entity.getToolkit().isDraftMode());
     }
 
     @Override

@@ -26,12 +26,13 @@
     <jstl:if test="${status == 'DENIED'}">
 	<acme:input-textbox code="patron.patronage.show.label.status" path="status" readonly="true"/> 
     </jstl:if>
-
+	
 	<jstl:choose>
     	<jstl:when test="${command == 'create'}">	
     		<acme:input-textbox code="patron.patronage.show.label.code" path="code"/>
     	</jstl:when>
     	<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+    		<acme:input-textbox code="patron.patronage.show.label.creationDate" path="creationDate" readonly="true"/>
     		<acme:input-textbox code="patron.patronage.show.label.code" path="code" readonly="${true}"/>
     	</jstl:when>
     </jstl:choose>
