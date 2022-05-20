@@ -19,3 +19,4 @@ inventor.artefactToolkit.form.button.create = Add Artefact
 inventor.artefactToolkit.list.label.amount = Amount
 inventor.artefactToolkit.list.label.artefact.name = Artefact's Name
 inventor.artefactToolkit.form.error.invalidAmount = You can't add more than 1 tool
+inventor.artefactToolkit.form.label.noArtefacts = There aren't any available artefact

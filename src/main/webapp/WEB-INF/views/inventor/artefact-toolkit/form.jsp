@@ -16,12 +16,27 @@
 			</jstl:if>
 		</jstl:when>
 		<jstl:when test="${command == 'create'}">
-				<acme:input-select path="artefacts" code="inventor.artefactToolkit.form.label.artefacts">
-					<jstl:forEach items="${artefacts}" var="artefact">
-                    	<acme:input-option code="${artefact.name} - ${artefact.type} - ${artefact.retailPrice} " value="${artefact.id}"/>
-               		</jstl:forEach>
-                </acme:input-select> 
-			<acme:submit code="inventor.artefactToolkit.form.button.create" action="/inventor/artefact-toolkit/create"/>
+		<jstl:choose>
+				<jstl:when test="${artefactSize==0}">
+					<acme:input-select path="artefacts"
+						code="inventor.artefactToolkit.form.label.artefacts" readonly="${true}">
+							<acme:input-option
+								code="inventor.artefactToolkit.form.label.noArtefacts"
+								value=""  />
+					</acme:input-select>
+				</jstl:when>
+				<jstl:when test="${artefactSize!=0}">
+					<acme:input-select path="artefacts"
+						code="inventor.artefactToolkit.form.label.artefacts">
+						<jstl:forEach items="${artefacts}" var="artefact">
+							<acme:input-option
+								code="${artefact.name} - ${artefact.type} - ${artefact.retailPrice} "
+								value="${artefact.id}" />
+						</jstl:forEach>
+					</acme:input-select>
+					<acme:submit code="inventor.artefactToolkit.form.button.create" action="/inventor/artefact-toolkit/create"/>
+				</jstl:when>
+			</jstl:choose>
 		</jstl:when>
 	</jstl:choose>
 </acme:form>

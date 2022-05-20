@@ -1,6 +1,7 @@
 package acme.features.inventor.artefactToolkit;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,13 +66,15 @@ public class InventorArtefactToolkitCreateService implements AbstractCreateServi
 			
 			int masterId;
 			masterId =  request.getModel().getInteger("masterId");
+			List<Artefact> artefacts; 
 			
 			Collection<Artefact> artefactsInToolKit;
 			artefactsInToolKit = this.repository.findManyArtefactsByMasterId(masterId);
-			
+			artefacts=this.repository.findAllArtefacts().stream().filter(x->!artefactsInToolKit.contains(x)).collect(Collectors.toList());
 			request.unbind(entity, model,"amount","toolkit");
-			model.setAttribute("artefacts", this.repository.findAllArtefacts().stream().filter(x->!artefactsInToolKit.contains(x)).collect(Collectors.toList()));
+			model.setAttribute("artefacts",artefacts );
 			model.setAttribute("masterId",masterId);
+			model.setAttribute("artefactSize", artefacts.size());
 		}
 
 		@Override
