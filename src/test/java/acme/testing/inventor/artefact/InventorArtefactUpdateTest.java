@@ -16,7 +16,7 @@ public class InventorArtefactUpdateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/artefact/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest (final int recordIndex, final String type, final String name, final String retailPrice,
+	public void positiveTest (final int recordIndex, final String name, final String retailPrice,
 		final String technology, final String description, final String info) {
 				
 		super.signIn("inventor1", "inventor1");
@@ -27,7 +27,6 @@ public class InventorArtefactUpdateTest extends TestHarness{
 		super.checkColumnHasValue(recordIndex, 0, name);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.fillInputBoxIn("type", type);
 		super.fillInputBoxIn("name", name);
 		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("technology", technology);
@@ -40,11 +39,9 @@ public class InventorArtefactUpdateTest extends TestHarness{
 
 		super.checkColumnHasValue(recordIndex, 0, name);
 		super.checkColumnHasValue(recordIndex, 2, retailPrice);
-		super.checkColumnHasValue(recordIndex, 3, type);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("name", name);
-		super.checkInputBoxHasValue("type", type);
 		super.checkInputBoxHasValue("technology", technology);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("retailPrice", retailPrice);
@@ -58,7 +55,7 @@ public class InventorArtefactUpdateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/artefact/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeTest (final int recordIndex, final String type, final String name, final String retailPrice,
+	public void negativeTest (final int recordIndex, final String name, final String retailPrice,
 		final String technology, final String description, final String info) {
 		
 		super.signIn("inventor1", "inventor1");
@@ -71,7 +68,6 @@ public class InventorArtefactUpdateTest extends TestHarness{
 		super.clickOnListingRecord(recordIndex);
 		
 		super.checkFormExists();
-		super.fillInputBoxIn("type", type);
 		super.fillInputBoxIn("name", name);
 		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("technology", technology);
