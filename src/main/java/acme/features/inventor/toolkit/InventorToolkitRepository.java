@@ -36,4 +36,7 @@ public interface InventorToolkitRepository extends AbstractRepository{
 	
 	@Query("select c from Configuration c")
 	Configuration findConfig();
+
+	@Query("select c.defaultCurrency  from Configuration c")
+	String getDefaultCurrency();
 }

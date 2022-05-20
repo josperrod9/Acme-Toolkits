@@ -7,4 +7,6 @@
 	<acme:list-column code="inventor.artefactToolkit.list.label.amount" path="amount" width="20%"/>
 	<acme:list-column code="inventor.artefactToolkit.list.label.artefact.name" path="artefact.name" width="80%"/>
 </acme:list>
+<acme:button test="${showCreate}" code="inventor.artefactToolkit.list.button.artefactsCreate" action="/inventor/artefact-toolkit/create?masterId=${masterId}"/>
+
 

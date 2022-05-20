@@ -57,7 +57,7 @@ public class PatronPatronageListTest extends TestHarness {
 	@Order(20)
 	public void positiveTest1(final int recordIndex,final int recordIndexReport, final String creationMoment,
 		final String memorandum, final String information, final String automaticSequenceNumber) {
-		super.signIn("patron1", "patron1");
+		super.signIn("patron3", "patron3");
 		super.clickOnMenu("Patron", "Patronages");
 		
 		super.clickOnListingRecord(recordIndex);

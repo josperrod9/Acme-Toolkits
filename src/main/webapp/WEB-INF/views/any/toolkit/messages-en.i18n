@@ -11,6 +11,7 @@
 ####List
 any.toolkit.list.label.title = Title
 any.toolkit.list.label.code = Code
+any.toolkit.list.label.totalPrice = Total Price
 
 
 ####Form

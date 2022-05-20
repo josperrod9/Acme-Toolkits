@@ -16,7 +16,7 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/patronage-report/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest (final int recordIndex, final String memorandum, final String info) {
+	public void positiveTest (final int recordIndex, final int recordIndexReport, final String memorandum, final String info) {
 		
 		super.signIn("inventor1", "inventor1");
 
@@ -42,10 +42,10 @@ public class InventorPatronageReportCreateTest extends TestHarness{
 		super.checkFormExists();
 		super.clickOnButton("Patronage Reports");
 
-		super.checkColumnHasValue(recordIndex, 0, memorandum);
-		super.checkColumnHasValue(recordIndex, 2, info);
+		super.checkColumnHasValue(recordIndexReport, 0, memorandum);
+		super.checkColumnHasValue(recordIndexReport, 2, info);
 		
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(recordIndexReport);
 		super.checkFormExists();
 		
 		super.checkInputBoxHasValue("memorandum", memorandum);

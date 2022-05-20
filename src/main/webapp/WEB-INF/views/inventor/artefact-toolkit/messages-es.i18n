@@ -21,3 +21,4 @@ inventor.artefactToolkit.list.label.amount = Cantidad
 inventor.artefactToolkit.list.label.artefact.name = Nombre del artefacto
 inventor.artefactToolkit.form.error.invalidAmount = No puedes añadir más de una herramienta
 inventor.artefactToolkit.form.label.noArtefacts = No existe ningún artefacto disponible
+inventor.artefactToolkit.list.button.artefactsCreate = Añadir un artefacto
