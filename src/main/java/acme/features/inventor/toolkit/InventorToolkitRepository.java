@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.configuration.Configuration;
+import acme.entities.toolkits.Artefact;
 import acme.entities.toolkits.ArtefactToolkit;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.repositories.AbstractRepository;
@@ -30,6 +31,9 @@ public interface InventorToolkitRepository extends AbstractRepository{
 	@Query("SELECT at FROM ArtefactToolkit at WHERE at.toolkit.id=:id")
 	Collection<ArtefactToolkit> findManyArtefactToolkitByToolkitId(int id);
 
+	@Query("SELECT at.artefact FROM ArtefactToolkit at WHERE at.toolkit.id=:id")
+	Collection<Artefact> findManyArtefactByToolkitId(int id);
+	
 	@Query("select c from Configuration c")
 	Configuration findConfig();
 }
