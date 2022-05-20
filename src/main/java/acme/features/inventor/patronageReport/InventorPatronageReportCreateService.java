@@ -23,6 +23,8 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 	@Autowired
 	protected InventorPatronageReportRepository repo;
 	
+	private final Random randomNumber = new Random();
+	
 	@Override
 	public boolean authorise(final Request<PatronageReport> request) {
 		assert request != null;
@@ -66,8 +68,7 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		Patronage patronage;
 		String automaticSequenceNumber;
 		final Collection<String> automaticSequenceNumbers = this.repo.findAllAutomaticSequenceNumberOfPatronagesReports();
-		Random randomNumber;
-		randomNumber = new Random();
+		
 		
 		masterId = request.getModel().getInteger("masterId");
 		patronage = this.repo.findPatronageById(masterId);
@@ -75,11 +76,11 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 				
         Formatter fmt;
         fmt = new Formatter();
-        fmt.format("%04d",randomNumber.nextInt(10000));
+        fmt.format("%04d",this.randomNumber.nextInt(10000));
         automaticSequenceNumber = patronage.getCode()+":"+fmt;
         
         while(automaticSequenceNumbers.contains(automaticSequenceNumber)) {
-        	fmt.format("%04d",randomNumber.nextInt(10000));
+        	fmt.format("%04d",this.randomNumber.nextInt(10000));
             automaticSequenceNumber = patronage.getCode()+":"+fmt;
         }
         fmt.close();

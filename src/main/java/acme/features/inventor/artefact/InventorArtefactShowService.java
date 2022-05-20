@@ -16,7 +16,7 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
 	@Autowired
 	protected InventorArtefactRepository repo;
 	@Autowired
-	protected InventorArtefactMoneyExchange InventorArtefactMoneyExchange;
+	protected InventorArtefactMoneyExchange inventorArtefactMoneyExchange;
 	
 	@Override
 	public boolean authorise(final Request<Artefact> request) {
@@ -53,7 +53,7 @@ public class InventorArtefactShowService implements AbstractShowService<Inventor
         assert entity != null;
         assert model != null;
         final String systemCurrency= this.repo.getDefaultCurrency();
-		final Money priceExchanged=this.InventorArtefactMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
+		final Money priceExchanged=this.inventorArtefactMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
 		model.setAttribute("money", priceExchanged);
         request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "type", "info", "id","published");
 		
