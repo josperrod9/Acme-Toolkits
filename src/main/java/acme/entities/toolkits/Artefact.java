@@ -63,6 +63,9 @@ public class Artefact extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	
+	@Valid
+	@NotNull
 	@ManyToOne(optional = false)
 	protected Inventor inventor;
 }
