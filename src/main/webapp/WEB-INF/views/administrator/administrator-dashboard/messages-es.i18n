@@ -19,6 +19,10 @@ administrator.dashboard.form.title.components.average = Media del precio de los 
 administrator.dashboard.form.title.components.deviation = Desviación del precio de los componentes
 administrator.dashboard.form.title.components.minimum =  Mínimo del precio de los componentes
 administrator.dashboard.form.title.components.maximum = Máximo del precio de los componentes
+administrator.dashboard.form.title.tools.average = Media del precio de los herramientas
+administrator.dashboard.form.title.tools.deviation = Desviación del precio de los herramientas
+administrator.dashboard.form.title.tools.minimum =  Mínimo del precio de los herramientas
+administrator.dashboard.form.title.tools.maximum = Máximo del precio de los herramientas
 
 administrator.administrator-dashboard.form.label.total-number-of-components =  Número total de componentes
 administrator.administrator-dashboard.form.label.total-number-of-tools =  Número total de herramientas

@@ -19,6 +19,10 @@ administrator.dashboard.form.title.components.average = Average price of compone
 administrator.dashboard.form.title.components.deviation = Deviation price of components
 administrator.dashboard.form.title.components.minimum =  Minimum price of components
 administrator.dashboard.form.title.components.maximum = Maximum price of components
+administrator.dashboard.form.title.tools.average = Average price of tools
+administrator.dashboard.form.title.tools.deviation = Deviation price of tools
+administrator.dashboard.form.title.tools.minimum =  Minimum price of tools
+administrator.dashboard.form.title.tools.maximum = Maximum price of tools
 
 administrator.administrator-dashboard.form.label.total-number-of-components =  Total number of components 
 administrator.administrator-dashboard.form.label.total-number-of-tools =  Total number of tools

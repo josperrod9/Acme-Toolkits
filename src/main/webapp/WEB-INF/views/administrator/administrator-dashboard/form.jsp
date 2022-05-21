@@ -156,7 +156,7 @@
 		var="entry">
 		<tr>
 			<td><acme:message
-					code="administrator.dashboard.form.title.components.average" /></td>
+					code="administrator.dashboard.form.title.tools.average" /></td>
 			<td><acme:print value="${entry.key}" /></td>
 			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
@@ -165,7 +165,7 @@
 		var="entry">
 		<tr>
 			<td><acme:message
-					code="administrator.dashboard.form.title.components.deviation" /></td>
+					code="administrator.dashboard.form.title.tools.deviation" /></td>
 			<td><acme:print value="${entry.key}" /></td>
 			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
@@ -175,7 +175,7 @@
 		var="entry">
 		<tr>
 			<td><acme:message
-					code="administrator.dashboard.form.title.components.minimum" /></td>
+					code="administrator.dashboard.form.title.tools.minimum" /></td>
 			<td><acme:print value="${entry.key}" /></td>
 			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
@@ -184,7 +184,7 @@
 		var="entry">
 		<tr>
 			<td><acme:message
-					code="administrator.dashboard.form.title.components.maximum" /></td>
+					code="administrator.dashboard.form.title.tools.maximum" /></td>
 			<td><acme:print value="${entry.key}" /></td>
 			<th id="value"><acme:print value="${entry.value}" /></th>
 		</tr>
