@@ -77,9 +77,12 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
         	startDate = entity.getStartDate();
         	Date endDate; 
         	endDate = entity.getEndDate();
-        	Date moment; 
-        	moment = new Date(startDate.getTime() + 604799999); 
-        	errors.state(request, endDate.after(moment), "endDate", "patron.patronage.show.error.end-date-one-week-before-start-date");
+        	Calendar calendar;
+        	calendar = Calendar.getInstance();
+        	calendar.setTime(startDate); 
+        	calendar.add(Calendar.MONTH, 1);
+        	calendar.add(Calendar.SECOND, -1);
+        	errors.state(request, endDate.after(calendar.getTime()), "endDate", "patron.patronage.show.error.end-date-one-month-before-start-date");
         }
 
 	}

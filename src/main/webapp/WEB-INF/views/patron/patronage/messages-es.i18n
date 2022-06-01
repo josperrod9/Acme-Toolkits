@@ -51,4 +51,4 @@ patron.patronage.show.error.incorrect-currency = La divisa introducida no corres
 patron.patronage.show.error.username-null = El nombre de usuario no puede estar vacío
 patron.patronage.show.error.username-does-not-exist = El nombre de usuario correspondiente al inventor que introdujo no se encuentra en la base de datos. Por favor, revise el nombre de usuario.
 patron.patronage.show.error.start-date-not-enough = La fecha de inicio debe de ser, al menos, un mes después de este momento.
-patron.patronage.show.error.end-date-one-week-before-start-date = La fecha de finalización debe de ser, al menos, una semana desués de la fecha de inicio.
+patron.patronage.show.error.end-date-one-month-before-start-date = La fecha de finalización debe de ser, al menos, un mes después de la fecha de inicio.
