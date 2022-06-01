@@ -34,7 +34,7 @@
 								value="${artefact.id}" />
 						</jstl:forEach>
 					</acme:input-select>
-					<acme:submit code="inventor.artefactToolkit.form.button.create" action="/inventor/artefact-toolkit/create"/>
+					<acme:submit code="inventor.artefactToolkit.form.button.create" action="/inventor/artefact-toolkit/create?masterId=${masterId}"/>
 				</jstl:when>
 			</jstl:choose>
 		</jstl:when>
